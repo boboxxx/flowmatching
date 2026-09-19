@@ -20,6 +20,8 @@ The conservative inference grid is fixed before results to $K\in\{1,2,4\}$ and $
 
 After calibration selection, the single-seed held-out replication uses three new channel seeds (7001--7003). It is a gate before training seeds 2031 and 2032: the multi-seed expansion proceeds only if the held-out FM-only PSNR delta remains positive and FlowHARQ preserves the matched-quality constraints.
 
+The gate passed, so the confirmatory expansion uses training seeds 2030--2032 and channel seeds 7001--7003. The architecture, normalized-Huber objective, reconstruction weight 1.0, K=4, tau=0.8, and 24 dB service target are frozen. Seeds 2031 and 2032 may fit only their scalar direct/FM quality biases on the calibration split; all 80 held-out images remain excluded from fitting. Paper claims use paired Student-t intervals over the three training-seed means after averaging channel seeds.
+
 ## Prediction and acceptance
 
 - Calibration FM-only PSNR must improve by at least 0.05 dB over direct at a feasible conservative mask.
