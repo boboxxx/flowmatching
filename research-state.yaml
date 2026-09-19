@@ -68,10 +68,18 @@ experiments:
   best_value: 0.001
   total_runs: 3
   active_jobs:
-    - job_id: "11397126_[0-3]"
+    - job_id: "11397130_[0-3]"
       hypothesis: H1
       purpose: "same-seed robust repair objective sweep"
-      status: pending_resources
+      status: running
+    - job_id: "11397133_[0-3]"
+      hypothesis: H1
+      purpose: "calibration-only paired evaluation"
+      status: dependent
+    - job_id: "11397134"
+      hypothesis: H1
+      purpose: "bootstrap comparison and preregistered acceptance check"
+      status: dependent
   trajectory:
     - run_id: pilot_v1_tau050
       hypothesis: H1
