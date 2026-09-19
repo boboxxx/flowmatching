@@ -28,6 +28,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 6. Training-seed variability is material: the paired FM-only PSNR delta is -0.0321, -0.0016, and +0.0058 dB for seeds 2027--2029. A positive claim cannot rest on the best checkpoint.
 7. On the v2 calibration split at frozen K=2, tau=0.9, FM-only minus direct is -0.0121 dB, with bootstrap 95% CI [-0.0179, -0.0058]. Decision-threshold tuning alone cannot rescue the current repair module.
 8. The final-epoch v2 FM loss is extremely heavy-tailed. Across seeds, median batch losses are 0.26--0.28 and 90th percentiles are 2.2--3.2, but 99th percentiles reach 203--2,209 and maxima reach 1,703--158,505. This directly supports H1's outlier-dominance mechanism rather than treating robust loss as an arbitrary hyperparameter sweep.
+9. An oracle-decision audit proves that calibration is not the only current bottleneck. At the 24 dB target, v2 FM moves 37 held-out cases from NACK to ACK but moves 39 in the opposite direction, for an oracle NACK saving of -0.012 percentage points. The learned head's nominal +0.104-point saving is therefore a calibration artifact, not evidence of useful repair. H1 must succeed before H2 is scientifically meaningful.
 
 ## Lessons and Constraints
 
