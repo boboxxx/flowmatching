@@ -1,0 +1,1183 @@
+2026-09-19 20:03:22.623632: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-19 20:03:22.644066: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-19 20:03:22.644094: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-19 20:03:22.644108: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-19 20:03:22.647769: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-19 20:03:23.011257: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-09-19 20:03:23.496343: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.508961: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.509135: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.511394: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.511572: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.511712: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.597853: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.598040: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.598055: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1977] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2026-09-19 20:03:23.598067: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2026-09-19 20:03:23.598188: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:23.598212: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21452 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{'status': 'PASS', 'weight_tensors': 113, 'legacy_h5_max_error': 0.0, 'new_weights_h5_max_error': 0.6013545393943787}
+2026-09-19 20:03:29.221989: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-19 20:03:29.239656: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-19 20:03:29.239683: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-19 20:03:29.239698: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-19 20:03:29.243185: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-19 20:03:29.658283: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-09-19 20:03:30.005596: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:30.018450: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:30.018663: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:31.959243: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:31.959588: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:31.959760: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:32.037248: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:32.037445: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:32.037459: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1977] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2026-09-19 20:03:32.037470: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2026-09-19 20:03:32.037648: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:03:32.037674: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21452 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9
+channel_snr: 10.0
+Epoch 1/100
+2026-09-19 20:03:38.304188: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:442] Loaded cuDNN version 8700
+2026-09-19 20:03:39.962190: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7962317e5060 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-09-19 20:03:39.962219: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 4090, Compute Capability 8.9
+2026-09-19 20:03:39.964972: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-09-19 20:03:40.018438: I ./tensorflow/compiler/jit/device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+100/100 - 19s - loss: 0.0519 - psnr_metric: 13.8751 - psnr0: 13.8751 - psnr_fb0: 13.8751 - mse0: 0.0519 - avg_pwr0: 1.0000 - val_loss: 0.0300 - val_psnr_metric: 16.6075 - val_psnr0: 16.6075 - val_psnr_fb0: 16.6075 - val_mse0: 0.0295 - val_avg_pwr0: 1.0000 - 19s/epoch - 185ms/step
+Epoch 2/100
+100/100 - 8s - loss: 0.0218 - psnr_metric: 18.0601 - psnr0: 18.0601 - psnr_fb0: 18.0601 - mse0: 0.0218 - avg_pwr0: 1.0000 - val_loss: 0.0213 - val_psnr_metric: 18.1652 - val_psnr0: 18.1652 - val_psnr_fb0: 18.1652 - val_mse0: 0.0210 - val_avg_pwr0: 1.0000 - 8s/epoch - 78ms/step
+Epoch 3/100
+100/100 - 8s - loss: 0.0121 - psnr_metric: 20.5224 - psnr0: 20.5224 - psnr_fb0: 20.5224 - mse0: 0.0121 - avg_pwr0: 1.0000 - val_loss: 0.0116 - val_psnr_metric: 20.8196 - val_psnr0: 20.8196 - val_psnr_fb0: 20.8196 - val_mse0: 0.0114 - val_avg_pwr0: 1.0000 - 8s/epoch - 79ms/step
+Epoch 4/100
+100/100 - 8s - loss: 0.0077 - psnr_metric: 22.4680 - psnr0: 22.4680 - psnr_fb0: 22.4680 - mse0: 0.0077 - avg_pwr0: 1.0000 - val_loss: 0.0112 - val_psnr_metric: 21.0724 - val_psnr0: 21.0724 - val_psnr_fb0: 21.0724 - val_mse0: 0.0110 - val_avg_pwr0: 1.0000 - 8s/epoch - 78ms/step
+Epoch 5/100
+100/100 - 8s - loss: 0.0071 - psnr_metric: 22.9872 - psnr0: 22.9872 - psnr_fb0: 22.9872 - mse0: 0.0071 - avg_pwr0: 1.0000 - val_loss: 0.0105 - val_psnr_metric: 21.6839 - val_psnr0: 21.6839 - val_psnr_fb0: 21.6839 - val_mse0: 0.0103 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 6/100
+100/100 - 8s - loss: 0.0062 - psnr_metric: 23.6969 - psnr0: 23.6969 - psnr_fb0: 23.6969 - mse0: 0.0062 - avg_pwr0: 1.0000 - val_loss: 0.0112 - val_psnr_metric: 21.0802 - val_psnr0: 21.0802 - val_psnr_fb0: 21.0802 - val_mse0: 0.0111 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 7/100
+100/100 - 8s - loss: 0.0072 - psnr_metric: 23.0154 - psnr0: 23.0154 - psnr_fb0: 23.0154 - mse0: 0.0072 - avg_pwr0: 1.0000 - val_loss: 0.0094 - val_psnr_metric: 22.3594 - val_psnr0: 22.3594 - val_psnr_fb0: 22.3594 - val_mse0: 0.0092 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 8/100
+100/100 - 8s - loss: 0.0067 - psnr_metric: 23.3507 - psnr0: 23.3507 - psnr_fb0: 23.3507 - mse0: 0.0067 - avg_pwr0: 1.0000 - val_loss: 0.0095 - val_psnr_metric: 21.7618 - val_psnr0: 21.7618 - val_psnr_fb0: 21.7618 - val_mse0: 0.0094 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 9/100
+100/100 - 8s - loss: 0.0063 - psnr_metric: 23.5348 - psnr0: 23.5348 - psnr_fb0: 23.5348 - mse0: 0.0063 - avg_pwr0: 1.0000 - val_loss: 0.0117 - val_psnr_metric: 20.7346 - val_psnr0: 20.7346 - val_psnr_fb0: 20.7346 - val_mse0: 0.0116 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 10/100
+100/100 - 8s - loss: 0.0057 - psnr_metric: 24.0763 - psnr0: 24.0763 - psnr_fb0: 24.0763 - mse0: 0.0057 - avg_pwr0: 1.0000 - val_loss: 0.0085 - val_psnr_metric: 22.8841 - val_psnr0: 22.8841 - val_psnr_fb0: 22.8841 - val_mse0: 0.0083 - val_avg_pwr0: 1.0000 - 8s/epoch - 78ms/step
+Epoch 11/100
+100/100 - 8s - loss: 0.0053 - psnr_metric: 24.4175 - psnr0: 24.4175 - psnr_fb0: 24.4175 - mse0: 0.0053 - avg_pwr0: 1.0000 - val_loss: 0.0085 - val_psnr_metric: 22.5109 - val_psnr0: 22.5109 - val_psnr_fb0: 22.5109 - val_mse0: 0.0084 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 12/100
+100/100 - 8s - loss: 0.0054 - psnr_metric: 24.4235 - psnr0: 24.4235 - psnr_fb0: 24.4235 - mse0: 0.0054 - avg_pwr0: 1.0000 - val_loss: 0.0089 - val_psnr_metric: 22.2444 - val_psnr0: 22.2444 - val_psnr_fb0: 22.2444 - val_mse0: 0.0087 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 13/100
+100/100 - 8s - loss: 0.0050 - psnr_metric: 24.7459 - psnr0: 24.7459 - psnr_fb0: 24.7459 - mse0: 0.0050 - avg_pwr0: 1.0000 - val_loss: 0.0076 - val_psnr_metric: 22.9361 - val_psnr0: 22.9361 - val_psnr_fb0: 22.9361 - val_mse0: 0.0075 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 14/100
+100/100 - 8s - loss: 0.0050 - psnr_metric: 24.7272 - psnr0: 24.7272 - psnr_fb0: 24.7272 - mse0: 0.0050 - avg_pwr0: 1.0000 - val_loss: 0.0075 - val_psnr_metric: 22.9974 - val_psnr0: 22.9974 - val_psnr_fb0: 22.9974 - val_mse0: 0.0074 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 15/100
+100/100 - 8s - loss: 0.0049 - psnr_metric: 24.8250 - psnr0: 24.8250 - psnr_fb0: 24.8250 - mse0: 0.0049 - avg_pwr0: 1.0000 - val_loss: 0.0074 - val_psnr_metric: 22.7826 - val_psnr0: 22.7826 - val_psnr_fb0: 22.7826 - val_mse0: 0.0073 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 16/100
+100/100 - 8s - loss: 0.0055 - psnr_metric: 24.1298 - psnr0: 24.1298 - psnr_fb0: 24.1298 - mse0: 0.0055 - avg_pwr0: 1.0000 - val_loss: 0.0072 - val_psnr_metric: 23.0993 - val_psnr0: 23.0993 - val_psnr_fb0: 23.0993 - val_mse0: 0.0071 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 17/100
+100/100 - 8s - loss: 0.0049 - psnr_metric: 24.9011 - psnr0: 24.9011 - psnr_fb0: 24.9011 - mse0: 0.0049 - avg_pwr0: 1.0000 - val_loss: 0.0064 - val_psnr_metric: 23.3260 - val_psnr0: 23.3260 - val_psnr_fb0: 23.3260 - val_mse0: 0.0063 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 18/100
+100/100 - 8s - loss: 0.0048 - psnr_metric: 24.8978 - psnr0: 24.8978 - psnr_fb0: 24.8978 - mse0: 0.0048 - avg_pwr0: 1.0000 - val_loss: 0.0071 - val_psnr_metric: 22.6843 - val_psnr0: 22.6843 - val_psnr_fb0: 22.6843 - val_mse0: 0.0071 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 19/100
+100/100 - 8s - loss: 0.0049 - psnr_metric: 24.7821 - psnr0: 24.7821 - psnr_fb0: 24.7821 - mse0: 0.0049 - avg_pwr0: 1.0000 - val_loss: 0.0066 - val_psnr_metric: 22.8578 - val_psnr0: 22.8578 - val_psnr_fb0: 22.8578 - val_mse0: 0.0065 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 20/100
+100/100 - 8s - loss: 0.0044 - psnr_metric: 25.3636 - psnr0: 25.3636 - psnr_fb0: 25.3636 - mse0: 0.0044 - avg_pwr0: 1.0000 - val_loss: 0.0056 - val_psnr_metric: 23.6714 - val_psnr0: 23.6714 - val_psnr_fb0: 23.6714 - val_mse0: 0.0055 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 21/100
+100/100 - 8s - loss: 0.0047 - psnr_metric: 25.0368 - psnr0: 25.0368 - psnr_fb0: 25.0368 - mse0: 0.0047 - avg_pwr0: 1.0000 - val_loss: 0.0055 - val_psnr_metric: 23.8284 - val_psnr0: 23.8284 - val_psnr_fb0: 23.8284 - val_mse0: 0.0054 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 22/100
+100/100 - 8s - loss: 0.0047 - psnr_metric: 25.0196 - psnr0: 25.0196 - psnr_fb0: 25.0196 - mse0: 0.0047 - avg_pwr0: 1.0000 - val_loss: 0.0053 - val_psnr_metric: 23.8426 - val_psnr0: 23.8426 - val_psnr_fb0: 23.8426 - val_mse0: 0.0053 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 23/100
+100/100 - 8s - loss: 0.0044 - psnr_metric: 25.3371 - psnr0: 25.3371 - psnr_fb0: 25.3371 - mse0: 0.0044 - avg_pwr0: 1.0000 - val_loss: 0.0051 - val_psnr_metric: 23.8847 - val_psnr0: 23.8847 - val_psnr_fb0: 23.8847 - val_mse0: 0.0051 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 24/100
+100/100 - 8s - loss: 0.0044 - psnr_metric: 25.4874 - psnr0: 25.4874 - psnr_fb0: 25.4874 - mse0: 0.0044 - avg_pwr0: 1.0000 - val_loss: 0.0052 - val_psnr_metric: 24.1209 - val_psnr0: 24.1209 - val_psnr_fb0: 24.1209 - val_mse0: 0.0051 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 25/100
+100/100 - 8s - loss: 0.0042 - psnr_metric: 25.6120 - psnr0: 25.6120 - psnr_fb0: 25.6120 - mse0: 0.0042 - avg_pwr0: 1.0000 - val_loss: 0.0053 - val_psnr_metric: 23.9097 - val_psnr0: 23.9097 - val_psnr_fb0: 23.9097 - val_mse0: 0.0053 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 26/100
+100/100 - 8s - loss: 0.0044 - psnr_metric: 25.4342 - psnr0: 25.4342 - psnr_fb0: 25.4342 - mse0: 0.0044 - avg_pwr0: 1.0000 - val_loss: 0.0048 - val_psnr_metric: 24.2781 - val_psnr0: 24.2781 - val_psnr_fb0: 24.2781 - val_mse0: 0.0047 - val_avg_pwr0: 1.0000 - 8s/epoch - 78ms/step
+Epoch 27/100
+100/100 - 8s - loss: 0.0043 - psnr_metric: 25.6404 - psnr0: 25.6404 - psnr_fb0: 25.6404 - mse0: 0.0043 - avg_pwr0: 1.0000 - val_loss: 0.0054 - val_psnr_metric: 23.7516 - val_psnr0: 23.7516 - val_psnr_fb0: 23.7516 - val_mse0: 0.0053 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 28/100
+100/100 - 8s - loss: 0.0041 - psnr_metric: 25.6493 - psnr0: 25.6493 - psnr_fb0: 25.6493 - mse0: 0.0041 - avg_pwr0: 1.0000 - val_loss: 0.0046 - val_psnr_metric: 24.3314 - val_psnr0: 24.3314 - val_psnr_fb0: 24.3314 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 29/100
+100/100 - 8s - loss: 0.0042 - psnr_metric: 25.7969 - psnr0: 25.7969 - psnr_fb0: 25.7969 - mse0: 0.0042 - avg_pwr0: 1.0000 - val_loss: 0.0045 - val_psnr_metric: 24.4282 - val_psnr0: 24.4282 - val_psnr_fb0: 24.4282 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 30/100
+100/100 - 8s - loss: 0.0041 - psnr_metric: 25.7611 - psnr0: 25.7611 - psnr_fb0: 25.7611 - mse0: 0.0041 - avg_pwr0: 1.0000 - val_loss: 0.0046 - val_psnr_metric: 24.4073 - val_psnr0: 24.4073 - val_psnr_fb0: 24.4073 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 31/100
+100/100 - 8s - loss: 0.0041 - psnr_metric: 25.7944 - psnr0: 25.7944 - psnr_fb0: 25.7944 - mse0: 0.0041 - avg_pwr0: 1.0000 - val_loss: 0.0048 - val_psnr_metric: 24.2925 - val_psnr0: 24.2925 - val_psnr_fb0: 24.2925 - val_mse0: 0.0047 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 32/100
+Restoring model weights from the end of the best epoch: 29.
+100/100 - 8s - loss: 0.0045 - psnr_metric: 25.3097 - psnr0: 25.3097 - psnr_fb0: 25.3097 - mse0: 0.0045 - avg_pwr0: 1.0000 - val_loss: 0.0054 - val_psnr_metric: 23.5362 - val_psnr0: 23.5362 - val_psnr_fb0: 23.5362 - val_mse0: 0.0054 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 32: early stopping
+channel_snr: 10.0
+Epoch 1/100
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+100/100 - 22s - loss: 0.0540 - psnr_metric: 13.7840 - psnr0: 25.8271 - psnr_fb0: 25.8271 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 13.7840 - psnr_fb1: 13.7840 - mse1: 0.0540 - avg_pwr1: 1.0000 - val_loss: 0.0314 - val_psnr_metric: 15.7517 - val_psnr0: 24.4424 - val_psnr_fb0: 24.4424 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 15.7517 - val_psnr_fb1: 15.7517 - val_mse1: 0.0310 - val_avg_pwr1: 1.0000 - 22s/epoch - 224ms/step
+Epoch 2/100
+100/100 - 10s - loss: 0.0205 - psnr_metric: 18.0489 - psnr0: 26.1178 - psnr_fb0: 26.1178 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 18.0489 - psnr_fb1: 18.0489 - mse1: 0.0205 - avg_pwr1: 1.0000 - val_loss: 0.0163 - val_psnr_metric: 19.5951 - val_psnr0: 24.4056 - val_psnr_fb0: 24.4056 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 19.5951 - val_psnr_fb1: 19.5951 - val_mse1: 0.0160 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 3/100
+100/100 - 11s - loss: 0.0114 - psnr_metric: 20.8808 - psnr0: 25.8094 - psnr_fb0: 25.8094 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 20.8808 - psnr_fb1: 20.8808 - mse1: 0.0114 - avg_pwr1: 1.0000 - val_loss: 0.0117 - val_psnr_metric: 21.8616 - val_psnr0: 24.4413 - val_psnr_fb0: 24.4413 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 21.8616 - val_psnr_fb1: 21.8616 - val_mse1: 0.0114 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 4/100
+100/100 - 10s - loss: 0.0075 - psnr_metric: 23.0234 - psnr0: 26.1338 - psnr_fb0: 26.1338 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 23.0234 - psnr_fb1: 23.0234 - mse1: 0.0075 - avg_pwr1: 1.0000 - val_loss: 0.0094 - val_psnr_metric: 22.8264 - val_psnr0: 24.4110 - val_psnr_fb0: 24.4110 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 22.8264 - val_psnr_fb1: 22.8264 - val_mse1: 0.0092 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 5/100
+100/100 - 10s - loss: 0.0059 - psnr_metric: 24.1887 - psnr0: 25.8625 - psnr_fb0: 25.8625 - mse0: 0.0042 - avg_pwr0: 1.0000 - psnr1: 24.1887 - psnr_fb1: 24.1887 - mse1: 0.0059 - avg_pwr1: 1.0000 - val_loss: 0.0085 - val_psnr_metric: 23.6713 - val_psnr0: 24.4045 - val_psnr_fb0: 24.4045 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 23.6713 - val_psnr_fb1: 23.6713 - val_mse1: 0.0083 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 6/100
+100/100 - 10s - loss: 0.0050 - psnr_metric: 24.9062 - psnr0: 25.9521 - psnr_fb0: 25.9521 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 24.9062 - psnr_fb1: 24.9062 - mse1: 0.0050 - avg_pwr1: 1.0000 - val_loss: 0.0080 - val_psnr_metric: 23.9352 - val_psnr0: 24.3998 - val_psnr_fb0: 24.3998 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 23.9352 - val_psnr_fb1: 23.9352 - val_mse1: 0.0078 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 7/100
+100/100 - 11s - loss: 0.0044 - psnr_metric: 25.6956 - psnr0: 26.0964 - psnr_fb0: 26.0964 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 25.6956 - psnr_fb1: 25.6956 - mse1: 0.0044 - avg_pwr1: 1.0000 - val_loss: 0.0071 - val_psnr_metric: 24.3762 - val_psnr0: 24.4126 - val_psnr_fb0: 24.4126 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 24.3762 - val_psnr_fb1: 24.3762 - val_mse1: 0.0069 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 8/100
+100/100 - 10s - loss: 0.0042 - psnr_metric: 25.7038 - psnr0: 26.0230 - psnr_fb0: 26.0230 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 25.7038 - psnr_fb1: 25.7038 - mse1: 0.0042 - avg_pwr1: 1.0000 - val_loss: 0.0072 - val_psnr_metric: 24.4815 - val_psnr0: 24.3705 - val_psnr_fb0: 24.3705 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 24.4815 - val_psnr_fb1: 24.4815 - val_mse1: 0.0070 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 9/100
+100/100 - 10s - loss: 0.0040 - psnr_metric: 26.1052 - psnr0: 25.7224 - psnr_fb0: 25.7224 - mse0: 0.0042 - avg_pwr0: 1.0000 - psnr1: 26.1052 - psnr_fb1: 26.1052 - mse1: 0.0040 - avg_pwr1: 1.0000 - val_loss: 0.0067 - val_psnr_metric: 24.7314 - val_psnr0: 24.3971 - val_psnr_fb0: 24.3971 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 24.7314 - val_psnr_fb1: 24.7314 - val_mse1: 0.0066 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 10/100
+100/100 - 11s - loss: 0.0037 - psnr_metric: 26.7490 - psnr0: 26.2029 - psnr_fb0: 26.2029 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 26.7490 - psnr_fb1: 26.7490 - mse1: 0.0037 - avg_pwr1: 1.0000 - val_loss: 0.0062 - val_psnr_metric: 24.8951 - val_psnr0: 24.4178 - val_psnr_fb0: 24.4178 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 24.8951 - val_psnr_fb1: 24.8951 - val_mse1: 0.0061 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 11/100
+100/100 - 10s - loss: 0.0035 - psnr_metric: 26.8346 - psnr0: 26.2568 - psnr_fb0: 26.2568 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 26.8346 - psnr_fb1: 26.8346 - mse1: 0.0035 - avg_pwr1: 1.0000 - val_loss: 0.0062 - val_psnr_metric: 25.0029 - val_psnr0: 24.3965 - val_psnr_fb0: 24.3965 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 25.0029 - val_psnr_fb1: 25.0029 - val_mse1: 0.0060 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 12/100
+100/100 - 10s - loss: 0.0034 - psnr_metric: 27.0836 - psnr0: 26.1288 - psnr_fb0: 26.1288 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 27.0836 - psnr_fb1: 27.0836 - mse1: 0.0034 - avg_pwr1: 1.0000 - val_loss: 0.0058 - val_psnr_metric: 25.2907 - val_psnr0: 24.3962 - val_psnr_fb0: 24.3962 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 25.2907 - val_psnr_fb1: 25.2907 - val_mse1: 0.0057 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 13/100
+100/100 - 10s - loss: 0.0035 - psnr_metric: 27.1291 - psnr0: 26.0637 - psnr_fb0: 26.0637 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 27.1291 - psnr_fb1: 27.1291 - mse1: 0.0035 - avg_pwr1: 1.0000 - val_loss: 0.0057 - val_psnr_metric: 25.3895 - val_psnr0: 24.4076 - val_psnr_fb0: 24.4076 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 25.3895 - val_psnr_fb1: 25.3895 - val_mse1: 0.0055 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 14/100
+100/100 - 10s - loss: 0.0033 - psnr_metric: 27.1579 - psnr0: 26.0242 - psnr_fb0: 26.0242 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 27.1579 - psnr_fb1: 27.1579 - mse1: 0.0033 - avg_pwr1: 1.0000 - val_loss: 0.0055 - val_psnr_metric: 25.4268 - val_psnr0: 24.4284 - val_psnr_fb0: 24.4284 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 25.4268 - val_psnr_fb1: 25.4268 - val_mse1: 0.0054 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 15/100
+100/100 - 10s - loss: 0.0033 - psnr_metric: 27.3114 - psnr0: 25.8819 - psnr_fb0: 25.8819 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 27.3114 - psnr_fb1: 27.3114 - mse1: 0.0033 - avg_pwr1: 1.0000 - val_loss: 0.0050 - val_psnr_metric: 25.6898 - val_psnr0: 24.3698 - val_psnr_fb0: 24.3698 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 25.6898 - val_psnr_fb1: 25.6898 - val_mse1: 0.0049 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 16/100
+100/100 - 10s - loss: 0.0031 - psnr_metric: 27.5422 - psnr0: 26.0371 - psnr_fb0: 26.0371 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 27.5422 - psnr_fb1: 27.5422 - mse1: 0.0031 - avg_pwr1: 1.0000 - val_loss: 0.0049 - val_psnr_metric: 25.7091 - val_psnr0: 24.4337 - val_psnr_fb0: 24.4337 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 25.7091 - val_psnr_fb1: 25.7091 - val_mse1: 0.0048 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 17/100
+100/100 - 10s - loss: 0.0030 - psnr_metric: 27.8039 - psnr0: 26.1640 - psnr_fb0: 26.1640 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 27.8039 - psnr_fb1: 27.8039 - mse1: 0.0030 - avg_pwr1: 1.0000 - val_loss: 0.0045 - val_psnr_metric: 25.5136 - val_psnr0: 24.4145 - val_psnr_fb0: 24.4145 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 25.5136 - val_psnr_fb1: 25.5136 - val_mse1: 0.0044 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 18/100
+100/100 - 10s - loss: 0.0032 - psnr_metric: 27.4448 - psnr0: 25.7166 - psnr_fb0: 25.7166 - mse0: 0.0042 - avg_pwr0: 1.0000 - psnr1: 27.4448 - psnr_fb1: 27.4448 - mse1: 0.0032 - avg_pwr1: 1.0000 - val_loss: 0.0043 - val_psnr_metric: 26.0981 - val_psnr0: 24.3741 - val_psnr_fb0: 24.3741 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 26.0981 - val_psnr_fb1: 26.0981 - val_mse1: 0.0042 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 19/100
+100/100 - 10s - loss: 0.0029 - psnr_metric: 27.8980 - psnr0: 26.0058 - psnr_fb0: 26.0058 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 27.8980 - psnr_fb1: 27.8980 - mse1: 0.0029 - avg_pwr1: 1.0000 - val_loss: 0.0040 - val_psnr_metric: 26.2113 - val_psnr0: 24.4015 - val_psnr_fb0: 24.4015 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.2113 - val_psnr_fb1: 26.2113 - val_mse1: 0.0040 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 20/100
+100/100 - 10s - loss: 0.0027 - psnr_metric: 28.1636 - psnr0: 26.0874 - psnr_fb0: 26.0874 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.1636 - psnr_fb1: 28.1636 - mse1: 0.0027 - avg_pwr1: 1.0000 - val_loss: 0.0039 - val_psnr_metric: 26.2755 - val_psnr0: 24.4095 - val_psnr_fb0: 24.4095 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.2755 - val_psnr_fb1: 26.2755 - val_mse1: 0.0038 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 21/100
+100/100 - 10s - loss: 0.0029 - psnr_metric: 28.0187 - psnr0: 25.9021 - psnr_fb0: 25.9021 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 28.0187 - psnr_fb1: 28.0187 - mse1: 0.0029 - avg_pwr1: 1.0000 - val_loss: 0.0037 - val_psnr_metric: 26.4147 - val_psnr0: 24.4159 - val_psnr_fb0: 24.4159 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.4147 - val_psnr_fb1: 26.4147 - val_mse1: 0.0036 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 22/100
+100/100 - 10s - loss: 0.0027 - psnr_metric: 28.2616 - psnr0: 25.9800 - psnr_fb0: 25.9800 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.2616 - psnr_fb1: 28.2616 - mse1: 0.0027 - avg_pwr1: 1.0000 - val_loss: 0.0035 - val_psnr_metric: 26.5246 - val_psnr0: 24.3774 - val_psnr_fb0: 24.3774 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 26.5246 - val_psnr_fb1: 26.5246 - val_mse1: 0.0034 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 23/100
+100/100 - 11s - loss: 0.0027 - psnr_metric: 28.1843 - psnr0: 25.9126 - psnr_fb0: 25.9126 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.1843 - psnr_fb1: 28.1843 - mse1: 0.0027 - avg_pwr1: 1.0000 - val_loss: 0.0034 - val_psnr_metric: 26.6093 - val_psnr0: 24.3806 - val_psnr_fb0: 24.3806 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.6093 - val_psnr_fb1: 26.6093 - val_mse1: 0.0034 - val_avg_pwr1: 1.0000 - 11s/epoch - 106ms/step
+Epoch 24/100
+100/100 - 10s - loss: 0.0026 - psnr_metric: 28.3149 - psnr0: 25.9396 - psnr_fb0: 25.9396 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.3149 - psnr_fb1: 28.3149 - mse1: 0.0026 - avg_pwr1: 1.0000 - val_loss: 0.0033 - val_psnr_metric: 26.7126 - val_psnr0: 24.4227 - val_psnr_fb0: 24.4227 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.7126 - val_psnr_fb1: 26.7126 - val_mse1: 0.0032 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 25/100
+100/100 - 11s - loss: 0.0025 - psnr_metric: 28.7354 - psnr0: 26.1891 - psnr_fb0: 26.1891 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.7354 - psnr_fb1: 28.7354 - mse1: 0.0025 - avg_pwr1: 1.0000 - val_loss: 0.0032 - val_psnr_metric: 26.7524 - val_psnr0: 24.4456 - val_psnr_fb0: 24.4456 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.7524 - val_psnr_fb1: 26.7524 - val_mse1: 0.0032 - val_avg_pwr1: 1.0000 - 11s/epoch - 106ms/step
+Epoch 26/100
+100/100 - 10s - loss: 0.0026 - psnr_metric: 28.4853 - psnr0: 25.9282 - psnr_fb0: 25.9282 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.4853 - psnr_fb1: 28.4853 - mse1: 0.0026 - avg_pwr1: 1.0000 - val_loss: 0.0032 - val_psnr_metric: 26.7321 - val_psnr0: 24.3856 - val_psnr_fb0: 24.3856 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 26.7321 - val_psnr_fb1: 26.7321 - val_mse1: 0.0032 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 27/100
+100/100 - 11s - loss: 0.0026 - psnr_metric: 28.6248 - psnr0: 26.0403 - psnr_fb0: 26.0403 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.6248 - psnr_fb1: 28.6248 - mse1: 0.0026 - avg_pwr1: 1.0000 - val_loss: 0.0031 - val_psnr_metric: 26.7666 - val_psnr0: 24.4047 - val_psnr_fb0: 24.4047 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.7666 - val_psnr_fb1: 26.7666 - val_mse1: 0.0031 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 28/100
+100/100 - 10s - loss: 0.0026 - psnr_metric: 28.5001 - psnr0: 25.9674 - psnr_fb0: 25.9674 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.5001 - psnr_fb1: 28.5001 - mse1: 0.0026 - avg_pwr1: 1.0000 - val_loss: 0.0030 - val_psnr_metric: 26.9305 - val_psnr0: 24.3871 - val_psnr_fb0: 24.3871 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.9305 - val_psnr_fb1: 26.9305 - val_mse1: 0.0030 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 29/100
+100/100 - 10s - loss: 0.0026 - psnr_metric: 28.5305 - psnr0: 25.9352 - psnr_fb0: 25.9352 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 28.5305 - psnr_fb1: 28.5305 - mse1: 0.0026 - avg_pwr1: 1.0000 - val_loss: 0.0030 - val_psnr_metric: 27.0111 - val_psnr0: 24.4282 - val_psnr_fb0: 24.4282 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.0111 - val_psnr_fb1: 27.0111 - val_mse1: 0.0029 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 30/100
+100/100 - 10s - loss: 0.0025 - psnr_metric: 28.7935 - psnr0: 26.0586 - psnr_fb0: 26.0586 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.7935 - psnr_fb1: 28.7935 - mse1: 0.0025 - avg_pwr1: 1.0000 - val_loss: 0.0029 - val_psnr_metric: 27.0551 - val_psnr0: 24.4380 - val_psnr_fb0: 24.4380 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.0551 - val_psnr_fb1: 27.0551 - val_mse1: 0.0029 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 31/100
+100/100 - 10s - loss: 0.0025 - psnr_metric: 28.8219 - psnr0: 26.1590 - psnr_fb0: 26.1590 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.8219 - psnr_fb1: 28.8219 - mse1: 0.0025 - avg_pwr1: 1.0000 - val_loss: 0.0029 - val_psnr_metric: 27.1147 - val_psnr0: 24.4395 - val_psnr_fb0: 24.4395 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.1147 - val_psnr_fb1: 27.1147 - val_mse1: 0.0028 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 32/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.8216 - psnr0: 26.0561 - psnr_fb0: 26.0561 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.8216 - psnr_fb1: 28.8216 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0029 - val_psnr_metric: 26.8927 - val_psnr0: 24.3962 - val_psnr_fb0: 24.3962 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 26.8927 - val_psnr_fb1: 26.8927 - val_mse1: 0.0029 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 33/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.6925 - psnr0: 25.9289 - psnr_fb0: 25.9289 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 28.6925 - psnr_fb1: 28.6925 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0029 - val_psnr_metric: 27.1643 - val_psnr0: 24.4390 - val_psnr_fb0: 24.4390 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.1643 - val_psnr_fb1: 27.1643 - val_mse1: 0.0028 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 34/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.8446 - psnr0: 26.0842 - psnr_fb0: 26.0842 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.8446 - psnr_fb1: 28.8446 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0028 - val_psnr_metric: 27.1694 - val_psnr0: 24.3763 - val_psnr_fb0: 24.3763 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.1694 - val_psnr_fb1: 27.1694 - val_mse1: 0.0028 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 35/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.7775 - psnr0: 26.0574 - psnr_fb0: 26.0574 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.7775 - psnr_fb1: 28.7775 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0028 - val_psnr_metric: 27.1286 - val_psnr0: 24.4310 - val_psnr_fb0: 24.4310 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.1286 - val_psnr_fb1: 27.1286 - val_mse1: 0.0028 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 36/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.7373 - psnr0: 25.9434 - psnr_fb0: 25.9434 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.7373 - psnr_fb1: 28.7373 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0028 - val_psnr_metric: 27.2819 - val_psnr0: 24.4115 - val_psnr_fb0: 24.4115 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.2819 - val_psnr_fb1: 27.2819 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 37/100
+100/100 - 10s - loss: 0.0023 - psnr_metric: 28.9514 - psnr0: 26.0852 - psnr_fb0: 26.0852 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 28.9514 - psnr_fb1: 28.9514 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.2285 - val_psnr0: 24.4067 - val_psnr_fb0: 24.4067 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.2285 - val_psnr_fb1: 27.2285 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 38/100
+100/100 - 10s - loss: 0.0023 - psnr_metric: 28.9935 - psnr0: 26.0179 - psnr_fb0: 26.0179 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.9935 - psnr_fb1: 28.9935 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.2430 - val_psnr0: 24.3921 - val_psnr_fb0: 24.3921 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.2430 - val_psnr_fb1: 27.2430 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 39/100
+100/100 - 11s - loss: 0.0024 - psnr_metric: 29.0317 - psnr0: 26.1266 - psnr_fb0: 26.1266 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 29.0317 - psnr_fb1: 29.0317 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.3003 - val_psnr0: 24.4260 - val_psnr_fb0: 24.4260 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.3003 - val_psnr_fb1: 27.3003 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 40/100
+100/100 - 10s - loss: 0.0023 - psnr_metric: 29.0457 - psnr0: 26.0378 - psnr_fb0: 26.0378 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 29.0457 - psnr_fb1: 29.0457 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.3662 - val_psnr0: 24.3820 - val_psnr_fb0: 24.3820 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.3662 - val_psnr_fb1: 27.3662 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 41/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 28.7920 - psnr0: 25.8983 - psnr_fb0: 25.8983 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 28.7920 - psnr_fb1: 28.7920 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.2984 - val_psnr0: 24.3955 - val_psnr_fb0: 24.3955 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.2984 - val_psnr_fb1: 27.2984 - val_mse1: 0.0027 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 42/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 29.0645 - psnr0: 26.0893 - psnr_fb0: 26.0893 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 29.0645 - psnr_fb1: 29.0645 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0027 - val_psnr_metric: 27.3552 - val_psnr0: 24.4251 - val_psnr_fb0: 24.4251 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.3552 - val_psnr_fb1: 27.3552 - val_mse1: 0.0026 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 43/100
+100/100 - 10s - loss: 0.0024 - psnr_metric: 29.0107 - psnr0: 25.9970 - psnr_fb0: 25.9970 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 29.0107 - psnr_fb1: 29.0107 - mse1: 0.0024 - avg_pwr1: 1.0000 - val_loss: 0.0026 - val_psnr_metric: 27.4479 - val_psnr0: 24.4132 - val_psnr_fb0: 24.4132 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.4479 - val_psnr_fb1: 27.4479 - val_mse1: 0.0026 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 44/100
+100/100 - 10s - loss: 0.0022 - psnr_metric: 29.2513 - psnr0: 26.0988 - psnr_fb0: 26.0988 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 29.2513 - psnr_fb1: 29.2513 - mse1: 0.0022 - avg_pwr1: 1.0000 - val_loss: 0.0026 - val_psnr_metric: 27.4305 - val_psnr0: 24.4003 - val_psnr_fb0: 24.4003 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.4305 - val_psnr_fb1: 27.4305 - val_mse1: 0.0026 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 45/100
+100/100 - 11s - loss: 0.0022 - psnr_metric: 29.3594 - psnr0: 26.2514 - psnr_fb0: 26.2514 - mse0: 0.0037 - avg_pwr0: 1.0000 - psnr1: 29.3594 - psnr_fb1: 29.3594 - mse1: 0.0022 - avg_pwr1: 1.0000 - val_loss: 0.0026 - val_psnr_metric: 27.5271 - val_psnr0: 24.4177 - val_psnr_fb0: 24.4177 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.5271 - val_psnr_fb1: 27.5271 - val_mse1: 0.0026 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 46/100
+100/100 - 10s - loss: 0.0022 - psnr_metric: 29.4674 - psnr0: 26.2560 - psnr_fb0: 26.2560 - mse0: 0.0037 - avg_pwr0: 1.0000 - psnr1: 29.4674 - psnr_fb1: 29.4674 - mse1: 0.0022 - avg_pwr1: 1.0000 - val_loss: 0.0026 - val_psnr_metric: 27.5176 - val_psnr0: 24.3972 - val_psnr_fb0: 24.3972 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.5176 - val_psnr_fb1: 27.5176 - val_mse1: 0.0025 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 47/100
+100/100 - 10s - loss: 0.0022 - psnr_metric: 29.4415 - psnr0: 26.2329 - psnr_fb0: 26.2329 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 29.4415 - psnr_fb1: 29.4415 - mse1: 0.0022 - avg_pwr1: 1.0000 - val_loss: 0.0026 - val_psnr_metric: 27.4711 - val_psnr0: 24.4132 - val_psnr_fb0: 24.4132 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.4711 - val_psnr_fb1: 27.4711 - val_mse1: 0.0026 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 48/100
+100/100 - 10s - loss: 0.0023 - psnr_metric: 29.2442 - psnr0: 26.0146 - psnr_fb0: 26.0146 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 29.2442 - psnr_fb1: 29.2442 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0025 - val_psnr_metric: 27.6413 - val_psnr0: 24.3791 - val_psnr_fb0: 24.3791 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.6413 - val_psnr_fb1: 27.6413 - val_mse1: 0.0025 - val_avg_pwr1: 1.0000 - 10s/epoch - 105ms/step
+Epoch 49/100
+100/100 - 10s - loss: 0.0021 - psnr_metric: 29.6873 - psnr0: 26.3491 - psnr_fb0: 26.3491 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 29.6873 - psnr_fb1: 29.6873 - mse1: 0.0021 - avg_pwr1: 1.0000 - val_loss: 0.0025 - val_psnr_metric: 27.5672 - val_psnr0: 24.3807 - val_psnr_fb0: 24.3807 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.5672 - val_psnr_fb1: 27.5672 - val_mse1: 0.0025 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 50/100
+100/100 - 11s - loss: 0.0023 - psnr_metric: 29.3911 - psnr0: 26.0459 - psnr_fb0: 26.0459 - mse0: 0.0040 - avg_pwr0: 1.0000 - psnr1: 29.3911 - psnr_fb1: 29.3911 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0025 - val_psnr_metric: 27.7419 - val_psnr0: 24.3671 - val_psnr_fb0: 24.3671 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.7419 - val_psnr_fb1: 27.7419 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 51/100
+100/100 - 10s - loss: 0.0021 - psnr_metric: 29.6264 - psnr0: 26.1850 - psnr_fb0: 26.1850 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 29.6264 - psnr_fb1: 29.6264 - mse1: 0.0021 - avg_pwr1: 1.0000 - val_loss: 0.0025 - val_psnr_metric: 27.6712 - val_psnr0: 24.3835 - val_psnr_fb0: 24.3835 - val_mse0: 0.0046 - val_avg_pwr0: 1.0000 - val_psnr1: 27.6712 - val_psnr_fb1: 27.6712 - val_mse1: 0.0025 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 52/100
+100/100 - 10s - loss: 0.0023 - psnr_metric: 29.4668 - psnr0: 25.9200 - psnr_fb0: 25.9200 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 29.4668 - psnr_fb1: 29.4668 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0025 - val_psnr_metric: 27.7411 - val_psnr0: 24.4096 - val_psnr_fb0: 24.4096 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.7411 - val_psnr_fb1: 27.7411 - val_mse1: 0.0025 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 53/100
+100/100 - 11s - loss: 0.0023 - psnr_metric: 29.4460 - psnr0: 25.9259 - psnr_fb0: 25.9259 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 29.4460 - psnr_fb1: 29.4460 - mse1: 0.0023 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.8065 - val_psnr0: 24.4338 - val_psnr_fb0: 24.4338 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.8065 - val_psnr_fb1: 27.8065 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 11s/epoch - 105ms/step
+Epoch 54/100
+100/100 - 11s - loss: 0.0021 - psnr_metric: 29.7862 - psnr0: 26.2388 - psnr_fb0: 26.2388 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 29.7862 - psnr_fb1: 29.7862 - mse1: 0.0021 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.7750 - val_psnr0: 24.4126 - val_psnr_fb0: 24.4126 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.7750 - val_psnr_fb1: 27.7750 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 11s/epoch - 107ms/step
+Epoch 55/100
+100/100 - 10s - loss: 0.0021 - psnr_metric: 29.6566 - psnr0: 26.0004 - psnr_fb0: 26.0004 - mse0: 0.0039 - avg_pwr0: 1.0000 - psnr1: 29.6566 - psnr_fb1: 29.6566 - mse1: 0.0021 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.8490 - val_psnr0: 24.4081 - val_psnr_fb0: 24.4081 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.8490 - val_psnr_fb1: 27.8490 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 56/100
+100/100 - 10s - loss: 0.0020 - psnr_metric: 29.8492 - psnr0: 26.1793 - psnr_fb0: 26.1793 - mse0: 0.0037 - avg_pwr0: 1.0000 - psnr1: 29.8492 - psnr_fb1: 29.8492 - mse1: 0.0020 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.7543 - val_psnr0: 24.3790 - val_psnr_fb0: 24.3790 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.7543 - val_psnr_fb1: 27.7543 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 10s/epoch - 102ms/step
+Epoch 57/100
+100/100 - 10s - loss: 0.0020 - psnr_metric: 29.7481 - psnr0: 26.0993 - psnr_fb0: 26.0993 - mse0: 0.0038 - avg_pwr0: 1.0000 - psnr1: 29.7481 - psnr_fb1: 29.7481 - mse1: 0.0020 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.8400 - val_psnr0: 24.4232 - val_psnr_fb0: 24.4232 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.8400 - val_psnr_fb1: 27.8400 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 10s/epoch - 104ms/step
+Epoch 58/100
+Restoring model weights from the end of the best epoch: 55.
+100/100 - 10s - loss: 0.0022 - psnr_metric: 29.7481 - psnr0: 25.9770 - psnr_fb0: 25.9770 - mse0: 0.0041 - avg_pwr0: 1.0000 - psnr1: 29.7481 - psnr_fb1: 29.7481 - mse1: 0.0022 - avg_pwr1: 1.0000 - val_loss: 0.0024 - val_psnr_metric: 27.8403 - val_psnr0: 24.4035 - val_psnr_fb0: 24.4035 - val_mse0: 0.0045 - val_avg_pwr0: 1.0000 - val_psnr1: 27.8403 - val_psnr_fb1: 27.8403 - val_mse1: 0.0024 - val_avg_pwr1: 1.0000 - 10s/epoch - 103ms/step
+Epoch 58: early stopping
+{"status": "training_finished_requires_evaluation_and_convergence_review", "stages": [{"stage": 0, "epochs": 32, "best_validation_psnr": 24.428239822387695, "early_stopped": true, "elapsed_seconds": 259.3705027103424, "cbr": 0.020833333333333332}, {"stage": 1, "epochs": 58, "best_validation_psnr": 27.849000930786133, "early_stopped": true, "elapsed_seconds": 875.5925209522247, "cbr": 0.041666666666666664}]}
+2026-09-19 20:18:10.002809: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-19 20:18:10.022473: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-19 20:18:10.022500: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-19 20:18:10.022515: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-19 20:18:10.027615: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-19 20:18:10.462177: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-09-19 20:18:10.789744: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:10.804815: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:10.805155: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.649052: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.656619: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.656782: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.734142: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.734364: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.734424: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1977] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2026-09-19 20:18:12.734446: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2026-09-19 20:18:12.734742: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:18:12.734771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21452 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9
+channel_snr: 10.0
+Epoch 1/100
+2026-09-19 20:18:19.200926: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:442] Loaded cuDNN version 8700
+2026-09-19 20:18:20.777093: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x783929a091d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2026-09-19 20:18:20.777121: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce RTX 4090, Compute Capability 8.9
+2026-09-19 20:18:20.779955: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2026-09-19 20:18:20.830266: I ./tensorflow/compiler/jit/device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+channel_snr: 10.0
+channel_snr: 10.0
+channel_snr: 10.0
+100/100 - 19s - loss: 0.0475 - psnr_metric: 14.5205 - psnr0: 14.5205 - psnr_fb0: 14.5205 - mse0: 0.0475 - avg_pwr0: 1.0000 - val_loss: 0.0306 - val_psnr_metric: 16.6352 - val_psnr0: 16.6352 - val_psnr_fb0: 16.6352 - val_mse0: 0.0302 - val_avg_pwr0: 1.0000 - 19s/epoch - 186ms/step
+Epoch 2/100
+100/100 - 8s - loss: 0.0150 - psnr_metric: 19.6305 - psnr0: 19.6305 - psnr_fb0: 19.6305 - mse0: 0.0150 - avg_pwr0: 1.0000 - val_loss: 0.0147 - val_psnr_metric: 19.5875 - val_psnr0: 19.5875 - val_psnr_fb0: 19.5875 - val_mse0: 0.0144 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 3/100
+100/100 - 8s - loss: 0.0083 - psnr_metric: 22.2614 - psnr0: 22.2614 - psnr_fb0: 22.2614 - mse0: 0.0083 - avg_pwr0: 1.0000 - val_loss: 0.0094 - val_psnr_metric: 22.1897 - val_psnr0: 22.1897 - val_psnr_fb0: 22.1897 - val_mse0: 0.0092 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 4/100
+100/100 - 8s - loss: 0.0063 - psnr_metric: 23.6223 - psnr0: 23.6223 - psnr_fb0: 23.6223 - mse0: 0.0063 - avg_pwr0: 1.0000 - val_loss: 0.0096 - val_psnr_metric: 21.9274 - val_psnr0: 21.9274 - val_psnr_fb0: 21.9274 - val_mse0: 0.0095 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 5/100
+100/100 - 8s - loss: 0.0059 - psnr_metric: 24.0365 - psnr0: 24.0365 - psnr_fb0: 24.0365 - mse0: 0.0059 - avg_pwr0: 1.0000 - val_loss: 0.0086 - val_psnr_metric: 22.9621 - val_psnr0: 22.9621 - val_psnr_fb0: 22.9621 - val_mse0: 0.0084 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 6/100
+100/100 - 8s - loss: 0.0055 - psnr_metric: 24.4255 - psnr0: 24.4255 - psnr_fb0: 24.4255 - mse0: 0.0055 - avg_pwr0: 1.0000 - val_loss: 0.0120 - val_psnr_metric: 20.4120 - val_psnr0: 20.4120 - val_psnr_fb0: 20.4120 - val_mse0: 0.0118 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 7/100
+100/100 - 8s - loss: 0.0062 - psnr_metric: 23.8595 - psnr0: 23.8595 - psnr_fb0: 23.8595 - mse0: 0.0062 - avg_pwr0: 1.0000 - val_loss: 0.0077 - val_psnr_metric: 23.1392 - val_psnr0: 23.1392 - val_psnr_fb0: 23.1392 - val_mse0: 0.0075 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 8/100
+100/100 - 8s - loss: 0.0041 - psnr_metric: 25.5917 - psnr0: 25.5917 - psnr_fb0: 25.5917 - mse0: 0.0041 - avg_pwr0: 1.0000 - val_loss: 0.0050 - val_psnr_metric: 24.1944 - val_psnr0: 24.1944 - val_psnr_fb0: 24.1944 - val_mse0: 0.0049 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 9/100
+100/100 - 8s - loss: 0.0043 - psnr_metric: 25.2604 - psnr0: 25.2604 - psnr_fb0: 25.2604 - mse0: 0.0043 - avg_pwr0: 1.0000 - val_loss: 0.0051 - val_psnr_metric: 23.6718 - val_psnr0: 23.6718 - val_psnr_fb0: 23.6718 - val_mse0: 0.0051 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 10/100
+100/100 - 8s - loss: 0.0038 - psnr_metric: 26.0301 - psnr0: 26.0301 - psnr_fb0: 26.0301 - mse0: 0.0038 - avg_pwr0: 1.0000 - val_loss: 0.0037 - val_psnr_metric: 25.6261 - val_psnr0: 25.6261 - val_psnr_fb0: 25.6261 - val_mse0: 0.0037 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 11/100
+100/100 - 8s - loss: 0.0036 - psnr_metric: 26.1540 - psnr0: 26.1540 - psnr_fb0: 26.1540 - mse0: 0.0036 - avg_pwr0: 1.0000 - val_loss: 0.0037 - val_psnr_metric: 25.5231 - val_psnr0: 25.5231 - val_psnr_fb0: 25.5231 - val_mse0: 0.0036 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 12/100
+100/100 - 8s - loss: 0.0033 - psnr_metric: 26.8170 - psnr0: 26.8170 - psnr_fb0: 26.8170 - mse0: 0.0033 - avg_pwr0: 1.0000 - val_loss: 0.0036 - val_psnr_metric: 25.4876 - val_psnr0: 25.4876 - val_psnr_fb0: 25.4876 - val_mse0: 0.0036 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 13/100
+100/100 - 8s - loss: 0.0031 - psnr_metric: 26.9991 - psnr0: 26.9991 - psnr_fb0: 26.9991 - mse0: 0.0031 - avg_pwr0: 1.0000 - val_loss: 0.0034 - val_psnr_metric: 25.9647 - val_psnr0: 25.9647 - val_psnr_fb0: 25.9647 - val_mse0: 0.0033 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 14/100
+100/100 - 8s - loss: 0.0031 - psnr_metric: 26.8749 - psnr0: 26.8749 - psnr_fb0: 26.8749 - mse0: 0.0031 - avg_pwr0: 1.0000 - val_loss: 0.0041 - val_psnr_metric: 24.9011 - val_psnr0: 24.9011 - val_psnr_fb0: 24.9011 - val_mse0: 0.0041 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 15/100
+100/100 - 8s - loss: 0.0037 - psnr_metric: 26.0801 - psnr0: 26.0801 - psnr_fb0: 26.0801 - mse0: 0.0037 - avg_pwr0: 1.0000 - val_loss: 0.0042 - val_psnr_metric: 24.9324 - val_psnr0: 24.9324 - val_psnr_fb0: 24.9324 - val_mse0: 0.0042 - val_avg_pwr0: 1.0000 - 8s/epoch - 76ms/step
+Epoch 16/100
+Restoring model weights from the end of the best epoch: 13.
+100/100 - 8s - loss: 0.0037 - psnr_metric: 26.0485 - psnr0: 26.0485 - psnr_fb0: 26.0485 - mse0: 0.0037 - avg_pwr0: 1.0000 - val_loss: 0.0039 - val_psnr_metric: 25.0639 - val_psnr0: 25.0639 - val_psnr_fb0: 25.0639 - val_mse0: 0.0039 - val_avg_pwr0: 1.0000 - 8s/epoch - 77ms/step
+Epoch 16: early stopping
+{"status": "training_finished_requires_evaluation_and_convergence_review", "stages": [{"stage": 0, "epochs": 16, "best_validation_psnr": 25.964677810668945, "early_stopped": true, "elapsed_seconds": 135.54204058647156, "cbr": 0.041666666666666664}]}
+2026-09-19 20:20:29.865585: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-19 20:20:29.885371: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-19 20:20:29.885398: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-19 20:20:29.885413: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-19 20:20:29.889112: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-19 20:20:30.254081: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-09-19 20:20:30.760119: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.778969: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.779104: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.779576: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.779691: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.779962: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.852964: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.853214: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.853227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1977] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2026-09-19 20:20:30.853238: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2026-09-19 20:20:30.853416: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:20:30.853446: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21452 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9
+2026-09-19 20:20:33.213159: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:442] Loaded cuDNN version 8700
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "01.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "02.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "03.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "04.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "05.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "06.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "07.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "08.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "09.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "10.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "11.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "12.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "13.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "14.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "15.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "16.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "17.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "18.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "19.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "20.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "21.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "22.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "23.png", "draws": 10, "layers": 2}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "24.png", "draws": 10, "layers": 2}
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/lpips.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/weights/v0.1/alex.pth
+[{"rounds": 1, "images": 24, "draws": 10, "cbr_payload": 0.02083333333333333, "mse": 0.0057896378362784166, "psnr": 22.58685434659322, "ms_ssim": 0.8671895620723565, "ms_ssim_db": 8.901407114664714, "lpips": 0.42955907694995404}, {"rounds": 2, "images": 24, "draws": 10, "cbr_payload": 0.04166666666666666, "mse": 0.002624491616006708, "psnr": 26.38713463147481, "ms_ssim": 0.9374562007685502, "ms_ssim_db": 12.197527579466502, "lpips": 0.30644152853637935}]
+2026-09-19 20:21:36.134284: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-09-19 20:21:36.154043: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-09-19 20:21:36.154071: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-09-19 20:21:36.154086: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-09-19 20:21:36.157875: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-09-19 20:21:36.527362: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2026-09-19 20:21:37.038486: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.051059: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.051277: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.052320: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.052613: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.052944: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.133568: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.133819: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.133832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1977] Could not identify NUMA node of platform GPU id 0, defaulting to 0.  Your kernel may not have been built with NUMA support.
+2026-09-19 20:21:37.133843: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:47] Overriding orig_value setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2026-09-19 20:21:37.133984: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:880] could not open file to read NUMA node: /sys/bus/pci/devices/0000:01:00.0/numa_node
+Your kernel may have been built without NUMA support.
+2026-09-19 20:21:37.134007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 21452 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 4090, pci bus id: 0000:01:00.0, compute capability: 8.9
+2026-09-19 20:21:38.830064: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:442] Loaded cuDNN version 8700
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "01.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "02.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "03.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "04.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "05.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "06.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "07.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "08.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "09.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "10.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "11.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "12.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "13.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "14.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "15.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "16.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "17.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "18.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "19.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "20.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "21.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "22.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "23.png", "draws": 10, "layers": 1}
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+channel_snr: 10
+{"image": "24.png", "draws": 10, "layers": 1}
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/lpips.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/weights/v0.1/alex.pth
+[{"rounds": 1, "images": 24, "draws": 10, "cbr_payload": 0.04166666666666666, "mse": 0.003402984714678799, "psnr": 25.321830002466836, "ms_ssim": 0.9134539889792601, "ms_ssim_db": 10.756626204649608, "lpips": 0.3315747924769918}]

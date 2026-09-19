@@ -1,0 +1,16 @@
+# H3 execution environment on sheng / DESKTOP-UGDDO8T
+# Python 3.10.15; NVIDIA GeForce RTX 4090; driver 591.86
+# PyTorch wheels are from the CUDA 11.8 index.
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+torch==2.5.0+cu118
+torchvision==0.20.0+cu118
+lpips==0.1.4
+pytorch-msssim==1.0.0
+timm==1.0.27
+numpy==1.26.3
+scipy==1.14.1
+Pillow==10.2.0
+matplotlib==3.9.2
+PyYAML==6.0.2
+pytest==9.1.1

@@ -1,0 +1,11 @@
+{
+  "name": "ntscc_quality1",
+  "paper": "NTSCC",
+  "objective": "MSE",
+  "channels": null,
+  "snr_db": 10,
+  "channel": "AWGN",
+  "source": "https://drive.google.com/file/d/12VwWfbpVtp6GRk6Xo8u-vLy7xtb9c6lB/view",
+  "bytes": 131622445,
+  "sha256": "7a8d1990dbd678ea5d3daa02c3aeaaf4459b347a96d6aa81a5c02eae6bfc7323"
+}

@@ -1,0 +1,13 @@
+# Isolated Python 3.10 venv; do not install into the project's PyTorch environment.
+tensorflow==2.14.1
+tensorflow-compression==2.14.1
+tensorflow-datasets==4.9.3
+numpy==1.26.4
+Pillow==10.2.0
+configargparse==1.7
+nvidia-cudnn-cu11==8.7.0.84
+nvidia-cublas-cu11==11.11.3.6
+nvidia-cuda-nvcc-cu11==11.8.89
+gdown==5.2.0
+# scripts/deepjsccf_runtime.sh explicitly reuses the cv environment's CUDA 11
+# runtime/FFT/RNG/solver libraries; its CUDA11_SITE setting must be present.

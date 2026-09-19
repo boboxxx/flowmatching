@@ -1,0 +1,11 @@
+name: flowharq-artemis-cu128
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.0
+  - pip=24.2
+  - pip:
+      - -r artemis-cu128.requirements.txt
+

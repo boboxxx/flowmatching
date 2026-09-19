@@ -5,4 +5,5 @@ scipy
 Pillow
 matplotlib
 lpips==0.1.4
+pytorch-msssim==1.0.0
 pytest

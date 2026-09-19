@@ -1,0 +1,90 @@
+{
+  "checkpoint": {
+    "name": "ntscc_quality1",
+    "paper": "NTSCC",
+    "objective": "MSE",
+    "channels": null,
+    "snr_db": 10,
+    "channel": "AWGN",
+    "source": "https://drive.google.com/file/d/12VwWfbpVtp6GRk6Xo8u-vLy7xtb9c6lB/view",
+    "bytes": 131622445,
+    "sha256": "7a8d1990dbd678ea5d3daa02c3aeaaf4459b347a96d6aa81a5c02eae6bfc7323"
+  },
+  "configuration": {
+    "family": "ntscc",
+    "upstream": "upstream/ntscc_author",
+    "checkpoint": "artifacts/published_weights/ntscc_quality1.pth",
+    "data": "data/Kodak24",
+    "output": "results/published_baselines_20260919/author_benchmark/ntscc_quality1_offdesign_crop256.csv",
+    "crop": 256,
+    "snrs": [
+      0.0,
+      5.0,
+      15.0
+    ],
+    "draws": 10,
+    "seed": 7070,
+    "limit": 0,
+    "eta": 0.2
+  },
+  "upstream_commit": "dd3c745374023af6d01f465c379122be785d936f",
+  "regenerated_buffers": [
+    "ga.layers.2.blocks.1.attn_mask",
+    "ga.layers.3.blocks.1.attn_mask",
+    "ga.layers.3.blocks.3.attn_mask",
+    "gs.layers.0.blocks.1.attn_mask",
+    "gs.layers.0.blocks.3.attn_mask",
+    "gs.layers.1.blocks.1.attn_mask",
+    "fe.rate_adaption.mask"
+  ],
+  "status": "completed",
+  "normalization_side_information": "Author oracle global scale retained; cost not modelled",
+  "metrics": "RGB float [0,1], per-image/draw then arithmetic average; standard five-scale MS-SSIM; AlexNet LPIPS v0.1",
+  "summary": [
+    {
+      "snr_db": 0.0,
+      "images": 24,
+      "draws": 10,
+      "cbr_payload": 0.025203704833984375,
+      "cbr_rate_map_capacity": 0.005208333333333332,
+      "cbr_with_rate_map_capacity": 0.030412038167317707,
+      "mse": 0.013663375909770063,
+      "psnr": 19.82919197877248,
+      "ms_ssim": 0.7056714611748854,
+      "ms_ssim_db": 5.497435286641121,
+      "lpips": 0.41815952584147453,
+      "native_ms_ssim_4level": 0.5894324692587057,
+      "psnr_8bit": 19.82839034398397
+    },
+    {
+      "snr_db": 5.0,
+      "images": 24,
+      "draws": 10,
+      "cbr_payload": 0.025203704833984375,
+      "cbr_rate_map_capacity": 0.002531545230366976,
+      "cbr_with_rate_map_capacity": 0.02773525006435135,
+      "mse": 0.0028124686888380285,
+      "psnr": 26.705041710535685,
+      "ms_ssim": 0.9185343667864799,
+      "ms_ssim_db": 11.26589544415474,
+      "lpips": 0.2315640873586138,
+      "native_ms_ssim_4level": 0.8908556116123995,
+      "psnr_8bit": 26.701489535967507
+    },
+    {
+      "snr_db": 15.0,
+      "images": 24,
+      "draws": 10,
+      "cbr_payload": 0.025203704833984375,
+      "cbr_rate_map_capacity": 0.0010359054426325163,
+      "cbr_with_rate_map_capacity": 0.026239610276616896,
+      "mse": 0.0013921095173524615,
+      "psnr": 29.578275283177693,
+      "ms_ssim": 0.9631176347533862,
+      "ms_ssim_db": 14.71486973365148,
+      "lpips": 0.20329546897361675,
+      "native_ms_ssim_4level": 0.9546570025384427,
+      "psnr_8bit": 29.571713415781655
+    }
+  ]
+}

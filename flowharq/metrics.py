@@ -3,6 +3,34 @@ from torch import Tensor
 import torch.nn.functional as F
 
 
+def mse(reference: Tensor, reconstruction: Tensor) -> Tensor:
+    """Per-image RGB MSE on [0, 1]; never compute it from averaged PSNR."""
+    if reference.shape != reconstruction.shape or reference.ndim != 4:
+        raise ValueError("Expected matching BCHW image tensors")
+    return (reference.float() - reconstruction.float()).square().flatten(1).mean(dim=1)
+
+
+def ms_ssim(reference: Tensor, reconstruction: Tensor) -> Tensor:
+    """Five-scale RGB MS-SSIM, Wang et al. 2003 / pytorch-msssim 1.0.0.
+
+    Valid 11x11 Gaussian windows (sigma 1.5), standard five weights, range 1.
+    Keep the raw [0,1] score; report dB separately if plotting a paper RD curve.
+    """
+    if reference.shape != reconstruction.shape or reference.ndim != 4:
+        raise ValueError("Expected matching BCHW image tensors")
+    if min(reference.shape[-2:]) <= 160:
+        raise ValueError("Standard five-scale MS-SSIM needs both dimensions > 160")
+    from pytorch_msssim import ms_ssim as implementation
+    return implementation(reference.float(), reconstruction.float(), data_range=1.0,
+                          size_average=False, win_size=11, win_sigma=1.5,
+                          weights=[0.0448, 0.2856, 0.3001, 0.2363, 0.1333])
+
+
+def ms_ssim_db(score: Tensor) -> Tensor:
+    """Per-image -10 log10(1-MS-SSIM); identity capped at 120 dB."""
+    return -10.0 * torch.log10((1.0 - score).clamp_min(1e-12))
+
+
 def psnr(reference: Tensor, reconstruction: Tensor) -> Tensor:
     mse = (reference - reconstruction).square().flatten(1).mean(dim=1).clamp_min(1e-12)
     return -10.0 * torch.log10(mse)

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import csv
 import json
 from pathlib import Path
@@ -13,7 +14,7 @@ from torch.utils.data import DataLoader
 from ugp.channel import ChannelContext, temporal_correlation
 from ugp.data import ImageDataset
 
-from .metrics import psnr, ssim
+from .metrics import psnr, ssim, mse, ms_ssim, ms_ssim_db
 from .model import FlowHARQJSCC
 from .perceptual import LPIPSMetric
 
@@ -108,6 +109,12 @@ def main():
     ).to(device)
     model.load_state_dict(payload["model"])
     model.eval()
+    reference_quality = model.quality
+    teacher_state = payload.get("training_state", {}).get("teacher_quality")
+    if teacher_state is not None:
+        reference_quality = copy.deepcopy(model.quality)
+        reference_quality.load_state_dict(teacher_state)
+        reference_quality.to(device).eval()
     integration_time_mode = "zero" if saved_args.get("fm_time") == "zero" else "midpoint"
     perceptual = LPIPSMetric(args.vendor).to(device) if args.lpips else None
     loader = DataLoader(
@@ -150,7 +157,7 @@ def main():
                     fm_only = model.decode(repaired, context)
                     receiver_context = first_observation.receiver_features(context)
                     predicted_direct_raw = model.quality.log_mse_to_psnr(
-                        model.quality(first, probabilities, receiver_context)
+                        reference_quality(first, probabilities, receiver_context)
                     )
                     predicted_fm_raw = model.quality.log_mse_to_psnr(
                         model.quality(repaired, probabilities, receiver_context)
@@ -198,6 +205,9 @@ def main():
                     for method_index, method in enumerate(METHODS):
                         values = psnr(image, reconstructions[method])
                         ssim_values = ssim(image, reconstructions[method])
+                        mse_values = mse(image, reconstructions[method])
+                        multiscale_values = ms_ssim(image, reconstructions[method])
+                        multiscale_db = ms_ssim_db(multiscale_values)
                         for index, name in enumerate(names):
                             rows.append(
                                 {
@@ -215,6 +225,12 @@ def main():
                                     "effective_snr_db": float(first_observation.effective_snr_db[index]),
                                     "psnr": float(values[index]),
                                     "ssim": float(ssim_values[index]),
+                                    "mse": float(mse_values[index]),
+                                    "ms_ssim": float(multiscale_values[index]),
+                                    "ms_ssim_db": float(multiscale_db[index]),
+                                    "cbr_payload": (clean.shape[1] * clean.shape[2] / 2)
+                                    * (1 + int(nacks[method][index])) / image[index].numel(),
+                                    "psnr_outage": int(values[index] < args.target_psnr),
                                     "lpips": float(perceptual_values[method_index, index]),
                                     "nack": int(nacks[method][index]),
                                     "transmission_rounds": 1 + int(nacks[method][index]),
@@ -248,6 +264,11 @@ def main():
             summary[str(snr_db)][method] = {
                 "psnr": sum(r["psnr"] for r in selected) / len(selected),
                 "ssim": sum(r["ssim"] for r in selected) / len(selected),
+                "mse": sum(r["mse"] for r in selected) / len(selected),
+                "ms_ssim": sum(r["ms_ssim"] for r in selected) / len(selected),
+                "ms_ssim_db": sum(r["ms_ssim_db"] for r in selected) / len(selected),
+                "cbr_payload": sum(r["cbr_payload"] for r in selected) / len(selected),
+                "psnr_outage": sum(r["psnr_outage"] for r in selected) / len(selected),
                 "lpips": sum(r["lpips"] for r in selected) / len(selected),
                 "retransmission_rate": sum(r["nack"] for r in selected) / len(selected),
                 "transmission_rounds": sum(r["transmission_rounds"] for r in selected) / len(selected),

@@ -1,5 +1,32 @@
 # FlowHARQ confirmatory results — 2026-09-19
 
+## Published-paper baseline package — completed
+
+The completed published-baseline package is deliberately separate from the
+Rayleigh/HARQ confirmatory table below. It evaluates author public checkpoints
+for SwinJSCC and NTSCC at AWGN 10 dB, plus a from-scratch author-architecture
+DeepJSCC-f reproduction trained on DIV2K. All use Kodak24 256x256 center crops
+where noted, RGB [0,1] PSNR/MSE, standard five-scale MS-SSIM, and AlexNet LPIPS.
+Each row averages 10 independent channel draws per Kodak image—not multiple
+training seeds. Full raw CSVs, hashes, reconstruction inventory, protocol and
+environment locks are under `experiments/published_baselines_20260919/` and
+`artifacts/published_*_20260919/`.
+
+| Method | Setting | CBR | PSNR | MS-SSIM | LPIPS |
+|---|---|---:|---:|---:|---:|
+| SwinJSCC MSE C32 | public weights, full Kodak, AWGN 10 dB | 0.02083 | 29.369 | 0.95673 | 0.22077 |
+| SwinJSCC MS-SSIM C32 | public weights, full Kodak, AWGN 10 dB | 0.02083 | 27.620 | 0.96701 | 0.22267 |
+| NTSCC w/o z Q1 | public weights, full Kodak, AWGN 10 dB | 0.02548* | 29.795 | 0.95710 | 0.22176 |
+| DeepJSCC-f, 2 rounds | author CNN/fusion, Kodak crop, AWGN 10 dB | 0.04167 | 26.387 | 0.93746 | 0.30644 |
+| DeepJSCC-f CNN control | same total forward CBR, Kodak crop, AWGN 10 dB | 0.04167 | 25.322 | 0.91345 | 0.33157 |
+
+\*NTSCC total includes the authors' capacity-limit rate-map signalling model;
+the payload-only CBR is 0.02398. The DeepJSCC-f feedback model assumes ideal
+channel-output feedback, which is not equivalent to a 1-bit ACK/NACK. These
+results therefore establish transparent external references, not a matched
+channel/feedback-budget comparison with FlowHARQ. See
+`experiments/published_baselines_20260919/RESULTS.md` for every operating point.
+
 ## Claim
 
 Receiver-side four-step reliability-anchored flow matching (RAFM), followed by
@@ -42,6 +69,48 @@ before evaluating all 24 Kodak images with channel seeds 9001--9003.
 
 No Kodak sample was used for model fitting or operating-point selection.
 
+## Locked ten-seed robustness extension
+
+After the three-seed paper result was frozen, seeds 2033--2039 were added under
+the locked protocol without changing the model, threshold, target, split, or
+channel seeds.  Confidence intervals again operate on independent
+training-seed means after averaging the three channel seeds.
+
+| FlowHARQ minus adaptive HARQ | DIV2K mean [95% CI] | Kodak24 mean [95% CI] |
+|---|---:|---:|
+| Physical retransmission rate | **-1.319 pp [-1.537, -1.102]** | **-1.453 pp [-1.825, -1.081]** |
+| PSNR | +0.0144 dB [+0.00895, +0.0199] | +0.0253 dB [+0.0193, +0.0312] |
+| LPIPS | +0.00143 [+0.00118, +0.00169] | +0.00131 [+0.00103, +0.00159] |
+| SSIM | +0.000383 [+0.000136, +0.000630] | -0.000108 [-0.000240, +0.000023] |
+
+Both datasets retain a retransmission interval strictly below zero and pass the
+predeclared PSNR/LPIPS tolerances.  The DIV2K and Kodak analyses contain 30
+training/channel pairs (403,200 and 120,960 paired rows, respectively).  This
+is reported as a post-paper robustness extension rather than a replacement for
+the original three-seed confirmatory analysis.
+
+## External HARQ mechanism baseline
+
+Three independently trained DeepJSCC-f adapters were evaluated on the same
+80-image DIV2K test split, channel seeds, SNRs, speeds, and first-round channel
+draws as the original three FlowHARQ seeds.  The adapter uses the published
+noiseless-output-feedback/incremental-redundancy mechanism with the shared
+frozen SwinJSCC codec; it is not the original authors' checkpoint.  Its
+adaptive rule uses true first-round PSNR at the transmitter, making stopping
+intentionally favorable to the external baseline.
+
+| FlowHARQ minus DeepJSCC-f adaptive | Mean | 95% CI |
+|---|---:|---:|
+| Physical retransmission rate | -2.685 pp | [-6.147, +0.777] pp |
+| PSNR | **-0.1954 dB** | **[-0.2153, -0.1755] dB** |
+| LPIPS | +0.00223 | [-0.00204, +0.00650] |
+| SSIM | -0.00873 | [-0.01227, -0.00520] |
+
+The external adapter therefore improves the quality side of the tradeoff.  The
+FlowHARQ retransmission reduction against it is not statistically conclusive
+and is not a matched-quality win.  This result is a pressure test, not evidence
+for replacing the external baseline.
+
 ## Repair and mechanism controls
 
 On the calibration split at fixed K=4 and threshold 0.80:
@@ -73,15 +142,70 @@ The physical-round timing excludes wireless airtime, scheduling, propagation,
 and queueing, so it is not an end-to-end latency comparison. Virtual repair
 adds approximately 1.9 ms over direct decoding.
 
+## H3 constrained rate--distortion extension (single run)
+
+H3 was trained once from the frozen H2 seed-2030 checkpoint on sheng's RTX
+4090. Training used seed 2027; checkpoints at epochs 2, 4, 6, 8, and 10 were
+compared only on the 20-image calibration split. All five met the aggregate
+PSNR/LPIPS constraints, and epoch 10 was selected before opening the 80-image
+test split. The values below are exact paired means over one locked channel
+realization (seed 7070), not a training-seed average.
+
+| 80-image DIV2K test, 1,920 conditions | Adaptive HARQ | H2 FlowHARQ | H3 FlowHARQ |
+|---|---:|---:|---:|
+| Physical retransmission rate | 73.958% | 71.875% | **70.833%** |
+| Mean transmission rounds | 1.7396 | 1.7188 | **1.7083** |
+| PSNR | 21.9476 dB | 21.9792 dB | **22.0649 dB** |
+| LPIPS | **0.485024** | 0.486666 | 0.487205 |
+
+Relative to frozen H2, H3 reduces NACK rate by **1.042 percentage points**,
+adds **0.0857 dB** PSNR, and changes LPIPS by **+0.000538**. Relative to
+adaptive HARQ, H3 reduces NACK rate by **3.125 percentage points**, adds
+**0.1174 dB** PSNR, and changes LPIPS by **+0.002180**, within the aggregate
+`-0.02 dB / +0.003` quality budgets.
+
+This is a preregistered **near-miss, not a confirmatory pass**. H3 improves
+NACK rate at SNR 0, 3, and 6 dB, but ties H2 at 9, 12, and 15 dB. It therefore
+passes the aggregate rate, PSNR, and LPIPS rules but fails the locked
+requirement for a positive saving at at least four of six SNR points (3/6).
+The earlier quality-head-gated formulation was stopped after its LPIPS
+constraint remained violated and its quality-proxy error grew; its logs are
+retained on sheng and are not reported as a paper result.
+
+The already frozen epoch-10 checkpoint and DIV2K calibration bias were then
+applied once to Kodak24, again with channel seed 7070 and no Kodak tuning:
+
+| Kodak24, 576 conditions | Adaptive HARQ | H2 FlowHARQ | H3 FlowHARQ |
+|---|---:|---:|---:|
+| Physical retransmission rate | 69.792% | 68.576% | **66.493%** |
+| PSNR | 22.0409 dB | 22.0804 dB | **22.1951 dB** |
+| LPIPS | **0.522318** | 0.524500 | 0.525314 |
+
+H3 reduces NACK rate by **2.083 percentage points** versus H2 and by **3.299
+percentage points** versus adaptive HARQ. Relative to adaptive HARQ, PSNR is
+`+0.1542 dB` and LPIPS is `+0.002996`; four of six SNR points have a positive
+H2-relative saving. This external check passes the aggregate locked rules, but
+the LPIPS margin is only about `0.000004`, and the 0/3 dB LPIPS deltas exceed
+the budget when inspected separately. It supports H3 as an exploratory
+extension; it does not override the primary DIV2K cross-SNR rejection.
+
 ## Scientific limitations
 
 - The NACK saving is modest (about 1--2 percentage points).
 - The channel is simulated flat Rayleigh fading with Jakes temporal correlation.
 - The SwinJSCC codec is frozen; the receiver is trained around it.
 - A NACK triggers a full second round rather than selective-token retransmission.
+- The external DeepJSCC-f comparison is a mechanism-level adapter on the shared
+  codec/channel, not a reproduction of the original CIFAR/AWGN checkpoint.
+- The separate published-paper baseline package includes a true author-code
+  DeepJSCC-f reproduction, but it uses AWGN and ideal channel-output feedback;
+  it must not be merged into the Rayleigh/HARQ table above as a direct comparison.
 - Boundary balanced accuracy and ECE do not improve for every training seed;
   the supported decision claim is the paired held-out outcome, not universal
   calibration superiority.
+- The single-run H3 extension improves aggregate rate and quality, but misses
+  its predeclared cross-SNR consistency rule and is not yet a confirmatory
+  paper claim.
 - H4 is a paired calibration mechanism test, not a second held-out benchmark.
 
 ## Reproducibility pointers
@@ -89,9 +213,18 @@ adds approximately 1.9 ms over direct decoding.
 - Paper macros/tables: `paper/generated/`
 - Main analysis: `results/h2/analysis/`
 - Kodak analysis: `results/h2/kodak_analysis/`
+- Ten-seed analyses: `results/h2/analysis_10seeds/` and
+  `results/h2/kodak_analysis_10seeds/`
 - H1 objective ablation: `results/h1/comparison.json`
 - H4 one-step control: `results/h4/comparison.json`
 - Latency: `results/h2/latency/rtx_pro_6000.json`
+- External DeepJSCC-f analysis: `results/external_deepjscc_f/analysis/`
+- H3 checkpoint, calibration, paired test CSVs, and decision:
+  `results/h3/main_oracle_seed2027/`
+- H3 checksummed inventory: `artifacts/h3_manifest.json`
 - Frozen Kodak protocol: `experiments/h2_decision_calibration/kodak_protocol.md`
 - Slurm job definitions: `slurm/`
+- Checksummed artifact inventory: `artifacts/manifest.json`
 - Paper: `paper/main.tex` and `paper/build/main.pdf`
+- Published baselines, raw CSVs, and result documents:
+  `experiments/published_baselines_20260919/` and `artifacts/published_*_20260919/`

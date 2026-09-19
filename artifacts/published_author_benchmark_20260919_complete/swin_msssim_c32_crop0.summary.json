@@ -1,0 +1,63 @@
+{
+  "checkpoint": {
+    "name": "swin_msssim_c32",
+    "paper": "SwinJSCC",
+    "objective": "MS-SSIM",
+    "channels": 32,
+    "snr_db": 10,
+    "channel": "AWGN",
+    "source": "https://drive.google.com/file/d/1uEO5jpxFI_krhnDt1GGLA7TzUQ0WZtps/view",
+    "bytes": 125824278,
+    "sha256": "ccfe55a6d8353cb6803961260e975b1df663fcf078a4478aad4f08a06cba8162"
+  },
+  "configuration": {
+    "family": "swin",
+    "upstream": "upstream/SwinJSCC",
+    "checkpoint": "artifacts/published_weights/swin_msssim_c32.pth",
+    "data": "/home/sheng/flowmatching_vtc2027/data/Kodak24",
+    "output": "/home/sheng/flowmatching_vtc2027/results/published_baselines_20260919/author_benchmark/swin_msssim_c32_crop0.csv",
+    "crop": 0,
+    "snrs": [
+      10.0
+    ],
+    "draws": 10,
+    "seed": 7070,
+    "limit": 0,
+    "eta": 0.2
+  },
+  "upstream_commit": "a6d0e6da53548976acbe9317839a077ef31f190f",
+  "regenerated_buffers": [
+    "encoder.layers.0.blocks.1.attn_mask",
+    "encoder.layers.1.blocks.1.attn_mask",
+    "encoder.layers.2.blocks.1.attn_mask",
+    "encoder.layers.2.blocks.3.attn_mask",
+    "encoder.layers.2.blocks.5.attn_mask",
+    "encoder.layers.3.blocks.1.attn_mask",
+    "decoder.layers.0.blocks.1.attn_mask",
+    "decoder.layers.1.blocks.1.attn_mask",
+    "decoder.layers.1.blocks.3.attn_mask",
+    "decoder.layers.1.blocks.5.attn_mask",
+    "decoder.layers.2.blocks.1.attn_mask",
+    "decoder.layers.3.blocks.1.attn_mask"
+  ],
+  "status": "completed",
+  "normalization_side_information": "Author oracle global scale retained; cost not modelled",
+  "metrics": "RGB float [0,1], per-image/draw then arithmetic average; standard five-scale MS-SSIM; AlexNet LPIPS v0.1",
+  "summary": [
+    {
+      "snr_db": 10.0,
+      "images": 24,
+      "draws": 10,
+      "cbr_payload": 0.02083333333333333,
+      "cbr_rate_map_capacity": 0.0,
+      "cbr_with_rate_map_capacity": 0.02083333333333333,
+      "mse": 0.0021444596505413452,
+      "psnr": 27.62026805082957,
+      "ms_ssim": 0.9670128484567007,
+      "ms_ssim_db": 15.21506371498108,
+      "lpips": 0.2226669492200017,
+      "native_ms_ssim_4level": 0.9601260182758172,
+      "psnr_8bit": 27.616474469502766
+    }
+  ]
+}

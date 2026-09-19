@@ -1,0 +1,12 @@
+diff --git a/net/NTSCC_Hyperior.py b/net/NTSCC_Hyperior.py
+--- a/net/NTSCC_Hyperior.py
++++ b/net/NTSCC_Hyperior.py
+@@ -124,7 +124,7 @@ class NTSCC_Hyperprior(NTC_Hyperprior):
+         s_masked, mask_BCHW, indexes = self.fe(y, y_likelihoods.detach(), eta=self.eta)
+ 
+         # Pass through the channel.
+-        mask_BCHW = mask_BCHW.byte()
++        mask_BCHW = mask_BCHW.bool()
+         channel_input = torch.masked_select(s_masked, mask_BCHW)
+         channel_output, channel_usage = self.channel.forward(channel_input)
+         s_hat = torch.zeros_like(s_masked)

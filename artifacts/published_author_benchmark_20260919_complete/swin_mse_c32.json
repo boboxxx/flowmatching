@@ -1,0 +1,11 @@
+{
+  "name": "swin_mse_c32",
+  "paper": "SwinJSCC",
+  "objective": "MSE",
+  "channels": 32,
+  "snr_db": 10,
+  "channel": "AWGN",
+  "source": "https://drive.google.com/file/d/1h2Dk9jckeRg6Rah32S_kLq89CtPdGdwj/view",
+  "bytes": 125823492,
+  "sha256": "864d52a64281b3fcd4db34f7696b225b96c998b040b81d96cc556ecb837a17ff"
+}

@@ -1,0 +1,4 @@
+[submodule "upstream/SwinJSCC"]
+	path = upstream/SwinJSCC
+	url = https://github.com/semcomm/SwinJSCC.git
+	branch = main

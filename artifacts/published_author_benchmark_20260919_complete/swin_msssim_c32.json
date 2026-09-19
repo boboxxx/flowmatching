@@ -1,0 +1,11 @@
+{
+  "name": "swin_msssim_c32",
+  "paper": "SwinJSCC",
+  "objective": "MS-SSIM",
+  "channels": 32,
+  "snr_db": 10,
+  "channel": "AWGN",
+  "source": "https://drive.google.com/file/d/1uEO5jpxFI_krhnDt1GGLA7TzUQ0WZtps/view",
+  "bytes": 125824278,
+  "sha256": "ccfe55a6d8353cb6803961260e975b1df663fcf078a4478aad4f08a06cba8162"
+}

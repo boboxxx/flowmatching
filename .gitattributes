@@ -1,0 +1,3 @@
+# Preserve generated experiment CSV bytes so published SHA-256 values match
+# the archived Sheng artifacts. Do not apply checkout/commit line-ending filters.
+artifacts/**/*.csv -text
