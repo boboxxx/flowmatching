@@ -39,6 +39,12 @@ def parse_args():
     parser.add_argument("--lambda-reliability", type=float, default=0.5)
     parser.add_argument("--lambda-quality", type=float, default=0.2)
     parser.add_argument("--lambda-reconstruction", type=float, default=0.2)
+    parser.add_argument(
+        "--fm-loss",
+        choices=("mse", "normalized_huber"),
+        default="mse",
+        help="velocity objective; normalized_huber is robust to ZF deep-fade outliers",
+    )
     parser.add_argument("--seed", type=int, default=2027)
     return parser.parse_args()
 
@@ -134,7 +140,12 @@ def main():
                     artifacts = {"reconstruction_post": reconstruction}
                 else:
                     losses, artifacts = model.flow_losses(
-                        image, clean, observation, context, flow_steps=args.flow_steps
+                        image,
+                        clean,
+                        observation,
+                        context,
+                        flow_steps=args.flow_steps,
+                        fm_loss_type=args.fm_loss,
                     )
                     total = (
                         args.lambda_fm * losses["fm"]

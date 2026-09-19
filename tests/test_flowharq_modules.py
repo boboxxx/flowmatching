@@ -55,3 +55,34 @@ def test_flow_matching_loss_is_finite():
     loss.backward()
     assert any(parameter.grad is not None for parameter in flow.parameters())
 
+
+def test_normalized_huber_flow_loss_handles_deep_fade_outlier():
+    torch.manual_seed(4)
+    clean = torch.randn(2, 9, 8)
+    received = clean + 0.2 * torch.randn_like(clean)
+    received[:, 0] += 100.0
+    mask = torch.ones(2, 9)
+    context = torch.randn(2, 4)
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    mse = flow.matching_loss(clean, received, mask, context, loss_type="mse")
+    robust = flow.matching_loss(
+        clean, received, mask, context, loss_type="normalized_huber"
+    )
+    assert torch.isfinite(robust)
+    assert robust < mse
+    robust.backward()
+    assert any(parameter.grad is not None for parameter in flow.parameters())
+
+
+def test_unknown_flow_loss_is_rejected():
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    clean = torch.randn(1, 4, 8)
+    received = torch.randn_like(clean)
+    mask = torch.ones(1, 4)
+    context = torch.randn(1, 4)
+    try:
+        flow.matching_loss(clean, received, mask, context, loss_type="not-a-loss")
+    except ValueError as error:
+        assert "unknown flow-matching loss" in str(error)
+    else:
+        raise AssertionError("invalid loss type should raise ValueError")

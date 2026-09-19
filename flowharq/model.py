@@ -149,6 +149,7 @@ class FlowHARQJSCC(nn.Module):
         observation: ChannelObservation,
         context: ChannelContext,
         flow_steps: int = 4,
+        fm_loss_type: str = "mse",
     ) -> tuple[dict[str, Tensor], dict[str, Tensor]]:
         received = observation.tokens
         receiver_context = observation.receiver_features(context)
@@ -157,7 +158,13 @@ class FlowHARQJSCC(nn.Module):
         )
         reliability_logits, probabilities = self.predict_unreliability(observation, context)
         reliability_loss = balanced_reliability_bce(reliability_logits, oracle_mask)
-        fm_loss = self.flow.matching_loss(clean, received, oracle_mask, receiver_context)
+        fm_loss = self.flow.matching_loss(
+            clean,
+            received,
+            oracle_mask,
+            receiver_context,
+            loss_type=fm_loss_type,
+        )
 
         # Straight-through mask: hard behavior in the forward pass, useful
         # probability gradients in the backward pass.

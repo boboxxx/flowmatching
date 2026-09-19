@@ -137,14 +137,30 @@ class ReliabilityAnchoredFlow(nn.Module):
         received: Tensor,
         mask: Tensor,
         context: Tensor,
+        loss_type: str = "mse",
     ) -> Tensor:
         batch = clean.shape[0]
         t = torch.rand(batch, device=clean.device, dtype=clean.dtype)
         delta = clean - received
         z_t = received + t[:, None, None] * delta * mask[..., None]
         prediction = self.velocity(z_t, t, received, mask, context)
-        squared_error = (prediction - delta).square().mean(dim=-1)
-        return (squared_error * mask).sum() / mask.sum().clamp_min(1.0)
+        if loss_type == "mse":
+            token_loss = (prediction - delta).square().mean(dim=-1)
+        elif loss_type == "normalized_huber":
+            # ZF can create a few very large latent residuals in deep fades.
+            # Normalize only those large targets, without amplifying already-small
+            # residuals, and use a robust penalty.  The detached scale prevents the
+            # target magnitude from becoming an optimization shortcut.
+            scale = delta.square().mean(dim=-1, keepdim=True).sqrt().detach().clamp_min(1.0)
+            token_loss = F.smooth_l1_loss(
+                prediction / scale,
+                delta / scale,
+                beta=0.1,
+                reduction="none",
+            ).mean(dim=-1)
+        else:
+            raise ValueError(f"unknown flow-matching loss: {loss_type}")
+        return (token_loss * mask).sum() / mask.sum().clamp_min(1.0)
 
     def integrate(
         self,
@@ -220,4 +236,3 @@ def balanced_reliability_bce(logits: Tensor, target: Tensor) -> Tensor:
     negatives = target.numel() - positives
     positive_weight = (negatives / positives.clamp_min(1.0)).detach()
     return F.binary_cross_entropy_with_logits(logits, target, pos_weight=positive_weight)
-
