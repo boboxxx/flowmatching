@@ -54,6 +54,12 @@ def parse_args():
         default="mse",
         help="velocity objective; normalized_huber is robust to ZF deep-fade outliers",
     )
+    parser.add_argument(
+        "--fm-time",
+        choices=("uniform", "zero"),
+        default="uniform",
+        help="uniform trains flow matching; zero trains a one-shot residual control",
+    )
     parser.add_argument("--seed", type=int, default=2027)
     return parser.parse_args()
 
@@ -169,6 +175,7 @@ def main():
                         context,
                         flow_steps=args.flow_steps,
                         fm_loss_type=args.fm_loss,
+                        fm_time_mode=args.fm_time,
                         decision_target_psnr=args.decision_target_psnr,
                         decision_temperature_db=args.decision_temperature_db,
                     )

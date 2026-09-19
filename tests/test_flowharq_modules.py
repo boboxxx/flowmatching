@@ -89,6 +89,20 @@ def test_unknown_flow_loss_is_rejected():
         raise AssertionError("invalid loss type should raise ValueError")
 
 
+def test_unknown_flow_time_mode_is_rejected():
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    clean = torch.randn(1, 4, 8)
+    received = torch.randn_like(clean)
+    mask = torch.ones(1, 4)
+    context = torch.randn(1, 4)
+    try:
+        flow.matching_loss(clean, received, mask, context, time_mode="not-a-mode")
+    except ValueError as error:
+        assert "time mode" in str(error)
+    else:
+        raise AssertionError("invalid time mode should raise ValueError")
+
+
 def test_quality_boundary_loss_prefers_correct_ack_side():
     factor = -10.0 / torch.log(torch.tensor(10.0))
     actual_psnr = torch.tensor([22.0, 26.0])

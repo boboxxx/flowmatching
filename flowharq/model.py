@@ -151,6 +151,7 @@ class FlowHARQJSCC(nn.Module):
         context: ChannelContext,
         flow_steps: int = 4,
         fm_loss_type: str = "mse",
+        fm_time_mode: str = "uniform",
         decision_target_psnr: float = 24.0,
         decision_temperature_db: float = 1.0,
     ) -> tuple[dict[str, Tensor], dict[str, Tensor]]:
@@ -167,6 +168,7 @@ class FlowHARQJSCC(nn.Module):
             oracle_mask,
             receiver_context,
             loss_type=fm_loss_type,
+            time_mode=fm_time_mode,
         )
 
         # Straight-through mask: hard behavior in the forward pass, useful

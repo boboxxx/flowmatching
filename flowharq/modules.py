@@ -138,9 +138,15 @@ class ReliabilityAnchoredFlow(nn.Module):
         mask: Tensor,
         context: Tensor,
         loss_type: str = "mse",
+        time_mode: str = "uniform",
     ) -> Tensor:
         batch = clean.shape[0]
-        t = torch.rand(batch, device=clean.device, dtype=clean.dtype)
+        if time_mode == "uniform":
+            t = torch.rand(batch, device=clean.device, dtype=clean.dtype)
+        elif time_mode == "zero":
+            t = torch.zeros(batch, device=clean.device, dtype=clean.dtype)
+        else:
+            raise ValueError(f"unknown flow-matching time mode: {time_mode}")
         delta = clean - received
         z_t = received + t[:, None, None] * delta * mask[..., None]
         prediction = self.velocity(z_t, t, received, mask, context)
