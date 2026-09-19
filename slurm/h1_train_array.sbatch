@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=flowharq-h1-train
-#SBATCH --partition=general
+#SBATCH --partition=enginf
 #SBATCH --gres=gpu:RTX:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
