@@ -33,13 +33,13 @@ literature:
 hypotheses:
   - id: H1
     statement: "Robust, scale-normalized velocity supervision plus a stronger image reconstruction term will make partial flow repair improve FM-only PSNR by at least 0.05 dB without worsening LPIPS."
-    status: confirmatory_expansion
+    status: supported_repair_inconclusive_retx
     motivation: "Current squared velocity loss is dominated by ZF deep-fade outliers and produces near-zero useful repair."
     parent: null
     priority: high
   - id: H2
     statement: "A target-aware quality decision loss will reduce calibration MAE near the ACK boundary and convert repair gains into at least 2 percentage points fewer retransmissions."
-    status: pending
+    status: running
     motivation: "Current global log-MSE regression has roughly 0.93 dB calibration MAE."
     parent: null
     priority: high
@@ -91,18 +91,38 @@ experiments:
     - job_id: "11397172_[2031-2032]"
       hypothesis: H1
       purpose: "independent robust-repair training seeds"
-      status: running
+      status: completed
     - job_id: "11397174_[2031-2032]"
       hypothesis: H1
       purpose: "fixed-config calibration and scalar bias fitting"
-      status: dependent
+      status: completed
     - job_id: "11397175_[0-5]"
       hypothesis: H1
       purpose: "remaining two-training-seed by three-channel-seed held-out matrix"
-      status: dependent
+      status: completed
     - job_id: "11397176"
       hypothesis: H1
       purpose: "three-training-seed paired confidence intervals"
+      status: completed
+    - job_id: "11397195"
+      hypothesis: H2
+      purpose: "two-step decision-stage GPU smoke"
+      status: completed
+    - job_id: "11397196_[2030-2032]"
+      hypothesis: H2
+      purpose: "target-aware quality-head fine-tuning"
+      status: running
+    - job_id: "11397200_[2030-2032]"
+      hypothesis: H2
+      purpose: "fixed reconstruction configuration and scalar bias calibration"
+      status: dependent
+    - job_id: "11397202_[0-8]"
+      hypothesis: H2
+      purpose: "three by three held-out matrix with fresh channel seeds"
+      status: dependent
+    - job_id: "11397203"
+      hypothesis: H2
+      purpose: "paired cross-training-seed confidence intervals"
       status: dependent
   trajectory:
     - run_id: pilot_v1_tau050
@@ -140,6 +160,13 @@ experiments:
       wall_time_min: 1.0
       change_summary: "frozen K=4, tau=0.8, target=24 dB; PSNR +0.0327 dB, LPIPS +0.00145"
       timestamp: "2026-09-19T14:40:00+01:00"
+    - run_id: h1_confirmatory_3x3
+      hypothesis: H1
+      metric_value: 0.013889
+      delta: "mean NACK saving 1.389 pp; 95% CI [-0.463, 3.240] pp in saving direction, inconclusive"
+      wall_time_min: 12.0
+      change_summary: "3 training seeds x 3 fresh channel seeds; final PSNR +0.0271 dB CI [0.0120,0.0422]"
+      timestamp: "2026-09-19T15:00:00+01:00"
 
 outer_loop:
   cycle: 1

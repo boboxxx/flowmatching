@@ -20,6 +20,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 - H1 calibration succeeds: normalized Huber velocity supervision and reconstruction weight 1.0 yield +0.0714 dB FM-only PSNR over direct (bootstrap 95% CI [+0.0570, +0.0866]) at K=4, tau=0.8, with LPIPS delta +0.00203. Four of six conservative inference settings pass the preregistered +0.05 dB / +0.003 LPIPS gate.
 - At that frozen H1 point, calibration-only FlowHARQ saves 1.04 percentage points of physical retransmissions while improving final PSNR by +0.022 dB; this is a gate result, not held-out paper evidence.
 - The frozen single-training-seed held-out gate over three fresh channel seeds saves 2.1875 percentage points of retransmissions versus adaptive HARQ, with +0.0327 dB PSNR and +0.00145 LPIPS. This licenses the preregistered three-training-seed expansion but is not yet the final confidence-interval claim.
+- H1's full 3x3 held-out matrix establishes repair but not the retransmission claim. FlowHARQ minus adaptive HARQ is +0.0271 dB PSNR (95% CI [+0.0120,+0.0422]), +0.00098 LPIPS, and -1.389 pp NACK (95% CI [-3.240,+0.463] pp). All three training seeds reduce NACK individually, but n=3 and decision variability leave the interval crossing zero.
 
 ## Patterns and Insights
 
@@ -33,6 +34,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 8. The final-epoch v2 FM loss is extremely heavy-tailed. Across seeds, median batch losses are 0.26--0.28 and 90th percentiles are 2.2--3.2, but 99th percentiles reach 203--2,209 and maxima reach 1,703--158,505. This directly supports H1's outlier-dominance mechanism rather than treating robust loss as an arbitrary hyperparameter sweep.
 9. An oracle-decision audit proves that calibration is not the only current bottleneck. At the 24 dB target, v2 FM moves 37 held-out cases from NACK to ACK but moves 39 in the opposite direction, for an oracle NACK saving of -0.012 percentage points. The learned head's nominal +0.104-point saving is therefore a calibration artifact, not evidence of useful repair. H1 must succeed before H2 is scientifically meaningful.
 10. H1 exhibits a real interaction: reconstruction weight alone reaches -0.0008 dB and normalized Huber alone +0.0021 dB, while their combination reaches +0.0714 dB. The improvement therefore comes from jointly suppressing outlier gradients and aligning the residual predictor with decoded image quality.
+11. H1 FM-only PSNR improves for every training seed (+0.0739, +0.0358, +0.0574 dB). Final NACK changes are also directionally consistent (-2.19, -1.27, -0.71 pp), so H2 targets the magnitude and stability of the decision boundary rather than the repair network.
 
 ## Lessons and Constraints
 
