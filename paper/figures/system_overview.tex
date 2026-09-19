@@ -1,0 +1,32 @@
+\begin{tikzpicture}[
+  font=\scriptsize,
+  node distance=3.5mm and 4.5mm,
+  block/.style={draw, rounded corners=1.5pt, minimum height=6.8mm,
+                minimum width=16mm, align=center, fill=blue!7},
+  decision/.style={draw, diamond, aspect=2.1, align=center, fill=orange!12,
+                   inner sep=1.1pt},
+  arrow/.style={-Latex, line width=.55pt},
+  repair/.style={draw, rounded corners=1.5pt, minimum height=7.5mm,
+                 minimum width=20mm, align=center, fill=green!12},
+]
+\node[block] (enc) {SwinJSCC\\encoder};
+\node[block, right=of enc] (ch1) {Round-1\\Rayleigh channel};
+\node[block, right=of ch1] (rel) {CSI-aware\\reliability head};
+\node[repair, right=of rel] (fm) {masked latent FM\\virtual retransmission};
+\node[block, right=of fm] (dec) {SwinJSCC\\decoder};
+\node[decision, right=6mm of dec] (ack) {$\widehat q\!\geq\!q_0$?};
+\node[block, below=8mm of fm] (ch2) {Round-2 channel\\and MRC};
+\draw[arrow] (enc) -- node[above]{${\bf z}$} (ch1);
+\draw[arrow] (ch1) -- node[above]{${\widetilde{\bf z}}_1$} (rel);
+\draw[arrow] (rel) -- node[above]{$\mathbf m$} (fm);
+\draw[arrow] (fm) -- node[above]{${\bar{\bf z}}$} (dec);
+\draw[arrow] (dec) -- (ack);
+\draw[arrow] (ack.east) -- ++(6mm,0) node[right]{ACK};
+\draw[arrow] (ack.south) |- node[pos=.25,right]{NACK} (ch2.east);
+\draw[arrow] (enc.south) |- (ch2.west);
+\draw[arrow] (ch2.north) -- node[right]{${\bf z}_{\rm MRC}$} (dec.south);
+\draw[dashed, rounded corners, gray] ($(rel.north west)+(-1.5mm,1.5mm)$)
+  rectangle ($(ack.south east)+(1.5mm,-1.5mm)$);
+\node[gray, above=1.5mm of fm] {receiver-side decision loop};
+\end{tikzpicture}
+

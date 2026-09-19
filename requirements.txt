@@ -1,0 +1,8 @@
+torch
+torchvision
+numpy
+scipy
+Pillow
+matplotlib
+lpips==0.1.4
+pytest

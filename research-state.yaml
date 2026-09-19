@@ -1,0 +1,105 @@
+project:
+  title: "FlowHARQ: Virtual Retransmission via Reliability-Anchored Flow Matching"
+  question: "Can receiver-side partial latent flow repair replace a statistically significant fraction of physical HARQ rounds at matched image quality?"
+  status: active
+  started: "2026-09-19"
+  domain: "semantic communications, DeepJSCC, flow matching, HARQ"
+
+literature:
+  key_papers:
+    - id: deepjscc
+      title: "Deep Joint Source-Channel Coding for Wireless Image Transmission"
+      relevance: "canonical learned JSCC baseline"
+    - id: flowmatching
+      title: "Flow Matching for Generative Modeling"
+      relevance: "conditional vector-field training foundation"
+    - id: flowsem
+      title: "FlowSem"
+      relevance: "global FM refinement after DeepJSCC; not HARQ"
+    - id: fineharq
+      title: "Fine-Grained HARQ for Image Semantic Transmission"
+      relevance: "semantic retransmission baseline"
+    - id: djscc_h
+      title: "DeepJSCC-H"
+      relevance: "adaptive DeepJSCC HARQ baseline"
+  open_problems:
+    - "No verified image DeepJSCC system uses post-FM quality to decide physical HARQ."
+    - "It is unclear whether FM repair provides information beyond a one-shot residual denoiser."
+  evidence_gaps:
+    - "v2 held-out retransmission CI crosses zero."
+    - "Quality-head calibration MAE is about 0.93 dB, much larger than FM gains."
+    - "No simple denoiser control or mechanism ablation yet."
+
+hypotheses:
+  - id: H1
+    statement: "Robust, scale-normalized velocity supervision plus a stronger image reconstruction term will make partial flow repair improve FM-only PSNR by at least 0.05 dB without worsening LPIPS."
+    status: active
+    motivation: "Current squared velocity loss is dominated by ZF deep-fade outliers and produces near-zero useful repair."
+    parent: null
+    priority: high
+  - id: H2
+    statement: "A target-aware quality decision loss will reduce calibration MAE near the ACK boundary and convert repair gains into at least 2 percentage points fewer retransmissions."
+    status: pending
+    motivation: "Current global log-MSE regression has roughly 0.93 dB calibration MAE."
+    parent: null
+    priority: high
+  - id: H3
+    statement: "Jointly optimizing a differentiable final reconstruction/retransmission Lagrangian will reduce NACK rate while preserving PSNR and LPIPS tolerances."
+    status: pending
+    motivation: "The original idea specifies a retransmission penalty, but v2 training omits it."
+    parent: null
+    priority: high
+  - id: H4
+    statement: "Multi-step RAFM will outperform a parameter-matched one-shot residual denoiser at equal receiver latency or quality."
+    status: pending
+    motivation: "Needed to justify flow matching rather than generic latent denoising."
+    parent: null
+    priority: medium
+  - id: H5
+    statement: "FlowHARQ's retransmission saving increases with mobility because a physical second round becomes less predictable while receiver repair is channel-free."
+    status: pending
+    motivation: "Potential vehicular VTC story; only test after the core effect is significant."
+    parent: null
+    priority: low
+
+experiments:
+  proxy_metric: "adaptive-HARQ NACK rate minus FlowHARQ NACK rate, subject to PSNR delta >= -0.02 dB and LPIPS delta <= 0.003"
+  baseline_value: 0.001
+  best_value: 0.001
+  total_runs: 3
+  trajectory:
+    - run_id: pilot_v1_tau050
+      hypothesis: H1
+      metric_value: 0.025
+      delta: "exploratory; same validation used for tuning"
+      wall_time_min: 9.2
+      change_summary: "Initial partial flow, four Euler steps, threshold 0.50"
+      timestamp: "2026-09-19T11:00:00+01:00"
+    - run_id: pilot_v1_tau080
+      hypothesis: H1
+      metric_value: 0.010
+      delta: "exploratory; conservative mask removed over-repair"
+      wall_time_min: 6.9
+      change_summary: "Four steps, threshold 0.80"
+      timestamp: "2026-09-19T11:11:00+01:00"
+    - run_id: heldout_v2
+      hypothesis: H1
+      metric_value: 0.001
+      delta: "95% CI [-0.0041, 0.0020]; inconclusive"
+      wall_time_min: 29.0
+      change_summary: "3 train seeds x 3 channel seeds, calibration/test split, Rx CSI, MRC, LPIPS"
+      timestamp: "2026-09-19T12:43:00+01:00"
+
+outer_loop:
+  cycle: 1
+  last_direction: deepen
+  last_reflection: "The system and protocol are now sound, but FM repair is too weak and ACK calibration too noisy. Deepen mechanism rather than tune inference thresholds."
+
+workspace:
+  findings: "findings.md"
+  log: "research-log.md"
+  literature_dir: "literature/"
+  experiments_dir: "experiments/"
+  to_human_dir: "to_human/"
+  paper_dir: "paper/"
+

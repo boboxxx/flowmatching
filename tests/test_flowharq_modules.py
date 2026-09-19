@@ -1,0 +1,57 @@
+import torch
+
+from flowharq.modules import (
+    QualityPredictor,
+    ReliabilityAnchoredFlow,
+    ReliabilityEstimator,
+    oracle_unreliable_mask,
+)
+
+
+def test_oracle_mask_selects_requested_top_fraction():
+    clean = torch.zeros(2, 10, 4)
+    received = torch.arange(20, dtype=torch.float32).reshape(2, 10, 1).expand(-1, -1, 4)
+    mask, error = oracle_unreliable_mask(clean, received, fraction=0.3)
+    assert mask.shape == error.shape == (2, 10)
+    assert torch.equal(mask.sum(dim=1), torch.tensor([3.0, 3.0]))
+    assert torch.equal(mask[:, -3:], torch.ones(2, 3))
+
+
+def test_reliable_tokens_are_exactly_anchored():
+    torch.manual_seed(1)
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    received = torch.randn(2, 9, 8)
+    mask = torch.zeros(2, 9)
+    mask[:, :3] = 1.0
+    context = torch.randn(2, 4)
+    repaired = flow.integrate(received, mask, context, steps=3)
+    assert torch.equal(repaired[:, 3:], received[:, 3:])
+    assert not torch.equal(repaired[:, :3], received[:, :3])
+
+
+def test_heads_have_expected_shapes_and_gradients():
+    torch.manual_seed(2)
+    received = torch.randn(2, 16, 8, requires_grad=True)
+    context = torch.randn(2, 4)
+    reliability = ReliabilityEstimator(latent_dim=8, hidden_dim=32)
+    quality = QualityPredictor(latent_dim=8, hidden_dim=32)
+    logits = reliability(received, context)
+    prediction = quality(received, logits.sigmoid(), context)
+    assert logits.shape == (2, 16)
+    assert prediction.shape == (2,)
+    prediction.sum().backward()
+    assert received.grad is not None
+
+
+def test_flow_matching_loss_is_finite():
+    torch.manual_seed(3)
+    clean = torch.randn(2, 9, 8)
+    received = clean + 0.2 * torch.randn_like(clean)
+    mask, _ = oracle_unreliable_mask(clean, received, fraction=0.4)
+    context = torch.randn(2, 4)
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    loss = flow.matching_loss(clean, received, mask, context)
+    assert torch.isfinite(loss)
+    loss.backward()
+    assert any(parameter.grad is not None for parameter in flow.parameters())
+
