@@ -119,12 +119,19 @@ class FlowHARQJSCC(nn.Module):
         steps: int = 4,
         threshold: float = 0.8,
         soft_mask: bool = False,
+        integration_time_mode: str = "midpoint",
     ) -> tuple[Tensor, Tensor, Tensor]:
         received = observation.tokens
         receiver_context = observation.receiver_features(context)
         logits, probabilities = self.predict_unreliability(observation, context)
         mask = probabilities if soft_mask else (probabilities >= threshold).to(probabilities.dtype)
-        repaired = self.flow.integrate(received, mask, receiver_context, steps=steps)
+        repaired = self.flow.integrate(
+            received,
+            mask,
+            receiver_context,
+            steps=steps,
+            time_mode=integration_time_mode,
+        )
         return repaired, probabilities, mask
 
     def load_backbone(self, checkpoint: str) -> dict:
@@ -176,7 +183,11 @@ class FlowHARQJSCC(nn.Module):
         hard = (probabilities >= 0.5).to(probabilities.dtype)
         straight_through = hard + probabilities - probabilities.detach()
         repaired = self.flow.integrate(
-            received, straight_through, receiver_context, steps=flow_steps
+            received,
+            straight_through,
+            receiver_context,
+            steps=flow_steps,
+            time_mode="zero" if fm_time_mode == "zero" else "midpoint",
         )
         reconstruction_pre = self.decode(received, context)
         reconstruction_post = self.decode(repaired, context)

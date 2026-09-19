@@ -108,6 +108,7 @@ def main():
     ).to(device)
     model.load_state_dict(payload["model"])
     model.eval()
+    integration_time_mode = "zero" if saved_args.get("fm_time") == "zero" else "midpoint"
     perceptual = LPIPSMetric(args.vendor).to(device) if args.lpips else None
     loader = DataLoader(
         build_dataset(args),
@@ -144,6 +145,7 @@ def main():
                         context,
                         steps=args.flow_steps,
                         threshold=args.mask_threshold,
+                        integration_time_mode=integration_time_mode,
                     )
                     fm_only = model.decode(repaired, context)
                     receiver_context = first_observation.receiver_features(context)

@@ -103,6 +103,19 @@ def test_unknown_flow_time_mode_is_rejected():
         raise AssertionError("invalid time mode should raise ValueError")
 
 
+def test_unknown_integration_time_mode_is_rejected():
+    flow = ReliabilityAnchoredFlow(latent_dim=8, hidden_dim=32, depth=1, heads=4)
+    received = torch.randn(1, 4, 8)
+    mask = torch.ones(1, 4)
+    context = torch.randn(1, 4)
+    try:
+        flow.integrate(received, mask, context, steps=1, time_mode="not-a-mode")
+    except ValueError as error:
+        assert "integration time mode" in str(error)
+    else:
+        raise AssertionError("invalid integration time mode should raise ValueError")
+
+
 def test_quality_boundary_loss_prefers_correct_ack_side():
     factor = -10.0 / torch.log(torch.tensor(10.0))
     actual_psnr = torch.tensor([22.0, 26.0])

@@ -174,15 +174,22 @@ class ReliabilityAnchoredFlow(nn.Module):
         mask: Tensor,
         context: Tensor,
         steps: int = 4,
+        time_mode: str = "midpoint",
     ) -> Tensor:
         if steps < 1:
             raise ValueError("steps must be positive")
         z = received
         dt = 1.0 / steps
         for index in range(steps):
+            if time_mode == "midpoint":
+                time_value = (index + 0.5) * dt
+            elif time_mode == "zero":
+                time_value = 0.0
+            else:
+                raise ValueError(f"unknown integration time mode: {time_mode}")
             t = torch.full(
                 (received.shape[0],),
-                (index + 0.5) * dt,
+                time_value,
                 device=received.device,
                 dtype=received.dtype,
             )
