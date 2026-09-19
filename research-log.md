@@ -9,4 +9,5 @@ Chronological, append-only record of research decisions and evidence.
 | 3 | 2026-09-19 | outer-loop | Rejected pilot as paper evidence because tuning and evaluation shared the same 100 images. Added receiver CSI, time-correlated second round, MRC, LPIPS/SSIM, latency, deterministic calibration/test split, 3 training seeds and 3 channel seeds. |
 | 4 | 2026-09-19 | inner-loop | Held-out v2 completed: NACK delta -0.10 pp with 95% CI [-0.41, 0.20] pp; PSNR delta -0.004 dB with CI [-0.023, 0.016]. Result is statistically inconclusive. |
 | 5 | 2026-09-19 | outer-loop | Mechanism diagnosis: post-flow calibration MAE (~0.93 dB) dwarfs repair effect; squared velocity loss is exposed to extreme ZF residuals; original retransmission penalty is absent. Direction DEEPEN through H1 robust repair, H2 target-aware decision, H3 cost-aware joint training. |
-
+| 6 | 2026-09-19 | protocol | Locked H1 before execution: same-seed comparison of v2, stronger reconstruction weight, normalized Huber velocity loss, and their combination. Acceptance requires at least +0.05 dB FM-only PSNR with LPIPS delta no worse than +0.003 on calibration. |
+| 7 | 2026-09-19 | inner-loop | Implemented H1 objectives and paired bootstrap comparator; 17 local and Artemis tests passed. Submitted RTX array `11397126_[0-3]`. Held-out test remains untouched pending calibration selection. |

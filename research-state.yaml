@@ -33,7 +33,7 @@ literature:
 hypotheses:
   - id: H1
     statement: "Robust, scale-normalized velocity supervision plus a stronger image reconstruction term will make partial flow repair improve FM-only PSNR by at least 0.05 dB without worsening LPIPS."
-    status: active
+    status: running
     motivation: "Current squared velocity loss is dominated by ZF deep-fade outliers and produces near-zero useful repair."
     parent: null
     priority: high
@@ -67,6 +67,11 @@ experiments:
   baseline_value: 0.001
   best_value: 0.001
   total_runs: 3
+  active_jobs:
+    - job_id: "11397126_[0-3]"
+      hypothesis: H1
+      purpose: "same-seed robust repair objective sweep"
+      status: pending_resources
   trajectory:
     - run_id: pilot_v1_tau050
       hypothesis: H1
@@ -102,4 +107,3 @@ workspace:
   experiments_dir: "experiments/"
   to_human_dir: "to_human/"
   paper_dir: "paper/"
-

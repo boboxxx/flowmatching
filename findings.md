@@ -24,6 +24,9 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 2. The current straight paired path makes the velocity target an unnormalized residual. Deep Rayleigh fades create large ZF outliers that dominate squared loss.
 3. The system trains reconstruction, flow, reliability, and quality, but not the actual communication objective: matched final quality with fewer physical rounds.
 4. A global scalar calibration bias cannot compensate for sample-dependent uncertainty around the service threshold.
+5. A paired held-out stratification over all 3 training seeds and 3 channel seeds localizes the v2 failure to low SNR: FM-only minus direct PSNR is -0.0416 dB at 0 dB, -0.0135 dB at 3 dB, and approximately zero from 6--15 dB. Speed has little effect on this gap.
+6. Training-seed variability is material: the paired FM-only PSNR delta is -0.0321, -0.0016, and +0.0058 dB for seeds 2027--2029. A positive claim cannot rest on the best checkpoint.
+7. On the v2 calibration split at frozen K=2, tau=0.9, FM-only minus direct is -0.0121 dB, with bootstrap 95% CI [-0.0179, -0.0058]. Decision-threshold tuning alone cannot rescue the current repair module.
 
 ## Lessons and Constraints
 
@@ -45,4 +48,3 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 ## Optimization Trajectory
 
 The exploratory pilot reached a nominal 1 pp saving but did not survive leakage-free replication.  The current held-out baseline is 0.10 pp with a CI crossing zero.  The next accepted advance must improve the held-out constrained saving, not merely training PSNR or calibration performance.
-
