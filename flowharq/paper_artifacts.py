@@ -39,6 +39,9 @@ def parse_args():
     parser.add_argument("--calibration-json", required=True)
     parser.add_argument("--latency-json", required=True)
     parser.add_argument("--paper-dir", required=True)
+    parser.add_argument("--external-analysis-dir")
+    parser.add_argument("--repair-ablation-json")
+    parser.add_argument("--one-shot-json")
     return parser.parse_args()
 
 
@@ -156,6 +159,19 @@ def fmt(value: float, digits: int) -> str:
 
 
 def write_main_table(estimates: list[dict], destination: Path) -> None:
+    metric_values = {
+        metric: {
+            method: row_for(estimates, metric, "all", method)["mean"]
+            for method, _ in TABLE_METHODS
+        }
+        for metric in ("psnr", "ssim", "lpips", "nack")
+    }
+    best = {
+        "psnr": max(metric_values["psnr"].values()),
+        "ssim": max(metric_values["ssim"].values()),
+        "lpips": min(metric_values["lpips"].values()),
+        "nack": min(metric_values["nack"].values()),
+    }
     lines = [
         r"\begin{tabular}{lcccc}",
         r"\toprule",
@@ -167,15 +183,15 @@ def write_main_table(estimates: list[dict], destination: Path) -> None:
             metric: row_for(estimates, metric, "all", method)["mean"]
             for metric in ("psnr", "ssim", "lpips", "nack")
         }
-        cells = (
-            label,
-            fmt(values["psnr"], 2),
-            fmt(values["ssim"], 4),
-            fmt(values["lpips"], 4),
-            fmt(values["nack"], 3),
-        )
-        if method == "flowharq":
-            cells = tuple(r"\textbf{" + cell + "}" for cell in cells)
+        rendered = {}
+        for metric, digits in (("psnr", 2), ("ssim", 4), ("lpips", 4), ("nack", 3)):
+            value = fmt(values[metric], digits)
+            rendered[metric] = (
+                r"\textbf{" + value + "}"
+                if abs(values[metric] - best[metric]) < 1e-12
+                else value
+            )
+        cells = (label, rendered["psnr"], rendered["ssim"], rendered["lpips"], rendered["nack"])
         lines.append(" & ".join(cells) + r" \\")
     lines.extend((r"\bottomrule", r"\end{tabular}"))
     destination.write_text("\n".join(lines) + "\n")
@@ -213,6 +229,46 @@ def write_calibration_table(calibration: dict, destination: Path) -> None:
     destination.write_text("\n".join(lines) + "\n")
 
 
+def write_repair_ablation(
+    ablation: dict, destination: Path, one_shot: dict | None = None
+) -> dict:
+    labels = {
+        "baseline": "MSE",
+        "rec1": r"MSE + $\mathcal L_{\rm rec}$",
+        "huber": "Robust FM",
+        "huber_rec1": r"Robust FM + $\mathcal L_{\rm rec}$",
+    }
+    selected = {}
+    for row in ablation["candidates"]:
+        if int(row["flow_steps"]) == 4 and abs(float(row["mask_threshold"]) - 0.8) < 1e-9:
+            variant = Path(row["source_csv"]).parent.name
+            selected[variant] = row
+    lines = [
+        r"\begin{tabular}{lrr}",
+        r"\toprule",
+        r"Training objective & $\Delta$PSNR (dB) & $\Delta$LPIPS \\",
+        r"\midrule",
+    ]
+    for variant in ("baseline", "rec1", "huber", "huber_rec1"):
+        row = selected[variant]
+        cells = (labels[variant], fmt(row["psnr_delta"], 3), fmt(row["lpips_delta"], 4))
+        rendered = " & ".join(cells) + r" \\"
+        if variant == "huber_rec1":
+            rendered = r"\bfseries " + rendered
+        lines.append(rendered)
+    if one_shot is not None:
+        control = one_shot["selected"]
+        cells = (
+            r"One-step $t=0$ control",
+            fmt(control["psnr_delta"], 3),
+            fmt(control["lpips_delta"], 4),
+        )
+        lines.insert(-1, " & ".join(cells) + r" \\")
+    lines.extend((r"\bottomrule", r"\end{tabular}"))
+    destination.write_text("\n".join(lines) + "\n")
+    return selected["huber_rec1"]
+
+
 def main():
     args = parse_args()
     analysis = Path(args.analysis_dir)
@@ -227,6 +283,14 @@ def main():
     plot(estimates, speed_estimates, paper / "figures" / "quality_retransmission")
     write_main_table(estimates, paper / "generated" / "main_table.tex")
     write_calibration_table(calibration, paper / "generated" / "calibration_table.tex")
+    repair_selected = None
+    one_shot = json.loads(Path(args.one_shot_json).read_text()) if args.one_shot_json else None
+    if args.repair_ablation_json:
+        repair_selected = write_repair_ablation(
+            json.loads(Path(args.repair_ablation_json).read_text()),
+            paper / "generated" / "repair_ablation.tex",
+            one_shot,
+        )
 
     retransmission = row_for(deltas, "nack", "all")
     psnr = row_for(deltas, "psnr", "all")
@@ -251,6 +315,37 @@ def main():
             latency["physical_harq_combine_and_decode"]["mean_ms"], 2
         ),
     }
+    if args.external_analysis_dir:
+        external = Path(args.external_analysis_dir)
+        external_deltas = read_csv(external / "paired_deltas.csv")
+        external_retx = row_for(external_deltas, "nack", "all")
+        external_psnr = row_for(external_deltas, "psnr", "all")
+        external_lpips = row_for(external_deltas, "lpips", "all")
+        macros.update(
+            {
+                "ExternalRetxDelta": fmt(100.0 * external_retx["mean"], 2),
+                "ExternalRetxCILow": fmt(100.0 * external_retx["ci_low"], 2),
+                "ExternalRetxCIHigh": fmt(100.0 * external_retx["ci_high"], 2),
+                "ExternalPSNRDelta": fmt(external_psnr["mean"], 4),
+                "ExternalPSNRCILow": fmt(external_psnr["ci_low"], 4),
+                "ExternalPSNRCIHigh": fmt(external_psnr["ci_high"], 4),
+                "ExternalLPIPSDelta": fmt(external_lpips["mean"], 4),
+            }
+        )
+    if one_shot is not None and repair_selected is not None:
+        control = one_shot["selected"]
+        macros.update(
+            {
+                "OneShotPSNRDelta": fmt(control["psnr_delta"], 4),
+                "OneShotPSNRCILow": fmt(control["psnr_delta_ci95"][0], 4),
+                "OneShotPSNRCIHigh": fmt(control["psnr_delta_ci95"][1], 4),
+                "OneShotLPIPSDelta": fmt(control["lpips_delta"], 4),
+                "RAFMCalibrationPSNRDelta": fmt(repair_selected["psnr_delta"], 4),
+                "RAFMVsOneShotPSNR": fmt(
+                    repair_selected["psnr_delta"] - control["psnr_delta"], 4
+                ),
+            }
+        )
     lines = ["% Auto-generated from held-out evaluation artifacts."]
     lines.extend(f"\\newcommand{{\\{name}}}{{{value}}}" for name, value in macros.items())
     (paper / "generated" / "results_macros.tex").write_text("\n".join(lines) + "\n")

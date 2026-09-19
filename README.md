@@ -87,7 +87,7 @@ baselines to use the same type of receiver-available decision signal.
 
 ```bash
 python3 -m compileall -q flowharq tests
-python3 -m pytest -q tests/test_flowharq_modules.py
+python3 -m pytest -q
 ```
 
 ## Artemis workflow
@@ -96,16 +96,11 @@ The Artemis scheduler exposes RTX 6000-class nodes through the generic resource
 request `--gres=gpu:RTX:1`. The jobs print the exact GPU model with `nvidia-smi`
 at runtime, so hardware provenance is captured in the log.
 
-```bash
-cd /mnt/nfs2/engdes/wc296/flowmatching
-sbatch slurm/flowharq_smoke.sbatch
-
-# Initialize from the completed SwinJSCC/DeepJSCC backbone.
-sbatch --dependency=afterok:<backbone-job-id> slurm/train_flowharq.sbatch
-
-# Submit after training succeeds.
-sbatch --dependency=afterok:<flow-job-id> slurm/evaluate_flowharq.sbatch
-```
+The exact confirmatory jobs are retained under `slurm/`: H1 trains the robust
+repair objective, H2 fine-tunes only the 24 dB decision head and evaluates the
+3x3 seed matrix, and H4 trains the parameter-matched one-step control. Each
+job writes into a hypothesis-specific result directory so exploratory and
+confirmatory artifacts cannot overwrite one another.
 
 The production defaults use DIV2K 256x256 crops, a 32-dimensional channel
 bottleneck, a 35% oracle unreliable-token fraction for supervision, SNR in
@@ -114,8 +109,28 @@ and the inference mask threshold are selected only by the calibration job; the
 test job reads the resulting frozen JSON rather than accepting hand-tuned test
 settings.
 
-See `RESULTS.md` for the completed pilot, job provenance, honest interpretation,
-and the remaining work before a paper claim.
+See `RESULTS.md` for the final DIV2K, Kodak24, mechanism-control, and latency
+results. The paired retransmission intervals exclude zero on both image sets,
+so the core conference claim is supported within the documented limitations.
+
+## Paper artifacts
+
+Regenerate every numeric macro, table, and result figure from stored analysis:
+
+```bash
+python3 -m flowharq.paper_artifacts \
+  --analysis-dir results/h2/analysis \
+  --external-analysis-dir results/h2/kodak_analysis \
+  --calibration-json results/h2/seed_2030/decision.json \
+  --repair-ablation-json results/h1/comparison.json \
+  --one-shot-json results/h4/comparison.json \
+  --latency-json results/h2/latency/rtx_pro_6000.json \
+  --paper-dir paper
+```
+
+The VTC draft is `paper/main.tex`; the compiled PDF is
+`paper/build/main.pdf`. Submission-specific checks and the current official
+deadline/page rules are recorded in `paper/SUBMISSION_CHECKLIST.md`.
 
 ## Result integrity
 

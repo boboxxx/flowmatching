@@ -7,29 +7,27 @@
 \input{generated/results_macros}
 
 \title{Virtual Retransmission via Flow Matching for Reliable DeepJSCC Image Transmission}
-\author{\IEEEauthorblockN{Anonymous Authors}\IEEEauthorblockA{Technical draft for author review}}
+\author{\IEEEauthorblockN{Anonymous Authors}\IEEEauthorblockA{Anonymous submission}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Hybrid automatic repeat request (HARQ) improves neural joint source--channel
-coding reliability at the cost of another channel round.  This work asks
-whether receiver computation can avoid some of those transmissions.  We
-propose FlowHARQ, a receiver-side virtual retransmission stage that detects
-unreliable DeepJSCC latent tokens and transports only those tokens toward the
-clean latent distribution using reliability-anchored flow matching (RAFM).
-Reliable tokens are invariant by construction.  A calibrated post-flow quality
-head requests a physical second round only when repair remains insufficient;
-when requested, both rounds are combined using instantaneous-CSI maximum-ratio
-combining.  On a held-out DIV2K protocol with \NumTrainSeeds{} training seeds,
-\NumChannelSeeds{} channel seeds, and \NumTestImages{} test images, FlowHARQ
-changes the physical retransmission rate by \MainRetxDelta{} percentage points
-(95\% CI [\MainRetxCILow{}, \MainRetxCIHigh{}]) relative to adaptive HARQ,
-while changing PSNR by \MainPSNRDelta{} dB (95\% CI
-[\MainPSNRCILow{}, \MainPSNRCIHigh{}]).  These results test the central premise
-that flow matching can act as a zero-airtime HARQ round rather than merely a
-generative image decoder.
+We introduce FlowHARQ, a receiver-side virtual retransmission that uses
+flow matching before deciding whether to request another wireless round.
+FlowHARQ detects unreliable DeepJSCC latent tokens, transports only those
+tokens toward the clean latent distribution, and preserves every trusted token
+exactly.  Robust velocity supervision makes this repair effective under
+deep-fade outliers, while a target-aware quality head converts the post-flow
+state into ACK/NACK.  Across three training and three channel seeds on 80
+held-out DIV2K images, FlowHARQ reduces physical retransmissions by
+\MainRetxDelta{} percentage points relative to adaptive HARQ (paired 95\%
+CI [\MainRetxCILow{}, \MainRetxCIHigh{}]) while changing PSNR by
+\MainPSNRDelta{} dB and LPIPS by \MainLPIPSDelta{}.  Without any refitting,
+Kodak24 replicates a \ExternalRetxDelta{}-point change (95\% CI
+[\ExternalRetxCILow{}, \ExternalRetxCIHigh{}]).  The results demonstrate
+that receiver computation can replace a small but statistically supported
+fraction of physical HARQ rounds.
 \end{abstract}
 
 \section{Introduction}
@@ -50,13 +48,17 @@ skipped.  Conversely, generative semantic HARQ has been explored for text
 through stochastic VAE latents \cite{genharq}, leaving image DeepJSCC and FM
 unconnected at the HARQ decision point.
 
-We introduce \emph{virtual retransmission}: the receiver first repairs only
-unreliable semantic latents with FM and then issues ACK/NACK.  The contribution
-is one system-level idea with three parts: (i) receiver-side FM before HARQ,
-(ii) reliability-anchored partial transport that exactly preserves trusted
-latents, and (iii) a calibrated post-flow quality decision evaluated against
-adaptive and oracle HARQ under paired, time-correlated fading.  The intended
-operating point is matched reconstruction quality with fewer physical rounds.
+We introduce \emph{virtual retransmission}: the receiver repairs unreliable
+semantic latents before issuing ACK/NACK.  Our contributions are:
+\begin{itemize}
+ \item an FM-before-HARQ architecture in which receiver computation may avoid
+ a physical channel round;
+ \item reliability-anchored partial transport with a hard identity constraint
+ on trusted tokens and robust, reconstruction-aligned velocity training; and
+ \item leakage-free paired evaluation against adaptive HARQ under
+ time-correlated fading, including cross-seed confidence intervals, latency,
+ and external Kodak24 validation.
+\end{itemize}
 
 \begin{figure}[t]
   \centering
@@ -65,6 +67,33 @@ operating point is matched reconstruction quality with fewer physical rounds.
   first reception and the physical HARQ decision.}
   \label{fig:system}
 \end{figure}
+
+\section{Related Work}
+\subsection{DeepJSCC and Semantic HARQ}
+DeepJSCC replaces separately optimized compression and channel coding with a
+learned analog mapping \cite{deepjscc}; SwinJSCC extends this idea using a
+hierarchical Transformer and rate/SNR adaptation \cite{swinjscc}.  Reliability
+extensions have largely focused on the physical retransmission itself.
+DJSCC-H adapts the HARQ process for image delivery \cite{djscc_h}, while
+fine-grained semantic HARQ identifies and retransmits erroneous semantic bases
+\cite{fineharq}.  Generative semantic HARQ combines stochastic VAE latents,
+but its demonstrated modality is text \cite{genharq}.  FlowHARQ instead asks
+whether receiver-side generative repair can make a physical image
+retransmission unnecessary; the conference version retains full second-round
+retransmission when repair is insufficient.
+
+\subsection{Flow Matching for Semantic Communication}
+Flow matching learns conditional transport by regressing a prescribed path
+velocity \cite{flowmatching}.  FlowSem conditions global image generation on a
+coarse DeepJSCC reconstruction \cite{flowsem}.  RC-BFM begins from a
+channel-induced semantic state to shorten generative decoding
+\cite{rcbfm}, and channel-aware latent FM incorporates communication state
+directly into latent transport \cite{channel_lfm}.  These works use FM as a
+decoder or refinement mechanism.  FlowHARQ uses a hard-masked latent flow as
+an intermediate reliability action and evaluates it by the physical rounds
+that it avoids.  Mobility-aware DeepJSCC has separately studied time-varying
+MIMO adaptation \cite{mobility_deepjscc}; here mobility controls the
+correlation between paired HARQ rounds.
 
 \section{System Model}
 For image $\mathbf x$, a SwinJSCC encoder emits $N$ real-valued latent tokens
@@ -78,7 +107,7 @@ dimensions form complex symbols.  In HARQ round $r\in\{1,2\}$,
 where $\mathcal Q^{-1}$ restores token scale and the receiver knows $h_r$.
 Fading between rounds follows
 \begin{equation}
- h_2=\rho_\Delta h_1+\sqrt{1-\rho_\Delta^2}\,e,quad
+ h_2=\rho_\Delta h_1+\sqrt{1-\rho_\Delta^2}\,e,\quad
  \rho_\Delta=J_0(2\pi f_D\Delta),
  \label{eq:jakes}
 \end{equation}
@@ -90,15 +119,28 @@ combined using instantaneous-CSI MRC,
  |h_2|^2\widetilde{\mathbf Z}_2}{|h_1|^2+|h_2|^2}.
  \label{eq:mrc}
 \end{equation}
+Let $a\in\{0,1\}$ denote a NACK after the first-round receiver action.  The
+number of physical rounds is $1+a$, so the design goal is to reduce
+$\mathbb E[a]$ relative to adaptive HARQ while preserving service quality.
+Before confirmatory evaluation we set matched-quality tolerances of
+$\Delta{\rm PSNR}\geq-0.02$ dB and
+$\Delta{\rm LPIPS}\leq0.003$.  This separates the communication claim from a
+pure reconstruction claim: a receiver that improves an image but does not
+avoid a round has not achieved the primary objective.
 
 \section{FlowHARQ}
 \subsection{Reliability-Anchored Partial Flow}
 A reliability head outputs token corruption probabilities
 $q_i=g_q(\widetilde{\mathbf z}_{1,i},\mathbf c_{\rm rx})$, where
 $\mathbf c_{\rm rx}$ includes nominal SNR, speed, CSI age, instantaneous gain,
-and effective SNR.  At inference,
+Jakes correlation, and effective SNR.  At inference,
 $m_i=\mathbb I[q_i\geq\tau_r]$.  During training, the target mask is the
 top-$\kappa$ token-error subset computed from the clean latent.
+Specifically, with
+$e_i=d^{-1}\|\mathbf z_i-\widetilde{\mathbf z}_{1,i}\|_2^2$, the oracle mask
+contains the largest $\kappa N$ errors.  A balanced tokenwise BCE trains
+$g_q$ to reproduce this mask; the clean latent and oracle mask are discarded
+at test time.
 
 For masked tokens, we use the straight conditional path
 \begin{equation}
@@ -108,12 +150,17 @@ For masked tokens, we use the straight conditional path
 \end{equation}
 The velocity field is conditioned on the received tokens, receiver CSI, mask,
 and a pooled anchor computed only from reliable tokens.  Its objective is
-\begin{equation}
- \mathcal L_{\rm FM}=\mathbb E_t\frac{\sum_i m_i
- \|v_\psi(\mathbf z_i(t),t,\mathbf c_{\rm rx},\mathbf Z_{\rm rel})
- -\mathbf u_i\|_2^2}{\sum_i m_i}.
+\begin{align}
+ s_i&=\max\!\left(1,\sqrt{d^{-1}\|\mathbf u_i\|_2^2}\right),\\
+ \mathcal L_{\rm FM}&=\mathbb E_t
+ \frac{\sum_i m_i\,\rho_{0.1}\!\left((v_\psi-\mathbf u_i)/s_i\right)}
+ {\sum_i m_i},
  \label{eq:fm}
-\end{equation}
+\end{align}
+where $\rho_{0.1}$ is elementwise smooth-$L_1$ averaged over token dimensions.
+This scale-normalized robust objective prevents rare zero-forcing deep-fade
+residuals from dominating training.  We additionally optimize image $L_1$
+after repair; neither target nor clean latent is available at inference.
 Midpoint Euler integration uses $K$ evaluations.  A final projection enforces
 \begin{equation}
  \bar{\mathbf z}_i=(1-m_i)\widetilde{\mathbf z}_{1,i}
@@ -131,6 +178,16 @@ DeepJSCC transmitter is unchanged.  The total training loss is
  \mathcal L=\lambda_f\mathcal L_{\rm FM}+\lambda_r\mathcal L_{\rm rel}
  +\lambda_q\mathcal L_{\rm quality}+\lambda_x\mathcal L_1.
 \end{equation}
+After training the repair network, we freeze every module except the quality
+head and fine-tune it for the service boundary using
+\begin{equation}
+ \mathcal L_{\rm dec}=
+ {\rm BCEWithLogits}\!\left((q_0-\widehat q)/T_q,\,
+ \mathbb I[q<q_0]\right),
+ \label{eq:decision}
+\end{equation}
+averaged over direct and repaired states.  This stage targets the operational
+ACK/NACK decision rather than merely reducing global PSNR regression error.
 
 \section{Experimental Protocol}
 We initialize the encoder/decoder from a fixed SwinJSCC checkpoint and train
@@ -139,24 +196,35 @@ crops \cite{div2k}.  The encoder emits $256\times32$ real latent values,
 equivalent to 4096 complex channel symbols and a channel-bandwidth ratio of
 $1/48$.  The receiver-only reliability, flow, and quality modules add 0.479 M
 trainable parameters to the frozen 21.83 M-parameter codec.
+The reliability, flow, and initial quality modules are optimized for 40 epochs
+with AdamW, mixed precision, batch size 2, learning rate $2\!\times\!10^{-4}$,
+weight decay $10^{-4}$, and gradient norm 5.  We mask $\kappa=0.35$ of tokens,
+set $\lambda_f=1$, $\lambda_r=0.5$, $\lambda_q=0.2$, and
+$\lambda_x=1$.  The decision stage runs for 10 further epochs at
+$10^{-4}$ using equal weights on log-MSE regression and
+\eqref{eq:decision}; only the quality head is trainable.
 Training samples SNR in $[0,15]$ dB, speed in $[0,120]$ km/h, and CSI age in
 $[0,5]$ ms.  Evaluation uses SNR $\{0,3,6,9,12,15\}$ dB, speeds
 $\{30,60,90,120\}$ km/h, a 1 ms HARQ interval, and Rayleigh fading.  The first
 20 validation images form a calibration split; the remaining 80 are never used
 for model, mask, ODE-step, threshold, or bias selection.
 
-Calibration chooses $K\in\{1,2,4,8\}$ and
-$\tau_r\in\{0,.5,.65,.8,.9\}$ and a service target
-$q_0\in\{22,24,26\}$ dB, then fits one scalar bias for each quality head.
-The frozen configuration is $K=\SelectedFlowSteps{}$ and
-$\tau_r=\SelectedMaskThreshold{}$.  We compare direct DeepJSCC, full two-round
+The service target is fixed at $q_0=24$ dB.  On the calibration split, a
+conservative grid $K\in\{1,2,4\}$ and $\tau_r\in\{.8,.9\}$ is searched, and
+one scalar bias is fitted for each quality state.  The frozen configuration is
+$K=\SelectedFlowSteps{}$ and $\tau_r=\SelectedMaskThreshold{}$.  The
+target-aware stage then fine-tunes only the quality head; the repair, mask,
+codec, grid, and service target remain fixed.  We compare direct DeepJSCC, full two-round
 HARQ, FM without HARQ, adaptive HARQ, FlowHARQ, and oracle variants whose NACK
 uses ground-truth PSNR.  Every method shares the same first- and second-round
 channel draws.  We report PSNR, SSIM \cite{ssim}, LPIPS \cite{lpips}, physical
 retransmission rate, mean rounds, and GPU latency.  Confidence intervals are
 two-sided 95\% Student-$t$ intervals over independent training-seed means,
 after averaging channel seeds; paired effects are FlowHARQ minus adaptive HARQ
-within each training seed.
+within each training seed.  The main study uses \NumTrainSeeds{} training
+seeds, \NumChannelSeeds{} fresh channel seeds, and \NumTestImages{} held-out
+DIV2K images.  Kodak24 is evaluated with three further channel seeds after all
+choices are frozen, without refitting.
 
 \section{Results}
 \begin{figure*}[t]
@@ -182,32 +250,100 @@ retransmission rate by \MainRetxDelta{} percentage points relative to adaptive
 HARQ, with a paired 95\% CI of [\MainRetxCILow{}, \MainRetxCIHigh{}].  The
 corresponding PSNR change is \MainPSNRDelta{} dB
 ([\MainPSNRCILow{}, \MainPSNRCIHigh{}]), and the LPIPS change is
-\MainLPIPSDelta{}.  Figure~\ref{fig:main} separates these effects by SNR.
+\MainLPIPSDelta{}.  Thus the small retransmission reduction excludes zero
+under the paired protocol while the reconstruction changes stay inside the
+predeclared $-0.02$ dB PSNR and $+0.003$ LPIPS tolerances.
+
+The fully frozen Kodak24 evaluation gives a retransmission-rate change of
+\ExternalRetxDelta{} points (95\% CI [\ExternalRetxCILow{},
+\ExternalRetxCIHigh{}]), a PSNR change of \ExternalPSNRDelta{} dB
+([\ExternalPSNRCILow{}, \ExternalPSNRCIHigh{}]), and an LPIPS change of
+\ExternalLPIPSDelta{}.  This replication is evidence that the decision is not
+specific to the DIV2K holdout.  Figure~\ref{fig:main} separates the main-study
+effects by SNR.
 
 \begin{table}[t]
 \centering
-\caption{Calibration-only ODE-step ablation at the selected mask threshold.
-Deltas are FlowHARQ minus adaptive HARQ; retransmission is in percentage
-points.}
+\caption{Repair-objective ablation on calibration data at fixed
+$K=\SelectedFlowSteps{}$, $\tau_r=\SelectedMaskThreshold{}$.  Deltas are
+FM-only minus direct reception.}
 \label{tab:ablation}
-\resizebox{0.92\columnwidth}{!}{\input{generated/calibration_table}}
+\resizebox{\columnwidth}{!}{\input{generated/repair_ablation}}
 \end{table}
+
+Table~\ref{tab:ablation} isolates why repair becomes useful.  Squared velocity
+training degrades PSNR, and either reconstruction alignment or robust velocity
+supervision alone remains negative.  Their combination changes FM-only PSNR by
+$+\RAFMCalibrationPSNRDelta{}$ dB, showing an interaction rather than a
+threshold-only gain.  To distinguish multi-step transport from generic
+denoising, we train a parameter-matched control on exactly the same masked
+residual target but only at $t=0$, and evaluate it with one residual update.
+Its best conservative threshold changes PSNR by \OneShotPSNRDelta{} dB
+(95\% CI [\OneShotPSNRCILow{}, \OneShotPSNRCIHigh{}]) and LPIPS by
+\OneShotLPIPSDelta{}.  Four-step RAFM exceeds this control by
+\RAFMVsOneShotPSNR{} dB on the paired calibration samples.  Thus the useful
+repair cannot be reproduced by the matched one-step denoiser.
 
 The receiver-side virtual round takes \VirtualLatencyMs{} ms per image on an
 RTX PRO 6000, compared with \PhysicalLatencyMs{} ms for local second-round
-combining and decoding; over-the-air scheduling and propagation are excluded.
-This latency result therefore measures receiver computation, not complete
-network latency.
+combining and decoding, and adds about 1.9 ms over direct decoding.
+Over-the-air transmission, scheduling, and propagation are excluded from the
+physical-round number, so this is a receiver-compute comparison rather than
+complete network latency.
+
+\section{Discussion}
+\subsection{Communication Interpretation}
+Adaptive HARQ requests a second round for 0.742 of DIV2K cases, whereas
+FlowHARQ requests it for 0.729; mean physical rounds therefore change from
+1.742 to 1.729.  This is a 1.75\% reduction in second-round requests, not a
+1.30\% reduction in total symbols.  Relative to full HARQ, both adaptive
+schemes avoid many more rounds; the contribution here is the incremental
+saving obtained by inserting receiver computation before an already adaptive
+decision.  On Kodak24 the corresponding second-round reduction is 2.80\%
+(0.724 to 0.703), suggesting that the effect is not tied to DIV2K image
+content.
+
+The oracle decisions provide a useful sanity check.  On DIV2K, replacing the
+direct state with the repaired state changes oracle NACK from 0.756 to 0.745,
+an absolute 1.09-point reduction.  The learned-head reduction of 1.30 points
+has the same scale and direction.  Thus the supported effect is not created
+solely by a favorable scalar decision bias, although per-seed calibration
+metrics remain mixed.
+
+\subsection{SNR and Mobility}
+The mean retransmission delta is favorable at every tested SNR.  Its paired
+interval excludes zero at 0, 9, 12, and 15 dB, but not at 3 and 6 dB, where
+training-seed variability is larger.  The result should therefore be read as
+an aggregate operating-range claim rather than uniform significance in every
+channel bin.  Across 30--120 km/h, mean deltas remain narrowly between
+$-1.25$ and $-1.34$ points.  We find no evidence that the saving grows with
+speed in this flat-fading experiment; demonstrating a mobility advantage
+requires richer delay/Doppler channels rather than extrapolation from the
+present simulator.
+
+\subsection{Why Partial Transport Matters}
+The identity projection in \eqref{eq:identity} is more than a computational
+shortcut.  It prevents the generative module from revising evidence that the
+reliability head considers trustworthy, limiting the surface on which
+hallucination can occur.  The conservative selected threshold masks only high
+unreliability tokens, while the robust objective handles the large residuals
+created by rare fades.  The one-step control shows that identical architecture,
+mask supervision, and residual targets are insufficient: conditioning on
+intermediate time and integrating the learned trajectory is necessary for the
+observed calibration-split repair gain.
 
 \section{Limitations and Conclusion}
 FlowHARQ currently uses a flat-fading simulation, a fixed DeepJSCC backbone,
 and full rather than token-selective physical retransmission.  The quality head
-requires a small held-out calibration split, and receiver compute is not free.
-Within this controlled scope, the experiments test whether partial latent FM
-can substitute for some physical HARQ rounds.  The central claim is supported
-only if the retransmission confidence interval excludes zero while PSNR and
-LPIPS remain within the predeclared matched-quality tolerances; otherwise the
-result should be reported as a negative or inconclusive finding.
+requires a small held-out calibration split, and its balanced accuracy and ECE
+do not improve for every training seed.  The measured saving is modest
+(roughly 1--2 percentage points), while receiver compute is not free.
+Nevertheless, the paired DIV2K interval excludes zero, the independent
+Kodak24 interval does likewise, and both satisfy the predeclared
+matched-quality tolerances.  Within this controlled scope, robust partial
+latent transport therefore substitutes for a statistically supported fraction
+of physical HARQ rounds.  Token-selective retransmission, jointly trained
+codecs, and measured vehicular channels remain future work.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

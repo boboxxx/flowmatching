@@ -6,9 +6,9 @@ Can receiver-side reliability-anchored flow matching act as a zero-airtime HARQ 
 
 ## Current Understanding
 
-The architectural proposition is feasible and inexpensive: a 0.479 M-parameter receiver module can preserve reliable tokens exactly, use instantaneous receiver CSI, and add about 1.18 ms over direct decoding on an RTX PRO 6000.  The present bottleneck is not implementation or runtime.  It is statistical effect size.
+The final conference-scale prototype supports the core proposition.  A 0.479 M-parameter receiver module preserves reliable tokens exactly, uses instantaneous receiver CSI, and performs a four-step virtual retransmission plus decoding in 5.00 ms on an RTX PRO 6000.  Robust partial flow repair plus a target-aware quality head reduces physical NACKs at matched quality under a leakage-free 3x3 seed protocol and on frozen Kodak24 validation.
 
-The leakage-free v2 protocol shows essentially matched PSNR but no significant retransmission saving.  Flow repair changes reconstruction quality by only hundredths of a dB, while the quality head's calibration error is close to one dB.  Consequently the post-flow ACK/NACK decision cannot reliably exploit the small repair effect.  Inference-threshold sweeps cannot fix this mechanism.
+The effect is deliberately stated as modest: roughly 1--2 percentage points fewer physical retransmissions, not a large reconstruction gain.  The original squared-loss v2 system was inconclusive; the supported result depends on robust normalized velocity supervision, reconstruction alignment, and a service-boundary decision stage.
 
 ## Key Results
 
@@ -23,6 +23,8 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 - H1's full 3x3 held-out matrix establishes repair but not the retransmission claim. FlowHARQ minus adaptive HARQ is +0.0271 dB PSNR (95% CI [+0.0120,+0.0422]), +0.00098 LPIPS, and -1.389 pp NACK (95% CI [-3.240,+0.463] pp). All three training seeds reduce NACK individually, but n=3 and decision variability leave the interval crossing zero.
 - H2's frozen 3x3 DIV2K result supports the central system claim: FlowHARQ minus adaptive HARQ is -1.296 pp NACK (95% CI [-2.570,-0.0225]), +0.0206 dB PSNR (95% CI [+0.0012,+0.0400]), and +0.00132 LPIPS.
 - External Kodak24 validation strengthens the result: -2.025 pp NACK (95% CI [-3.343,-0.708]), +0.0284 dB PSNR (95% CI [-0.00028,+0.0570]), and +0.00128 LPIPS, using no Kodak fitting or selection.
+- H4 rules out a parameter-matched one-step residual explanation: its best conservative threshold gives -0.0147 dB PSNR (95% CI [-0.0232,-0.0055]) and +0.00093 LPIPS, versus +0.0714 dB for four-step RAFM.  The paired 0.0861 dB gap passes the preregistered 0.02 dB mechanism gate.
+- Final RTX PRO 6000 latency is 3.11 ms for direct decoding, 5.00 ms for virtual repair plus decoding, and 3.06 ms for local physical-round combining plus decoding.  The latter excludes airtime, scheduling, and propagation.
 
 ## Patterns and Insights
 
@@ -35,27 +37,26 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 7. On the v2 calibration split at frozen K=2, tau=0.9, FM-only minus direct is -0.0121 dB, with bootstrap 95% CI [-0.0179, -0.0058]. Decision-threshold tuning alone cannot rescue the current repair module.
 8. The final-epoch v2 FM loss is extremely heavy-tailed. Across seeds, median batch losses are 0.26--0.28 and 90th percentiles are 2.2--3.2, but 99th percentiles reach 203--2,209 and maxima reach 1,703--158,505. This directly supports H1's outlier-dominance mechanism rather than treating robust loss as an arbitrary hyperparameter sweep.
 9. An oracle-decision audit proves that calibration is not the only current bottleneck. At the 24 dB target, v2 FM moves 37 held-out cases from NACK to ACK but moves 39 in the opposite direction, for an oracle NACK saving of -0.012 percentage points. The learned head's nominal +0.104-point saving is therefore a calibration artifact, not evidence of useful repair. H1 must succeed before H2 is scientifically meaningful.
-10. H1 exhibits a real interaction: reconstruction weight alone reaches -0.0008 dB and normalized Huber alone +0.0021 dB, while their combination reaches +0.0714 dB. The improvement therefore comes from jointly suppressing outlier gradients and aligning the residual predictor with decoded image quality.
+10. H1 exhibits a real interaction at fixed K=4, tau=0.8: reconstruction alignment alone reaches -0.0172 dB and normalized Huber alone -0.0129 dB, while their combination reaches +0.0714 dB. The improvement therefore comes from jointly suppressing outlier gradients and aligning the residual predictor with decoded image quality.
 11. H1 FM-only PSNR improves for every training seed (+0.0739, +0.0358, +0.0574 dB). Final NACK changes are also directionally consistent (-2.19, -1.27, -0.71 pp), so H2 targets the magnitude and stability of the decision boundary rather than the repair network.
 12. H2's mechanism metrics are mixed: calibration balanced accuracy changes by +0.0220, -0.0236, and -0.0015 across seeds, while ECE improves for only one seed. The paper may claim that target-boundary fine-tuning stabilizes held-out retransmission savings, but not that it universally improves calibration accuracy.
+13. The flow-specificity control is decisive on calibration data: a one-step model trained and evaluated at $t=0$ degrades PSNR at both conservative mask thresholds, while four-step RAFM improves it.  This supports trajectory conditioning rather than parameter count or residual supervision as the differentiator.
 
 ## Lessons and Constraints
 
 - Never tune and report on the same 100 DIV2K images; retain deterministic calibration/test separation.
 - Report confidence intervals over training seeds, not over correlated images or channel draws.
-- Do not claim that FM itself helps until a parameter-matched one-shot denoiser control is beaten.
+- The matched one-shot control has now been beaten, but the claim remains limited to the tested architecture, calibration split, and latency regime.
 - Preserve reliable-token identity as a hard architectural invariant.
 - Treat a confidence interval crossing zero as inconclusive, even if the mean has the desired sign.
 - Avoid further inference-only threshold sweeps until actual repair quality improves.
 
 ## Open Questions
 
-- Can robust/normalized velocity training produce a measurable image-level repair gain?
-- Can a target-aware decision objective cut boundary errors enough to expose that gain?
 - Does a differentiable retransmission Lagrangian improve the true rate-quality frontier?
-- Is the multi-step flow mechanism better than a simpler residual denoiser?
 - Does the effect become stronger under mobility or bursty/selective corruption?
+- Does the result survive a jointly trained codec, measured vehicular channels, and additional datasets?
 
 ## Optimization Trajectory
 
-The exploratory pilot reached a nominal 1 pp saving but did not survive leakage-free replication.  The current held-out baseline is 0.10 pp with a CI crossing zero.  The next accepted advance must improve the held-out constrained saving, not merely training PSNR or calibration performance.
+The exploratory pilot reached a nominal 1 pp saving but did not survive leakage-free replication.  H1 repaired the latent mechanism, H2 converted that gain into a statistically supported held-out NACK reduction, and external Kodak24 validation replicated it.  H4 then separated four-step RAFM from a parameter-matched one-step denoiser.  The next advance should address selective physical retransmission or measured channels, not further tune the frozen test protocol.

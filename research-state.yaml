@@ -51,7 +51,7 @@ hypotheses:
     priority: high
   - id: H4
     statement: "Multi-step RAFM will outperform a parameter-matched one-shot residual denoiser at equal receiver latency or quality."
-    status: running
+    status: supported
     motivation: "Needed to justify flow matching rather than generic latent denoising."
     parent: null
     priority: medium
@@ -132,22 +132,22 @@ experiments:
       hypothesis: H2
       purpose: "Kodak24 paired confidence intervals"
       status: completed
-    - job_id: "11397232"
+    - job_id: "11397243"
       hypothesis: H4
-      purpose: "parameter-matched t=0 one-shot residual control"
-      status: running
-    - job_id: "11397233_[0-1]"
+      purpose: "corrected parameter-matched t=0 one-shot residual control"
+      status: completed
+    - job_id: "11397244_[0-1]"
       hypothesis: H4
-      purpose: "one-shot calibration evaluation"
-      status: dependent
-    - job_id: "11397234"
+      purpose: "corrected one-shot calibration evaluation"
+      status: completed
+    - job_id: "11397245"
       hypothesis: H4
-      purpose: "RAFM versus one-shot mechanism comparison"
-      status: dependent
+      purpose: "corrected RAFM versus one-shot mechanism comparison"
+      status: completed
     - job_id: "11397235"
       hypothesis: H2
       purpose: "final K=4 receiver latency benchmark"
-      status: running
+      status: completed
   trajectory:
     - run_id: pilot_v1_tau050
       hypothesis: H1
@@ -205,6 +205,13 @@ experiments:
       wall_time_min: 4.0
       change_summary: "24 unseen Kodak images, three training x three fresh channel seeds"
       timestamp: "2026-09-19T15:35:00+01:00"
+    - run_id: h4_one_shot_control
+      hypothesis: H4
+      metric_value: 0.086094
+      delta: "four-step RAFM PSNR gain minus best one-step t=0 residual-control gain on paired calibration samples"
+      wall_time_min: 8.6
+      change_summary: "RAFM +0.0714 dB versus one-shot -0.0147 dB; one-shot 95% CI [-0.0232,-0.0055]"
+      timestamp: "2026-09-19T16:05:00+01:00"
 
 outer_loop:
   cycle: 1

@@ -73,6 +73,11 @@ B.~Han, Y.~Hu, and H.~D. Schotten, ``Generative semantic {HARQ}: Latent-space
   text retransmission and combining,'' \emph{arXiv preprint arXiv:2603.15068},
   2026.
 
+\bibitem{mobility_deepjscc}
+G.~Sawada, S.~Inokuma, D.~Hisano, and K.~Maruta, ``Toward mobility-aware
+  semantic communication: {DeepJSCC} over time-varying {MIMO} channels,''
+  \emph{Journal on Wireless Communications and Networking}, 2026.
+
 \bibitem{div2k}
 E.~Agustsson and R.~Timofte, ``{NTIRE} 2017 challenge on single image
   super-resolution: Dataset and study,'' in \emph{IEEE Conference on Computer
