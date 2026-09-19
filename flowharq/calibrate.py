@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -75,6 +76,45 @@ def select(first: dict, second: dict, nack: bool, name: str) -> float:
     return metric(second if nack else first, name)
 
 
+def boundary_metrics(actual: list[bool], predicted_psnr: list[float], target: float) -> dict:
+    predicted = [value < target for value in predicted_psnr]
+    positives = sum(actual)
+    negatives = len(actual) - positives
+    true_positive_rate = (
+        sum(truth and guess for truth, guess in zip(actual, predicted)) / positives
+        if positives
+        else 1.0
+    )
+    true_negative_rate = (
+        sum((not truth) and (not guess) for truth, guess in zip(actual, predicted))
+        / negatives
+        if negatives
+        else 1.0
+    )
+    probabilities = [1.0 / (1.0 + math.exp(value - target)) for value in predicted_psnr]
+    expected_calibration_error = 0.0
+    for bin_index in range(10):
+        low = bin_index / 10.0
+        high = (bin_index + 1) / 10.0
+        indices = [
+            index
+            for index, probability in enumerate(probabilities)
+            if low <= probability < high or (bin_index == 9 and probability == 1.0)
+        ]
+        if not indices:
+            continue
+        confidence = mean(probabilities[index] for index in indices)
+        frequency = mean(float(actual[index]) for index in indices)
+        expected_calibration_error += len(indices) / len(actual) * abs(confidence - frequency)
+    return {
+        "accuracy": mean(float(truth == guess) for truth, guess in zip(actual, predicted)),
+        "balanced_accuracy": 0.5 * (true_positive_rate + true_negative_rate),
+        "nack_recall": true_positive_rate,
+        "ack_recall": true_negative_rate,
+        "ece": expected_calibration_error,
+    }
+
+
 def evaluate(path: str, target_psnr: float) -> dict:
     samples, metadata = load_samples(path)
     direct_errors = []
@@ -91,6 +131,12 @@ def evaluate(path: str, target_psnr: float) -> dict:
     direct_bias = mean(direct_errors)
     fm_bias = mean(fm_errors)
     records = {"adaptive_harq": [], "flowharq": []}
+    boundary = {
+        "direct_actual": [],
+        "direct_predicted": [],
+        "fm_actual": [],
+        "fm_predicted": [],
+    }
     for methods in samples:
         direct_prediction = (
             metric(methods["direct"], "predicted_direct_psnr_raw") + direct_bias
@@ -100,6 +146,10 @@ def evaluate(path: str, target_psnr: float) -> dict:
             "adaptive_harq": direct_prediction < target_psnr,
             "flowharq": fm_prediction < target_psnr,
         }
+        boundary["direct_actual"].append(metric(methods["direct"], "psnr") < target_psnr)
+        boundary["direct_predicted"].append(direct_prediction)
+        boundary["fm_actual"].append(metric(methods["fm_only"], "psnr") < target_psnr)
+        boundary["fm_predicted"].append(fm_prediction)
         first_round = {
             "adaptive_harq": methods["direct"],
             "flowharq": methods["fm_only"],
@@ -136,6 +186,12 @@ def evaluate(path: str, target_psnr: float) -> dict:
     )
     result["lpips_delta"] = (
         result["flowharq"]["lpips"] - result["adaptive_harq"]["lpips"]
+    )
+    result["direct_boundary"] = boundary_metrics(
+        boundary["direct_actual"], boundary["direct_predicted"], target_psnr
+    )
+    result["fm_boundary"] = boundary_metrics(
+        boundary["fm_actual"], boundary["fm_predicted"], target_psnr
     )
     return result
 

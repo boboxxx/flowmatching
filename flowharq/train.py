@@ -21,9 +21,15 @@ def parse_args():
     parser.add_argument("--upstream", default="upstream/SwinJSCC")
     parser.add_argument("--data", required=True)
     parser.add_argument("--output", required=True)
-    parser.add_argument("--stage", choices=("backbone", "flow", "joint"), default="flow")
+    parser.add_argument(
+        "--stage", choices=("backbone", "flow", "decision", "joint"), default="flow"
+    )
     parser.add_argument("--backbone", help="UGP/FlowHARQ checkpoint used to initialize encoder and decoder")
     parser.add_argument("--resume", help="full FlowHARQ checkpoint")
+    parser.add_argument(
+        "--initialize",
+        help="load full model weights without optimizer/epoch state (for stage changes)",
+    )
     parser.add_argument("--batch-size", type=int, default=2)
     parser.add_argument("--epochs", type=int, default=40)
     parser.add_argument("--max-steps", type=int, default=0)
@@ -38,7 +44,10 @@ def parse_args():
     parser.add_argument("--lambda-fm", type=float, default=1.0)
     parser.add_argument("--lambda-reliability", type=float, default=0.5)
     parser.add_argument("--lambda-quality", type=float, default=0.2)
+    parser.add_argument("--lambda-decision", type=float, default=0.0)
     parser.add_argument("--lambda-reconstruction", type=float, default=0.2)
+    parser.add_argument("--decision-target-psnr", type=float, default=24.0)
+    parser.add_argument("--decision-temperature-db", type=float, default=1.0)
     parser.add_argument(
         "--fm-loss",
         choices=("mse", "normalized_huber"),
@@ -60,6 +69,11 @@ def set_trainable(model: FlowHARQJSCC, stage: str) -> None:
         for module in (model.encoder, model.decoder):
             for parameter in module.parameters():
                 parameter.requires_grad = False
+    elif stage == "decision":
+        for parameter in model.parameters():
+            parameter.requires_grad = False
+        for parameter in model.quality.parameters():
+            parameter.requires_grad = True
 
 
 def save_checkpoint(path: Path, model, optimizer, args, epoch, step) -> None:
@@ -79,6 +93,8 @@ def save_checkpoint(path: Path, model, optimizer, args, epoch, step) -> None:
 
 def main():
     args = parse_args()
+    if args.resume and args.initialize:
+        raise ValueError("--resume and --initialize are mutually exclusive")
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
@@ -104,6 +120,10 @@ def main():
     ).to(device)
     if args.backbone:
         print(json.dumps({"backbone": model.load_backbone(args.backbone)}), flush=True)
+    if args.initialize:
+        initialization = torch.load(args.initialize, map_location="cpu")
+        model.load_state_dict(initialization["model"])
+        print(json.dumps({"initialize": args.initialize}), flush=True)
     start_epoch = 0
     step = 0
     if args.resume:
@@ -126,6 +146,9 @@ def main():
         if args.stage == "flow":
             model.encoder.eval()
             model.decoder.eval()
+        elif args.stage == "decision":
+            for module in (model.encoder, model.decoder, model.reliability, model.flow):
+                module.eval()
         for image, _ in loader:
             image = image.to(device, non_blocking=True)
             context = sample_context(image.shape[0], device)
@@ -146,13 +169,22 @@ def main():
                         context,
                         flow_steps=args.flow_steps,
                         fm_loss_type=args.fm_loss,
+                        decision_target_psnr=args.decision_target_psnr,
+                        decision_temperature_db=args.decision_temperature_db,
                     )
-                    total = (
-                        args.lambda_fm * losses["fm"]
-                        + args.lambda_reliability * losses["reliability"]
-                        + args.lambda_quality * losses["quality"]
-                        + args.lambda_reconstruction * losses["reconstruction"]
-                    )
+                    if args.stage == "decision":
+                        total = (
+                            args.lambda_quality * losses["quality"]
+                            + args.lambda_decision * losses["decision"]
+                        )
+                    else:
+                        total = (
+                            args.lambda_fm * losses["fm"]
+                            + args.lambda_reliability * losses["reliability"]
+                            + args.lambda_quality * losses["quality"]
+                            + args.lambda_decision * losses["decision"]
+                            + args.lambda_reconstruction * losses["reconstruction"]
+                        )
             scaler.scale(total).backward()
             scaler.unscale_(optimizer)
             torch.nn.utils.clip_grad_norm_(

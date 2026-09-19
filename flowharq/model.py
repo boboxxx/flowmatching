@@ -16,6 +16,7 @@ from .modules import (
     ReliabilityEstimator,
     balanced_reliability_bce,
     oracle_unreliable_mask,
+    quality_boundary_bce,
 )
 
 
@@ -150,6 +151,8 @@ class FlowHARQJSCC(nn.Module):
         context: ChannelContext,
         flow_steps: int = 4,
         fm_loss_type: str = "mse",
+        decision_target_psnr: float = 24.0,
+        decision_temperature_db: float = 1.0,
     ) -> tuple[dict[str, Tensor], dict[str, Tensor]]:
         received = observation.tokens
         receiver_context = observation.receiver_features(context)
@@ -184,11 +187,26 @@ class FlowHARQJSCC(nn.Module):
             F.smooth_l1_loss(predicted_pre, pre_log_mse)
             + F.smooth_l1_loss(predicted_post, post_log_mse)
         )
+        decision_loss = 0.5 * (
+            quality_boundary_bce(
+                predicted_pre,
+                pre_log_mse,
+                decision_target_psnr,
+                decision_temperature_db,
+            )
+            + quality_boundary_bce(
+                predicted_post,
+                post_log_mse,
+                decision_target_psnr,
+                decision_temperature_db,
+            )
+        )
         reconstruction_loss = F.l1_loss(reconstruction_post, image)
         losses = {
             "fm": fm_loss,
             "reliability": reliability_loss,
             "quality": quality_loss,
+            "decision": decision_loss,
             "reconstruction": reconstruction_loss,
         }
         artifacts = {

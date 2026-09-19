@@ -67,3 +67,6 @@ def test_calibration_bias_uses_raw_predictions(tmp_path):
     assert result["fm_quality_bias"] == pytest.approx(1.0)
     assert result["adaptive_harq"]["nack"] == pytest.approx(0.5)
     assert result["flowharq"]["nack"] == pytest.approx(0.5)
+    assert result["direct_boundary"]["balanced_accuracy"] == pytest.approx(1.0)
+    assert result["fm_boundary"]["balanced_accuracy"] == pytest.approx(1.0)
+    assert 0.0 <= result["direct_boundary"]["ece"] <= 1.0

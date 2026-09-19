@@ -219,6 +219,22 @@ class QualityPredictor(nn.Module):
         return -10.0 / math.log(10.0) * log_mse
 
 
+def quality_boundary_bce(
+    predicted_log_mse: Tensor,
+    target_log_mse: Tensor,
+    target_psnr: float,
+    temperature_db: float = 1.0,
+) -> Tensor:
+    """Binary NACK loss focused on a receiver service-quality boundary."""
+    if temperature_db <= 0:
+        raise ValueError("temperature_db must be positive")
+    predicted_psnr = QualityPredictor.log_mse_to_psnr(predicted_log_mse)
+    actual_psnr = QualityPredictor.log_mse_to_psnr(target_log_mse)
+    nack_logits = (target_psnr - predicted_psnr) / temperature_db
+    nack_target = (actual_psnr < target_psnr).to(predicted_log_mse.dtype)
+    return F.binary_cross_entropy_with_logits(nack_logits, nack_target)
+
+
 def oracle_unreliable_mask(clean: Tensor, received: Tensor, fraction: float = 0.35) -> tuple[Tensor, Tensor]:
     """Return a per-sample top-error mask and its continuous token errors."""
     if not 0.0 < fraction < 1.0:

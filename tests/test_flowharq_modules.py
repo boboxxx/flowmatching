@@ -5,6 +5,7 @@ from flowharq.modules import (
     ReliabilityAnchoredFlow,
     ReliabilityEstimator,
     oracle_unreliable_mask,
+    quality_boundary_bce,
 )
 
 
@@ -86,3 +87,24 @@ def test_unknown_flow_loss_is_rejected():
         assert "unknown flow-matching loss" in str(error)
     else:
         raise AssertionError("invalid loss type should raise ValueError")
+
+
+def test_quality_boundary_loss_prefers_correct_ack_side():
+    factor = -10.0 / torch.log(torch.tensor(10.0))
+    actual_psnr = torch.tensor([22.0, 26.0])
+    target_log_mse = actual_psnr / factor
+    correct_prediction = torch.tensor([22.0, 26.0]) / factor
+    wrong_prediction = torch.tensor([26.0, 22.0]) / factor
+    correct = quality_boundary_bce(correct_prediction, target_log_mse, 24.0)
+    wrong = quality_boundary_bce(wrong_prediction, target_log_mse, 24.0)
+    assert correct < wrong
+
+
+def test_quality_boundary_loss_rejects_nonpositive_temperature():
+    values = torch.zeros(2)
+    try:
+        quality_boundary_bce(values, values, 24.0, temperature_db=0.0)
+    except ValueError as error:
+        assert "temperature_db" in str(error)
+    else:
+        raise AssertionError("nonpositive temperature should raise ValueError")
