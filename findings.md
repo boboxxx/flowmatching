@@ -19,6 +19,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 - Conservative masks prevent hallucination, but also leave too little repair benefit to change many ACK decisions.
 - H1 calibration succeeds: normalized Huber velocity supervision and reconstruction weight 1.0 yield +0.0714 dB FM-only PSNR over direct (bootstrap 95% CI [+0.0570, +0.0866]) at K=4, tau=0.8, with LPIPS delta +0.00203. Four of six conservative inference settings pass the preregistered +0.05 dB / +0.003 LPIPS gate.
 - At that frozen H1 point, calibration-only FlowHARQ saves 1.04 percentage points of physical retransmissions while improving final PSNR by +0.022 dB; this is a gate result, not held-out paper evidence.
+- The frozen single-training-seed held-out gate over three fresh channel seeds saves 2.1875 percentage points of retransmissions versus adaptive HARQ, with +0.0327 dB PSNR and +0.00145 LPIPS. This licenses the preregistered three-training-seed expansion but is not yet the final confidence-interval claim.
 
 ## Patterns and Insights
 

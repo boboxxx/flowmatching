@@ -33,7 +33,7 @@ literature:
 hypotheses:
   - id: H1
     statement: "Robust, scale-normalized velocity supervision plus a stronger image reconstruction term will make partial flow repair improve FM-only PSNR by at least 0.05 dB without worsening LPIPS."
-    status: heldout_gate
+    status: confirmatory_expansion
     motivation: "Current squared velocity loss is dominated by ZF deep-fade outliers and produces near-zero useful repair."
     parent: null
     priority: high
@@ -83,10 +83,26 @@ experiments:
     - job_id: "11397165_[0-2]"
       hypothesis: H1
       purpose: "single-training-seed held-out replication over three fresh channel seeds"
-      status: running
+      status: completed
     - job_id: "11397168"
       hypothesis: H1
       purpose: "held-out paired aggregation"
+      status: completed
+    - job_id: "11397172_[2031-2032]"
+      hypothesis: H1
+      purpose: "independent robust-repair training seeds"
+      status: running
+    - job_id: "11397174_[2031-2032]"
+      hypothesis: H1
+      purpose: "fixed-config calibration and scalar bias fitting"
+      status: dependent
+    - job_id: "11397175_[0-5]"
+      hypothesis: H1
+      purpose: "remaining two-training-seed by three-channel-seed held-out matrix"
+      status: dependent
+    - job_id: "11397176"
+      hypothesis: H1
+      purpose: "three-training-seed paired confidence intervals"
       status: dependent
   trajectory:
     - run_id: pilot_v1_tau050
@@ -117,6 +133,13 @@ experiments:
       wall_time_min: 22.0
       change_summary: "normalized Huber velocity loss plus reconstruction weight 1.0; K=4, tau=0.8"
       timestamp: "2026-09-19T14:30:00+01:00"
+    - run_id: h1_heldout_seed2030
+      hypothesis: H1
+      metric_value: 0.021875
+      delta: "adaptive-HARQ NACK minus FlowHARQ NACK; one training seed, three fresh channel seeds"
+      wall_time_min: 1.0
+      change_summary: "frozen K=4, tau=0.8, target=24 dB; PSNR +0.0327 dB, LPIPS +0.00145"
+      timestamp: "2026-09-19T14:40:00+01:00"
 
 outer_loop:
   cycle: 1
