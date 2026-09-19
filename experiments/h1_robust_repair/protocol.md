@@ -16,6 +16,8 @@ Compare the v2 objective against three isolated variants using training seed 203
 
 Everything else remains fixed. Calibration uses the existing 20-image split; the 80-image test split is touched only after choosing among variants.
 
+The conservative inference grid is fixed before results to $K\in\{1,2,4\}$ and $\tau\in\{0.8,0.9\}$. This grid excludes the previously observed aggressive over-repair region and lets the hypothesis test the training objective rather than one arbitrary inference setting.
+
 ## Prediction and acceptance
 
 - Calibration FM-only PSNR must improve by at least 0.05 dB over direct at a feasible conservative mask.
@@ -25,4 +27,3 @@ Everything else remains fixed. Calibration uses the existing 20-image split; the
 ## Failure interpretation
 
 If no variant reaches the FM-only quality criterion, absolute residual fitting is not the main bottleneck; pivot to spatial conditioning or corruption-localized training rather than more loss-weight sweeps.
-
