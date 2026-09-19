@@ -17,12 +17,12 @@ thresholds=(0.80 0.90)
 tau="${thresholds[$SLURM_ARRAY_TASK_ID]}"
 tag="t${tau/./}"
 cd "$project"
-mkdir -p logs results/h4/one_shot
+mkdir -p logs results/h4/one_shot_t0
 export PYTHONPATH="$project/vendor:${PYTHONPATH:-}"
 "$python" -m flowharq.evaluate \
   --data "$data" \
-  --checkpoint results/h4/one_shot/checkpoint.pt \
-  --output "results/h4/one_shot/calibration_k1_${tag}.csv" \
+  --checkpoint results/h4/one_shot_t0/checkpoint.pt \
+  --output "results/h4/one_shot_t0/calibration_k1_${tag}.csv" \
   --split calibration \
   --flow-steps 1 \
   --mask-threshold "$tau" \
