@@ -1,0 +1,28 @@
+{
+  "recorded_at": "2026-09-19T23:46:02.762225+00:00",
+  "kind": "post_run_environment_and_current_source_snapshot",
+  "python": "3.10.15",
+  "torch": "2.5.0+cu118",
+  "cuda": "11.8",
+  "verification": "tests/test_evidence_harq.py tests/test_metrics.py tests/test_channel.py passed",
+  "base_commit": null,
+  "source_sha256": {
+    "evidence_harq/evaluate_codec.py": "5b9ff8b815068606adf3f7e0a59475a047b907cade7901b7f3ed3091369536ff",
+    "evidence_harq/data.py": "d3febe751278585457abcf163ae9480944cd9183b964dcc728b8a2591b948b8a",
+    "evidence_harq/oracle_gate.py": "9e4cad15381289e22b2b25b391d4afa7b5f11a3d6694996294fa06616276f68e",
+    "evidence_harq/train_codec.py": "7f4b899548fb4f0b1be8473e003bd7ddef269d75a47219de0b3383a83a0334f0",
+    "evidence_harq/codec.py": "afd2f9ddf7727e31d79096dbd5f303df8e2cde398780e4f225d512ae322d4660",
+    "evidence_harq/risk.py": "5e0e97f46358879f0ce28cca790440a969c206a0ab0461edc585487bfac93b5c",
+    "evidence_harq/__init__.py": "42fe7a427a647d8a38fc6389fc679d2bd36bc609925cb3500b6ef238c5a6bdb5",
+    "evidence_harq/physical.py": "7384ca999ddd25379f79739cad14a2ccbbd1f736cb969e087fb63e2c257659fe",
+    "evidence_harq/diagnose_codec.py": "71a978ff439dc4254d6460bc349e0a898850f58cce8504349fca866f18dee909",
+    "scripts/evaluate_paid_jscc.py": "0316a79cedf70c6390568a2509fd75c2cfe001ed94ff6c98f19d361f37309539",
+    "scripts/evaluate_author_cddm.py": "3a316aa1e3537290a74689aeef43910c1bfb32dd802c6ba11fae0d1b0b50986f",
+    "scripts/evaluate_published_checkpoint.py": "8b991524191735f17102f42df5a3a8f31e6b5edd5acbbdf5164de202218224f4",
+    "flowharq/metrics.py": "79d988479ef151454b932a467e916659044f52bc8bdc3a9dfc0384aa11c1347f",
+    "flowharq/perceptual.py": "cd9b6475e85020468edc834a810ec763589ef084499cc05d8c6dcd10479b39f7",
+    "ugp/model.py": "8f34d0f030ce03b44a4a24fdb203431cfa0fc88121a9f308e48c629485cc041d",
+    "tests/test_evidence_harq.py": "3e67a67529b2f6cbbb56710bc20bab776ab13af4ba8d0d2cb9632d0542348ac6"
+  },
+  "note": "Version snapshot, not a hermetic binary/wheel lock; Sheng project root is an rsync-deployed source tree without Git metadata, so code identity is given by source hashes. Final evaluation path overrides were added after the registered runs."
+}

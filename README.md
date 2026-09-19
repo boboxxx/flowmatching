@@ -1,5 +1,14 @@
 # FlowHARQ-JSCC
 
+The active research direction (2026-09-20) is **evidence-adaptive image transmission**:
+paid metadata/control, a progressive codec feasibility gate, then conditional posterior
+acquisition only if that gate passes. The mathematical model, fixed protocol, publication
+audit are in [the new study](experiments/evidence_harq_20260920/protocol.md).
+The [completed feasibility results](experiments/evidence_harq_20260920/RESULTS.md)
+show a **failed codec gate (0% selective saving)**, not a successful new method.
+Executable modules are under `evidence_harq/`. The FlowHARQ description and experiments
+below are retained as the legacy study; they do not establish the new method's performance.
+
 Research prototype for **virtual retransmission via flow matching** in semantic
 image communication. The receiver first repairs unreliable DeepJSCC latent
 tokens with conditional flow matching and only requests a physical HARQ round

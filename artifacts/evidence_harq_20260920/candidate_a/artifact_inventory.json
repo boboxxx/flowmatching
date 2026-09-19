@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 11967948,
+      "sha256": "debda0f5a693aed874687014266c14e59db2e28def89fced62e47d7011779a4c"
+    },
+    {
+      "path": "configuration.json",
+      "bytes": 660,
+      "sha256": "2872728a8d7b24ce57b572738fcc40c7488b0a6a694d465c4066af9d92225f22"
+    },
+    {
+      "path": "gate_decision.choices.csv",
+      "bytes": 5127,
+      "sha256": "c7c948d45ce783b524cbd099a4ad4c90b726dc0b8f81802f9d18761581ca6404"
+    },
+    {
+      "path": "gate_decision.json",
+      "bytes": 17309,
+      "sha256": "697475cc4efd2d8f00d5bfd6fce05b7c47913c2fe12d229440780e61d6d45011"
+    },
+    {
+      "path": "last.pt",
+      "bytes": 11967948,
+      "sha256": "98b7647ebbd2351e9078bfb91826677eb56e231bde11cc9f9d8dd80c34bd5029"
+    },
+    {
+      "path": "oracle_gate.csv",
+      "bytes": 631930,
+      "sha256": "879092acefb8c72939fe65758a4ace856ee028a56692a9b4fbfbb8b6be4a7f2e"
+    },
+    {
+      "path": "oracle_gate.json",
+      "bytes": 496,
+      "sha256": "878d608b89cf4bea6ef719f59482dcfed677a83f2bfb7cf2476144b96e31ffea"
+    },
+    {
+      "path": "overfit_diagnostic.json",
+      "bytes": 2363,
+      "sha256": "095c78a9d378fd77606aba911fd9cb930e49772d8934694eea90f2d7a42ceeb1"
+    },
+    {
+      "path": "pip-freeze.txt",
+      "bytes": 2667,
+      "sha256": "7e2e8d17ad5678f2a48d3bc3378fb9eeb0b71d6212230d25a250d1573f160dd2"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 1056,
+      "sha256": "48354295d0277274cf38584c50aa02d17df21aef86defedf963b73b266255dea"
+    },
+    {
+      "path": "split_manifest.json",
+      "bytes": 189165,
+      "sha256": "34f93c662aec97fa13ef1ca8403dcfad3e72095917aeb8f06c28d7c54be99360"
+    },
+    {
+      "path": "status.json",
+      "bytes": 456,
+      "sha256": "39bd6d744e1a614172d9bb50b9edb79e387432d0753712913b8341237117855d"
+    },
+    {
+      "path": "training.csv",
+      "bytes": 80446,
+      "sha256": "1f4ca4e1fbe74bbcde9df950e9a2c247325cbdcacd3636f63d6ac9f797be240c"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "row_counts": {
+    "candidate_a": 2560,
+    "candidate_b_fixed": 2560,
+    "ntscc_quality1": 240,
+    "ntscc_quality2": 240,
+    "swin_mse_c32": 240,
+    "swin_mse_c64": 240,
+    "cddm_kodak24": 720
+  },
+  "total_reconstruction_rows": 6800,
+  "relocated_replay_rows": 16,
+  "relocated_replay_max_metric_difference": 0.0,
+  "server_only_checkpoints": [
+    "candidate_a/last.pt",
+    "candidate_b_failed/best.pt",
+    "candidate_b_failed/last.pt",
+    "candidate_b_fixed/last.pt"
+  ],
+  "interpretation": "Integrity, accounting, split and completeness audit; not validation of scientific superiority."
+}

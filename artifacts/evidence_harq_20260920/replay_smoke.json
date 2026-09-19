@@ -1,0 +1,14 @@
+{
+  "status": "smoke_only",
+  "split": "oracle_gate",
+  "images": 1,
+  "draws": 1,
+  "snrs": [
+    10.0
+  ],
+  "rows": 16,
+  "checkpoint_sha256": "b0b6297527ba2063157eb0d6d60660dd36016d2141480201cbf0c8dc9b050728",
+  "csv_sha256": "c21ccd7b0e2fb16c398fab2e7e41b65937c89d18e580226db2e0b4fcf9420c40",
+  "warning": "Contains every counterfactual future observation; oracle is clairvoyant, not deployable.",
+  "latency_note": "Batched enumeration timing only; not a deployment latency benchmark."
+}

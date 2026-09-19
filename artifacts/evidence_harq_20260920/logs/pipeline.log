@@ -1,0 +1,666 @@
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=6
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=6
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"stage": "codec", "step": 1, "steps": 2000, "loss": 0.0017832014709711075, "elapsed_s": 1.3603198528289795}
+{"stage": "codec", "step": 25, "steps": 2000, "loss": 0.0027885965537279844, "elapsed_s": 3.3723392486572266}
+{"stage": "codec", "step": 50, "steps": 2000, "loss": 0.0023836211767047644, "elapsed_s": 5.794458866119385}
+{"stage": "codec", "step": 75, "steps": 2000, "loss": 0.0023254796396940947, "elapsed_s": 8.294915199279785}
+{"stage": "codec", "step": 100, "steps": 2000, "loss": 0.0011003625113517046, "elapsed_s": 10.696932077407837}
+{"stage": "codec", "status": "running", "step": 100, "steps": 2000, "best_validation_mse": 0.0017836242652265355, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0017831114819273353, "mse_k2": 0.0017834345577284693, "mse_k3": 0.0017838937346823514, "mse_k4": 0.001784057286567986, "elapsed_s": 11.568861961364746}
+{"stage": "codec", "step": 125, "steps": 2000, "loss": 0.0016117405612021685, "elapsed_s": 14.406722784042358}
+{"stage": "codec", "step": 150, "steps": 2000, "loss": 0.001720352447591722, "elapsed_s": 16.890246629714966}
+{"stage": "codec", "step": 175, "steps": 2000, "loss": 0.0011780920904129744, "elapsed_s": 19.354374170303345}
+{"stage": "codec", "step": 200, "steps": 2000, "loss": 0.0022407029755413532, "elapsed_s": 21.778369903564453}
+{"stage": "codec", "status": "running", "step": 200, "steps": 2000, "best_validation_mse": 0.0017766213248251006, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001776473328936845, "mse_k2": 0.0017766198376193642, "mse_k3": 0.0017765759956091642, "mse_k4": 0.0017768161371350289, "elapsed_s": 22.626672983169556}
+{"stage": "codec", "step": 225, "steps": 2000, "loss": 0.00179202517028898, "elapsed_s": 25.419313430786133}
+{"stage": "codec", "step": 250, "steps": 2000, "loss": 0.0016202025581151247, "elapsed_s": 27.894296169281006}
+{"stage": "codec", "step": 275, "steps": 2000, "loss": 0.0025281046982854605, "elapsed_s": 30.344715356826782}
+{"stage": "codec", "step": 300, "steps": 2000, "loss": 0.0011763274669647217, "elapsed_s": 32.68523454666138}
+{"stage": "codec", "status": "running", "step": 300, "steps": 2000, "best_validation_mse": 0.0017738859460223466, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001773976837284863, "mse_k2": 0.0017739638453349472, "mse_k3": 0.0017737056827172638, "mse_k4": 0.0017738974187523127, "elapsed_s": 33.59037375450134}
+{"stage": "codec", "step": 325, "steps": 2000, "loss": 0.0018521299352869391, "elapsed_s": 36.622984409332275}
+{"stage": "codec", "step": 350, "steps": 2000, "loss": 0.002205630298703909, "elapsed_s": 39.08336806297302}
+{"stage": "codec", "step": 375, "steps": 2000, "loss": 0.0011513041099533439, "elapsed_s": 41.53695893287659}
+{"stage": "codec", "step": 400, "steps": 2000, "loss": 0.002225686563178897, "elapsed_s": 43.91240477561951}
+{"stage": "codec", "status": "running", "step": 400, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0017731960513629019, "mse_k2": 0.001773459033574909, "mse_k3": 0.0017734235036186874, "mse_k4": 0.0017736368114128708, "elapsed_s": 44.737202644348145}
+{"stage": "codec", "step": 425, "steps": 2000, "loss": 0.0022366137709468603, "elapsed_s": 47.612311124801636}
+{"stage": "codec", "step": 450, "steps": 2000, "loss": 0.0008060845430009067, "elapsed_s": 50.07567548751831}
+{"stage": "codec", "step": 475, "steps": 2000, "loss": 0.003104089293628931, "elapsed_s": 52.529534339904785}
+{"stage": "codec", "step": 500, "steps": 2000, "loss": 0.0024031749926507473, "elapsed_s": 54.82102680206299}
+{"stage": "codec", "status": "running", "step": 500, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0018205051659606398, "mse_k2": 0.001819383748807013, "mse_k3": 0.0018169183051213623, "mse_k4": 0.0018122845562174917, "elapsed_s": 55.63635206222534}
+{"stage": "codec", "step": 525, "steps": 2000, "loss": 0.001311926986090839, "elapsed_s": 58.52787947654724}
+{"stage": "codec", "step": 550, "steps": 2000, "loss": 0.000511056452523917, "elapsed_s": 60.90343642234802}
+{"stage": "codec", "step": 575, "steps": 2000, "loss": 0.0023273886181414127, "elapsed_s": 63.361021995544434}
+{"stage": "codec", "step": 600, "steps": 2000, "loss": 0.0006323616835288703, "elapsed_s": 65.71491146087646}
+{"stage": "codec", "status": "running", "step": 600, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0017880492843687535, "mse_k2": 0.0017865193309262394, "mse_k3": 0.0017839941196143628, "mse_k4": 0.0017796053551137447, "elapsed_s": 66.53366661071777}
+{"stage": "codec", "step": 625, "steps": 2000, "loss": 0.001660219277255237, "elapsed_s": 69.3205897808075}
+{"stage": "codec", "step": 650, "steps": 2000, "loss": 0.002704713959246874, "elapsed_s": 71.78658413887024}
+{"stage": "codec", "step": 675, "steps": 2000, "loss": 0.0022561047226190567, "elapsed_s": 74.19061303138733}
+{"stage": "codec", "step": 700, "steps": 2000, "loss": 0.0014722133055329323, "elapsed_s": 76.59225916862488}
+{"stage": "codec", "status": "running", "step": 700, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0017818641033954918, "mse_k2": 0.0017809516517445444, "mse_k3": 0.0017791422666050493, "mse_k4": 0.0017755669774487614, "elapsed_s": 77.4170560836792}
+{"stage": "codec", "step": 725, "steps": 2000, "loss": 0.0019036795711144805, "elapsed_s": 80.2503776550293}
+{"stage": "codec", "step": 750, "steps": 2000, "loss": 0.0015020240098237991, "elapsed_s": 82.6701226234436}
+{"stage": "codec", "step": 775, "steps": 2000, "loss": 0.00562015175819397, "elapsed_s": 84.99828314781189}
+{"stage": "codec", "step": 800, "steps": 2000, "loss": 0.0025851766113191843, "elapsed_s": 87.47145009040833}
+{"stage": "codec", "status": "running", "step": 800, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001779990433715284, "mse_k2": 0.001779027422890067, "mse_k3": 0.0017773045925423502, "mse_k4": 0.0017741497489623726, "elapsed_s": 88.28108954429626}
+{"stage": "codec", "step": 825, "steps": 2000, "loss": 0.0010593137703835964, "elapsed_s": 91.14286088943481}
+{"stage": "codec", "step": 850, "steps": 2000, "loss": 0.0008777558687143028, "elapsed_s": 93.63309907913208}
+{"stage": "codec", "step": 875, "steps": 2000, "loss": 0.0019072925206273794, "elapsed_s": 95.94424057006836}
+{"stage": "codec", "step": 900, "steps": 2000, "loss": 0.0013189719757065177, "elapsed_s": 98.3260326385498}
+{"stage": "codec", "status": "running", "step": 900, "steps": 2000, "best_validation_mse": 0.0017734288499923422, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001778625790029764, "mse_k2": 0.0017771541723050177, "mse_k3": 0.0017755082342773675, "mse_k4": 0.0017731379717588424, "elapsed_s": 99.13408827781677}
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/lpips.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=6
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=6
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0821.png", "images_done": 1, "images": 40, "rows": 64}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0822.png", "images_done": 2, "images": 40, "rows": 128}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0823.png", "images_done": 3, "images": 40, "rows": 192}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0824.png", "images_done": 4, "images": 40, "rows": 256}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0825.png", "images_done": 5, "images": 40, "rows": 320}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0826.png", "images_done": 6, "images": 40, "rows": 384}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0827.png", "images_done": 7, "images": 40, "rows": 448}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0828.png", "images_done": 8, "images": 40, "rows": 512}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0829.png", "images_done": 9, "images": 40, "rows": 576}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0830.png", "images_done": 10, "images": 40, "rows": 640}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0831.png", "images_done": 11, "images": 40, "rows": 704}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0832.png", "images_done": 12, "images": 40, "rows": 768}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0833.png", "images_done": 13, "images": 40, "rows": 832}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0834.png", "images_done": 14, "images": 40, "rows": 896}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0835.png", "images_done": 15, "images": 40, "rows": 960}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0836.png", "images_done": 16, "images": 40, "rows": 1024}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0837.png", "images_done": 17, "images": 40, "rows": 1088}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0838.png", "images_done": 18, "images": 40, "rows": 1152}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0839.png", "images_done": 19, "images": 40, "rows": 1216}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0840.png", "images_done": 20, "images": 40, "rows": 1280}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0841.png", "images_done": 21, "images": 40, "rows": 1344}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0842.png", "images_done": 22, "images": 40, "rows": 1408}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0843.png", "images_done": 23, "images": 40, "rows": 1472}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0844.png", "images_done": 24, "images": 40, "rows": 1536}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0845.png", "images_done": 25, "images": 40, "rows": 1600}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0846.png", "images_done": 26, "images": 40, "rows": 1664}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0847.png", "images_done": 27, "images": 40, "rows": 1728}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0848.png", "images_done": 28, "images": 40, "rows": 1792}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0849.png", "images_done": 29, "images": 40, "rows": 1856}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0850.png", "images_done": 30, "images": 40, "rows": 1920}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0851.png", "images_done": 31, "images": 40, "rows": 1984}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0852.png", "images_done": 32, "images": 40, "rows": 2048}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0853.png", "images_done": 33, "images": 40, "rows": 2112}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0854.png", "images_done": 34, "images": 40, "rows": 2176}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0855.png", "images_done": 35, "images": 40, "rows": 2240}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0856.png", "images_done": 36, "images": 40, "rows": 2304}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0857.png", "images_done": 37, "images": 40, "rows": 2368}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0858.png", "images_done": 38, "images": 40, "rows": 2432}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0859.png", "images_done": 39, "images": 40, "rows": 2496}
+{"stage": "all_subset_evaluation", "split": "oracle_gate", "image": "0860.png", "images_done": 40, "images": 40, "rows": 2560}
+{
+  "stage": "oracle_gate",
+  "status": "stop_candidate",
+  "primary": {
+    "psnr_target": 24.0,
+    "lpips_target": 0.3,
+    "trial_count": 160,
+    "savings_vs_adaptive_reference": 0.0,
+    "criteria": {
+      "saving_at_least_10_percent": false,
+      "nontrivial_service_coverage": true,
+      "no_outage_increase": true,
+      "psnr_noninferior": true,
+      "lpips_noninferior": true,
+      "ms_ssim_noninferior": true,
+      "full_refines_base": false
+    },
+    "passed": false,
+    "summaries": {
+      "selective_clairvoyant": {
+        "psnr": 28.544601786136628,
+        "mse": 0.0023648550336929476,
+        "lpips": 0.20860776299377903,
+        "ms_ssim": 0.9602220579981804,
+        "total_uses": 5537.8625,
+        "cbr_total": 0.02816702524820964,
+        "outage": 0.33125
+      },
+      "adaptive_base_full_clairvoyant": {
+        "psnr": 28.544601786136628,
+        "mse": 0.0023648550336929476,
+        "lpips": 0.20860776299377903,
+        "ms_ssim": 0.9602220579981804,
+        "total_uses": 5537.8625,
+        "cbr_total": 0.02816702524820964,
+        "outage": 0.33125
+      },
+      "always_full": {
+        "psnr": 28.5375807762146,
+        "mse": 0.002366613347157909,
+        "lpips": 0.20842381169786678,
+        "ms_ssim": 0.9601885840296746,
+        "total_uses": 8364.0,
+        "cbr_total": 0.04254150390625,
+        "outage": 0.33125
+      },
+      "base_only": {
+        "psnr": 28.553590214252473,
+        "mse": 0.0023620821191343566,
+        "lpips": 0.20862736401613802,
+        "ms_ssim": 0.960268734768033,
+        "total_uses": 4138.0,
+        "cbr_total": 0.021046956380208336,
+        "outage": 0.33125
+      }
+    }
+  },
+  "sensitivity": [
+    {
+      "psnr_target": 22.0,
+      "lpips_target": 0.25,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.54562429189682,
+          "mse": 0.0023634772645436896,
+          "lpips": 0.20860838189255446,
+          "ms_ssim": 0.9602349311113357,
+          "total_uses": 5458.625,
+          "cbr_total": 0.027764002482096355,
+          "outage": 0.3125
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.54562429189682,
+          "mse": 0.0023634772645436896,
+          "lpips": 0.20860838189255446,
+          "ms_ssim": 0.9602349311113357,
+          "total_uses": 5458.625,
+          "cbr_total": 0.027764002482096355,
+          "outage": 0.3125
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.3125
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.3125
+        }
+      }
+    },
+    {
+      "psnr_target": 22.0,
+      "lpips_target": 0.3,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.546018970012664,
+          "mse": 0.0023634254360786144,
+          "lpips": 0.20862608726602047,
+          "ms_ssim": 0.9602390754967928,
+          "total_uses": 5088.85,
+          "cbr_total": 0.02588322957356771,
+          "outage": 0.225
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.546018970012664,
+          "mse": 0.0023634254360786144,
+          "lpips": 0.20862608726602047,
+          "ms_ssim": 0.9602390754967928,
+          "total_uses": 5088.85,
+          "cbr_total": 0.02588322957356771,
+          "outage": 0.225
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.225
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.225
+        }
+      }
+    },
+    {
+      "psnr_target": 22.0,
+      "lpips_target": 0.35,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.55305370092392,
+          "mse": 0.002363111663953532,
+          "lpips": 0.20862903639208524,
+          "ms_ssim": 0.9602428145706654,
+          "total_uses": 4851.1375,
+          "cbr_total": 0.02467416127522787,
+          "outage": 0.16875
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.55305370092392,
+          "mse": 0.002363111663953532,
+          "lpips": 0.20862903639208524,
+          "ms_ssim": 0.9602428145706654,
+          "total_uses": 4851.1375,
+          "cbr_total": 0.02467416127522787,
+          "outage": 0.16875
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.16875
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.16875
+        }
+      }
+    },
+    {
+      "psnr_target": 24.0,
+      "lpips_target": 0.25,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.54420710802078,
+          "mse": 0.002364906862158023,
+          "lpips": 0.20859005762031302,
+          "ms_ssim": 0.9602179136127234,
+          "total_uses": 5907.6375,
+          "cbr_total": 0.030047798156738283,
+          "outage": 0.41875
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.54420710802078,
+          "mse": 0.002364906862158023,
+          "lpips": 0.20859005762031302,
+          "ms_ssim": 0.9602179136127234,
+          "total_uses": 5907.6375,
+          "cbr_total": 0.030047798156738283,
+          "outage": 0.41875
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.41875
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.41875
+        }
+      }
+    },
+    {
+      "psnr_target": 24.0,
+      "lpips_target": 0.3,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.544601786136628,
+          "mse": 0.0023648550336929476,
+          "lpips": 0.20860776299377903,
+          "ms_ssim": 0.9602220579981804,
+          "total_uses": 5537.8625,
+          "cbr_total": 0.02816702524820964,
+          "outage": 0.33125
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.544601786136628,
+          "mse": 0.0023648550336929476,
+          "lpips": 0.20860776299377903,
+          "ms_ssim": 0.9602220579981804,
+          "total_uses": 5537.8625,
+          "cbr_total": 0.02816702524820964,
+          "outage": 0.33125
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.33125
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.33125
+        }
+      }
+    },
+    {
+      "psnr_target": 24.0,
+      "lpips_target": 0.35,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.551636517047882,
+          "mse": 0.002364541261567865,
+          "lpips": 0.2086107121198438,
+          "ms_ssim": 0.9602257970720529,
+          "total_uses": 5300.15,
+          "cbr_total": 0.026957956949869792,
+          "outage": 0.275
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.551636517047882,
+          "mse": 0.002364541261567865,
+          "lpips": 0.2086107121198438,
+          "ms_ssim": 0.9602257970720529,
+          "total_uses": 5300.15,
+          "cbr_total": 0.026957956949869792,
+          "outage": 0.275
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.275
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.275
+        }
+      }
+    },
+    {
+      "psnr_target": 26.0,
+      "lpips_target": 0.25,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.543070220947264,
+          "mse": 0.002365740171762809,
+          "lpips": 0.20853751845424995,
+          "ms_ssim": 0.9602030593901872,
+          "total_uses": 6620.775,
+          "cbr_total": 0.033675003051757815,
+          "outage": 0.5875
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.543070220947264,
+          "mse": 0.002365740171762809,
+          "lpips": 0.20853751845424995,
+          "ms_ssim": 0.9602030593901872,
+          "total_uses": 6620.775,
+          "cbr_total": 0.033675003051757815,
+          "outage": 0.5875
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.5875
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.5875
+        }
+      }
+    },
+    {
+      "psnr_target": 26.0,
+      "lpips_target": 0.3,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.54346489906311,
+          "mse": 0.002365688343297734,
+          "lpips": 0.20855522382771596,
+          "ms_ssim": 0.9602072037756443,
+          "total_uses": 6251.0,
+          "cbr_total": 0.031794230143229164,
+          "outage": 0.5
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.54346489906311,
+          "mse": 0.002365688343297734,
+          "lpips": 0.20855522382771596,
+          "ms_ssim": 0.9602072037756443,
+          "total_uses": 6251.0,
+          "cbr_total": 0.031794230143229164,
+          "outage": 0.5
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.5
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.5
+        }
+      }
+    },
+    {
+      "psnr_target": 26.0,
+      "lpips_target": 0.35,
+      "trial_count": 160,
+      "savings_vs_adaptive_reference": 0.0,
+      "criteria": {
+        "saving_at_least_10_percent": false,
+        "nontrivial_service_coverage": true,
+        "no_outage_increase": true,
+        "psnr_noninferior": true,
+        "lpips_noninferior": true,
+        "ms_ssim_noninferior": true,
+        "full_refines_base": false
+      },
+      "passed": false,
+      "summaries": {
+        "selective_clairvoyant": {
+          "psnr": 28.55040307044983,
+          "mse": 0.002365453906759285,
+          "lpips": 0.20856206997996196,
+          "ms_ssim": 0.9602096427232027,
+          "total_uses": 6118.9375,
+          "cbr_total": 0.031122525533040367,
+          "outage": 0.46875
+        },
+        "adaptive_base_full_clairvoyant": {
+          "psnr": 28.55040307044983,
+          "mse": 0.002365453906759285,
+          "lpips": 0.20856206997996196,
+          "ms_ssim": 0.9602096427232027,
+          "total_uses": 6118.9375,
+          "cbr_total": 0.031122525533040367,
+          "outage": 0.46875
+        },
+        "always_full": {
+          "psnr": 28.5375807762146,
+          "mse": 0.002366613347157909,
+          "lpips": 0.20842381169786678,
+          "ms_ssim": 0.9601885840296746,
+          "total_uses": 8364.0,
+          "cbr_total": 0.04254150390625,
+          "outage": 0.46875
+        },
+        "base_only": {
+          "psnr": 28.553590214252473,
+          "mse": 0.0023620821191343566,
+          "lpips": 0.20862736401613802,
+          "ms_ssim": 0.960268734768033,
+          "total_uses": 4138.0,
+          "cbr_total": 0.021046956380208336,
+          "outage": 0.46875
+        }
+      }
+    }
+  ],
+  "interpretation": "Clairvoyant bound for this codec, channel, and service, not a conclusion about all active HARQ designs.",
+  "source_csv": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/main/oracle_gate.csv",
+  "source_sha256": "879092acefb8c72939fe65758a4ace856ee028a56692a9b4fbfbb8b6be4a7f2e"
+}
+CODEC_AND_ORACLE_GATE_FINISHED

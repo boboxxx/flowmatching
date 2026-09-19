@@ -1,0 +1,114 @@
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=6
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=6
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"stage": "codec", "step": 1, "steps": 8000, "loss": 0.0017810601275414228, "elapsed_s": 1.088897466659546}
+{"stage": "codec", "step": 25, "steps": 8000, "loss": 0.0027920790016651154, "elapsed_s": 3.3771402835845947}
+{"stage": "codec", "step": 50, "steps": 8000, "loss": 0.001545668113976717, "elapsed_s": 5.7376368045806885}
+{"stage": "codec", "step": 75, "steps": 8000, "loss": 0.0023303446359932423, "elapsed_s": 8.11318850517273}
+{"stage": "codec", "step": 100, "steps": 8000, "loss": 0.0010923754889518023, "elapsed_s": 10.574862957000732}
+{"stage": "codec", "step": 125, "steps": 8000, "loss": 0.0015997111331671476, "elapsed_s": 13.497982263565063}
+{"stage": "codec", "step": 150, "steps": 8000, "loss": 0.0017476489301770926, "elapsed_s": 15.973498344421387}
+{"stage": "codec", "step": 175, "steps": 8000, "loss": 0.001178230158984661, "elapsed_s": 18.499311923980713}
+{"stage": "codec", "step": 200, "steps": 8000, "loss": 0.028970591723918915, "elapsed_s": 20.939199686050415}
+{"stage": "codec", "status": "running", "step": 200, "steps": 8000, "best_validation_mse": 0.0021311394579242916, "mse_k0": 0.0017698784824460745, "mse_k1": 0.002603308949619532, "mse_k2": 0.002201810129918158, "mse_k3": 0.0019326084991917014, "mse_k4": 0.0017868302529677749, "elapsed_s": 21.83875012397766}
+{"stage": "codec", "step": 225, "steps": 8000, "loss": 0.0036915037781000137, "elapsed_s": 24.66080117225647}
+{"stage": "codec", "step": 250, "steps": 8000, "loss": 0.0017456932691857219, "elapsed_s": 27.11902403831482}
+{"stage": "codec", "step": 275, "steps": 8000, "loss": 0.008050779812037945, "elapsed_s": 29.59165334701538}
+{"stage": "codec", "step": 300, "steps": 8000, "loss": 0.0013477312168106437, "elapsed_s": 31.993027448654175}
+{"stage": "codec", "step": 325, "steps": 8000, "loss": 0.002617673948407173, "elapsed_s": 35.058255672454834}
+{"stage": "codec", "step": 350, "steps": 8000, "loss": 0.002437738236039877, "elapsed_s": 37.514376163482666}
+{"stage": "codec", "step": 375, "steps": 8000, "loss": 0.00118068081792444, "elapsed_s": 40.01746344566345}
+{"stage": "codec", "step": 400, "steps": 8000, "loss": 0.0023067654110491276, "elapsed_s": 42.437631130218506}
+{"stage": "codec", "status": "running", "step": 400, "steps": 8000, "best_validation_mse": 0.0018384818831691518, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0019130548113025724, "mse_k2": 0.0018620258895680308, "mse_k3": 0.0018051823833957314, "mse_k4": 0.0017736644484102726, "elapsed_s": 43.2513484954834}
+{"stage": "codec", "step": 425, "steps": 8000, "loss": 0.002277180552482605, "elapsed_s": 46.108524799346924}
+{"stage": "codec", "step": 450, "steps": 8000, "loss": 0.0008249670499935746, "elapsed_s": 48.56987237930298}
+{"stage": "codec", "step": 475, "steps": 8000, "loss": 0.0033784089609980583, "elapsed_s": 51.07597637176514}
+{"stage": "codec", "step": 500, "steps": 8000, "loss": 0.002489571226760745, "elapsed_s": 53.518439531326294}
+{"stage": "codec", "step": 525, "steps": 8000, "loss": 0.0014937266241759062, "elapsed_s": 56.42508411407471}
+{"stage": "codec", "step": 550, "steps": 8000, "loss": 0.0005420820089057088, "elapsed_s": 58.852572202682495}
+{"stage": "codec", "step": 575, "steps": 8000, "loss": 0.005299147218465805, "elapsed_s": 61.30541396141052}
+{"stage": "codec", "step": 600, "steps": 8000, "loss": 0.0028123031370341778, "elapsed_s": 63.69842219352722}
+{"stage": "codec", "status": "running", "step": 600, "steps": 8000, "best_validation_mse": 0.0018384818831691518, "mse_k0": 0.0017698784824460745, "mse_k1": 0.009563326742500067, "mse_k2": 0.006417552568018436, "mse_k3": 0.003451233636587858, "mse_k4": 0.0017840042361058294, "elapsed_s": 64.55102586746216}
+{"stage": "codec", "step": 625, "steps": 8000, "loss": 0.007531012874096632, "elapsed_s": 67.34973692893982}
+{"stage": "codec", "step": 650, "steps": 8000, "loss": 0.0030896211974322796, "elapsed_s": 69.80387687683105}
+{"stage": "codec", "step": 675, "steps": 8000, "loss": 0.0026631741784512997, "elapsed_s": 72.25713181495667}
+{"stage": "codec", "step": 700, "steps": 8000, "loss": 0.001626645214855671, "elapsed_s": 74.73917555809021}
+{"stage": "codec", "step": 725, "steps": 8000, "loss": 0.002378733828663826, "elapsed_s": 77.64621949195862}
+{"stage": "codec", "step": 750, "steps": 8000, "loss": 0.002485254779458046, "elapsed_s": 79.99951553344727}
+{"stage": "codec", "step": 775, "steps": 8000, "loss": 0.0059301843866705894, "elapsed_s": 82.35398840904236}
+{"stage": "codec", "step": 800, "steps": 8000, "loss": 0.002678691176697612, "elapsed_s": 84.82239270210266}
+{"stage": "codec", "status": "running", "step": 800, "steps": 8000, "best_validation_mse": 0.0018384818831691518, "mse_k0": 0.0017698784824460745, "mse_k1": 0.002080501872114837, "mse_k2": 0.0019747566781006753, "mse_k3": 0.0018297879840247333, "mse_k4": 0.0017748903948813677, "elapsed_s": 85.63680601119995}
+{"stage": "codec", "step": 825, "steps": 8000, "loss": 0.0010779515141621232, "elapsed_s": 88.54536724090576}
+{"stage": "codec", "step": 850, "steps": 8000, "loss": 0.0009081728640012443, "elapsed_s": 91.00802779197693}
+{"stage": "codec", "step": 875, "steps": 8000, "loss": 0.001975093502551317, "elapsed_s": 93.42713260650635}
+{"stage": "codec", "step": 900, "steps": 8000, "loss": 0.0013829439412802458, "elapsed_s": 95.8046944141388}
+{"stage": "codec", "step": 925, "steps": 8000, "loss": 0.0033927650656551123, "elapsed_s": 98.71517062187195}
+{"stage": "codec", "step": 950, "steps": 8000, "loss": 0.0018404762959107757, "elapsed_s": 101.22283291816711}
+{"stage": "codec", "step": 975, "steps": 8000, "loss": 0.001686399569734931, "elapsed_s": 103.72742176055908}
+{"stage": "codec", "step": 1000, "steps": 8000, "loss": 0.004615654703229666, "elapsed_s": 106.10441470146179}
+{"stage": "codec", "status": "running", "step": 1000, "steps": 8000, "best_validation_mse": 0.001831048066378571, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001890900288708508, "mse_k2": 0.001862546452321112, "mse_k3": 0.0017967545660212635, "mse_k4": 0.0017739909584634007, "elapsed_s": 106.94491982460022}
+{"stage": "codec", "step": 1025, "steps": 8000, "loss": 0.00043402364826761186, "elapsed_s": 109.84386348724365}
+{"stage": "codec", "step": 1050, "steps": 8000, "loss": 0.0006967451772652566, "elapsed_s": 112.22524309158325}
+{"stage": "codec", "step": 1075, "steps": 8000, "loss": 0.0009408660116605461, "elapsed_s": 114.59465169906616}
+{"stage": "codec", "step": 1100, "steps": 8000, "loss": 0.0014723853673785925, "elapsed_s": 117.08104395866394}
+{"stage": "codec", "step": 1125, "steps": 8000, "loss": 0.0014538605464622378, "elapsed_s": 119.9311945438385}
+{"stage": "codec", "step": 1150, "steps": 8000, "loss": 0.001703348709270358, "elapsed_s": 122.28483748435974}
+{"stage": "codec", "step": 1175, "steps": 8000, "loss": 0.0011696352157741785, "elapsed_s": 124.73384094238281}
+{"stage": "codec", "step": 1200, "steps": 8000, "loss": 0.0035705617628991604, "elapsed_s": 127.17510390281677}
+{"stage": "codec", "status": "running", "step": 1200, "steps": 8000, "best_validation_mse": 0.0018266250262968242, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0018805053317919374, "mse_k2": 0.0018495037453249096, "mse_k3": 0.001798960822634399, "mse_k4": 0.0017775302054360508, "elapsed_s": 128.00372004508972}
+{"stage": "codec", "step": 1225, "steps": 8000, "loss": 0.0017737438902258873, "elapsed_s": 130.95477199554443}
+{"stage": "codec", "step": 1250, "steps": 8000, "loss": 0.0006869544158689678, "elapsed_s": 133.39017748832703}
+{"stage": "codec", "step": 1275, "steps": 8000, "loss": 0.002232808154076338, "elapsed_s": 135.87823939323425}
+{"stage": "codec", "step": 1300, "steps": 8000, "loss": 0.001433642115443945, "elapsed_s": 138.32591652870178}
+{"stage": "codec", "step": 1325, "steps": 8000, "loss": 0.00279984506778419, "elapsed_s": 141.18390345573425}
+{"stage": "codec", "step": 1350, "steps": 8000, "loss": 0.0016638519009575248, "elapsed_s": 143.54481291770935}
+{"stage": "codec", "step": 1375, "steps": 8000, "loss": 0.0018658603075891733, "elapsed_s": 145.91411089897156}
+{"stage": "codec", "step": 1400, "steps": 8000, "loss": 0.001289338804781437, "elapsed_s": 148.3539068698883}
+{"stage": "codec", "status": "running", "step": 1400, "steps": 8000, "best_validation_mse": 0.0018064477131702005, "mse_k0": 0.0017698784824460745, "mse_k1": 0.001836478163022548, "mse_k2": 0.001824642252177, "mse_k3": 0.0017890121787786483, "mse_k4": 0.001775658258702606, "elapsed_s": 149.1709430217743}
+{"stage": "codec", "step": 1425, "steps": 8000, "loss": 0.0010992930037900805, "elapsed_s": 152.07380771636963}
+{"stage": "codec", "step": 1450, "steps": 8000, "loss": 0.003266069106757641, "elapsed_s": 154.54685282707214}
+{"stage": "codec", "step": 1475, "steps": 8000, "loss": 0.003355663036927581, "elapsed_s": 156.9413046836853}
+{"stage": "codec", "step": 1500, "steps": 8000, "loss": 0.001071906997822225, "elapsed_s": 159.41681051254272}
+{"stage": "codec", "step": 1525, "steps": 8000, "loss": 0.0016655835788697004, "elapsed_s": 162.42763257026672}
+{"stage": "codec", "step": 1550, "steps": 8000, "loss": 0.0024440912529826164, "elapsed_s": 164.87336826324463}
+{"stage": "codec", "step": 1575, "steps": 8000, "loss": 0.0010900413617491722, "elapsed_s": 167.32876229286194}
+{"stage": "codec", "step": 1600, "steps": 8000, "loss": 0.0012017274275422096, "elapsed_s": 169.72114300727844}
+{"stage": "codec", "status": "running", "step": 1600, "steps": 8000, "best_validation_mse": 0.0017980360687943177, "mse_k0": 0.0017698784824460745, "mse_k1": 0.0018200517864897848, "mse_k2": 0.0018125168629921974, "mse_k3": 0.0017852055141702294, "mse_k4": 0.0017743701115250587, "elapsed_s": 170.54400873184204}
+{"stage": "codec", "step": 1625, "steps": 8000, "loss": 0.0023112399503588676, "elapsed_s": 173.5184051990509}
+{"stage": "codec", "step": 1650, "steps": 8000, "loss": 0.0005002112593501806, "elapsed_s": 175.99823021888733}
+{"stage": "codec", "step": 1675, "steps": 8000, "loss": 0.0019045358058065176, "elapsed_s": 178.3934407234192}
+{"stage": "codec", "step": 1700, "steps": 8000, "loss": 0.0018915112596005201, "elapsed_s": 180.7696030139923}
+{"stage": "codec", "step": 1725, "steps": 8000, "loss": 0.0016355530824512243, "elapsed_s": 183.6528091430664}
+{"stage": "codec", "step": 1750, "steps": 8000, "loss": 0.0010563395917415619, "elapsed_s": 186.03536796569824}
+{"stage": "codec", "step": 1775, "steps": 8000, "loss": 0.0004441158380359411, "elapsed_s": 188.59483337402344}
+{"stage": "codec", "step": 1800, "steps": 8000, "loss": 0.002885892055928707, "elapsed_s": 190.98954916000366}
+{"stage": "codec", "status": "running", "step": 1800, "steps": 8000, "best_validation_mse": 0.0017980360687943177, "mse_k0": 0.0017698784824460745, "mse_k1": 0.002127358946017921, "mse_k2": 0.001985413138754666, "mse_k3": 0.001870667573530227, "mse_k4": 0.0018263325095176698, "elapsed_s": 191.82361102104187}
+{"stage": "codec", "step": 1825, "steps": 8000, "loss": 0.0018335646018385887, "elapsed_s": 194.74368238449097}
+{"stage": "codec", "step": 1850, "steps": 8000, "loss": 0.0023905865382403135, "elapsed_s": 197.2203929424286}
+{"stage": "codec", "step": 1875, "steps": 8000, "loss": 0.002875490812584758, "elapsed_s": 199.62827849388123}
+{"stage": "codec", "step": 1900, "steps": 8000, "loss": 0.0013283819425851107, "elapsed_s": 202.00147795677185}
+{"stage": "codec", "step": 1925, "steps": 8000, "loss": 0.0037169563584029675, "elapsed_s": 204.92094779014587}
+{"stage": "codec", "step": 1950, "steps": 8000, "loss": 0.0026808399707078934, "elapsed_s": 207.31949067115784}
+Traceback (most recent call last):
+  File "/home/sheng/anaconda3/envs/cv/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/sheng/anaconda3/envs/cv/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/sheng/flowmatching_vtc2027/evidence_harq/train_codec.py", line 189, in <module>
+    main()
+  File "/home/sheng/flowmatching_vtc2027/evidence_harq/train_codec.py", line 151, in main
+    ye, _ = enhancement_awgn(e, snr)
+  File "/home/sheng/flowmatching_vtc2027/evidence_harq/physical.py", line 78, in enhancement_awgn
+    y, info = packet_awgn(values[sl], snr_db, None if noise is None else noise[sl])
+  File "/home/sheng/flowmatching_vtc2027/evidence_harq/physical.py", line 41, in packet_awgn
+    raise FloatingPointError("packet scale is not representable in binary16")
+FloatingPointError: packet scale is not representable in binary16

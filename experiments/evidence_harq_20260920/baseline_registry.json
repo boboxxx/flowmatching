@@ -1,0 +1,17 @@
+{
+  "verified_on": "2026-09-20",
+  "policy": "Only verified conference/journal publications are external numerical baselines. In-house controls are ablations, not published baselines. No synthetic reimplementation may use an author's method name without a documented fidelity audit.",
+  "baselines": [
+    {"name": "SwinJSCC", "venue": "IEEE TCCN 11(1), 90-104, 2025", "doi": "10.1109/TCCN.2024.3424842", "source": "https://github.com/semcomm/SwinJSCC", "role": "Mandatory strong non-feedback base at C32/C64; author checkpoints", "status": "completed_paid_metadata_protocol; two_MSE_checkpoints_each_24_images_x_10_draws; AWGN10_center256_only"},
+    {"name": "NTSCC", "venue": "IEEE JSAC 40(8), 2300-2316, 2022", "doi": "10.1109/JSAC.2022.3180802", "source": "https://github.com/wsxtyrdd/NTSCC_JSAC22", "role": "Mandatory adaptive-rate JSCC reference", "status": "completed_paid_metadata_protocol; quality1_and_quality2_each_24_images_x_10_draws; scale_and_rate_map_charged; AWGN10_center256_only"},
+    {"name": "DeepJSCC-f", "venue": "IEEE JSAIT 1(1), 178-193, 2020", "doi": "10.1109/JSAIT.2020.2987203", "source": "https://github.com/kurka/deepJSCC-feedback", "role": "Mandatory published channel-output-feedback reference", "status": "verified_v2_training_complete; ideal channel-output feedback excludes direct finite-feedback cost equivalence"},
+    {"name": "DeepJSCC-l", "title": "Bandwidth-Agile Image Transmission With Deep Joint Source-Channel Coding", "venue": "IEEE TWC 20(12), 8081-8095, 2021", "doi": "10.1109/TWC.2021.3090048", "source": "https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/ipc-lab/layered_JSCC_journal.pdf", "role": "Progressive transmission reference", "status": "publication_verified; implementation_fidelity_pending"},
+    {"name": "SAFG-HARQ", "title": "Semantic Base Enabled Image Transmission With Fine-Grained HARQ", "venue": "IEEE TWC 24(4), 3606-3622, 2025", "doi": "10.1109/TWC.2025.3532501", "source": "https://ieeexplore.ieee.org/document/10857963/", "role": "Mandatory direct selective-HARQ literature comparator", "status": "publication_verified; full_text_and_author_code_not_yet_obtained; no_numerical_result_claim"},
+    {"name": "CDDM", "title": "Channel Denoising Diffusion Models for Wireless Semantic Communications", "venue": "IEEE TWC 23(9), 11168-11183, 2024", "doi": "10.1109/TWC.2024.3379244", "source": "https://github.com/Wireless3C-SJTU/CDDM-channel-denoising-diffusion-model-for-semantic-communication", "role": "Mandatory published generative receiver comparator", "status": "completed_author_code_and_six_checkpoints; paid_scale_AWGN10_center256; 24_images_x_10_draws_x_3_conditions; 93_diffusion_evaluations"}
+  ],
+  "context_only": [
+    {"name": "DiffCom", "source": "https://arxiv.org/abs/2406.07390", "reason": "Posterior-receiver background; inspected author repository cites arXiv. Formal publication not yet verified, so not counted toward published baselines."},
+    {"name": "LTT / RC-BFM / ADDPS / FlowSem", "reason": "Proposal mentions are not proof of publication. Must verify individually before eligibility."},
+    {"name": "legacy FlowHARQ H1/H2/H3/H4", "reason": "Own unpublished controls; legacy side-information protocol prevents unqualified rate comparison."}
+  ]
+}

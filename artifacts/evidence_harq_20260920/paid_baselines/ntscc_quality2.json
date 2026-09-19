@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "checkpoint": {
+    "name": "ntscc_quality2",
+    "paper": "NTSCC",
+    "objective": "MSE",
+    "channels": null,
+    "snr_db": 10,
+    "channel": "AWGN",
+    "source": "https://drive.google.com/file/d/1xzCrD8JSPQ-4V6Sv4pTa_Shd2mCRIvv3/view",
+    "bytes": 131622445,
+    "sha256": "27f5c7c16d3e60cde1dbaf51a013c8d058c78444b9b6dc3e3671085199487317"
+  },
+  "upstream_commit": "dd3c745374023af6d01f465c379122be785d936f",
+  "images": 24,
+  "draws": 10,
+  "seed": 8128,
+  "configuration": {
+    "family": "ntscc",
+    "upstream": "upstream/ntscc_author",
+    "checkpoint": "artifacts/published_weights/ntscc_quality2.pth",
+    "data": "data/Kodak24",
+    "output": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/paid_baselines/ntscc_quality2.csv",
+    "eta": 0.2,
+    "draws": 10,
+    "seed": 8128,
+    "limit": 0
+  },
+  "source_sha256": "0316a79cedf70c6390568a2509fd75c2cfe001ed94ff6c98f19d361f37309539",
+  "csv_sha256": "4f74e1b1a925e4c60e72deaeb3eff7a29ca2137ca713d38f32835e896bd53e27",
+  "summary": {
+    "psnr": 30.976589957873028,
+    "mse": 0.0009613004350588502,
+    "lpips": 0.12788536570345363,
+    "ms_ssim": 0.9602624046305815,
+    "cbr_payload": 0.04089630974663628,
+    "cbr_total": 0.05148590935601128
+  },
+  "protocol": "RGB center256; IEEE binary16 scale; reliable metadata/control at 0.5 info bits/complex use; fixed 4-bit NTSCC token-rate index; one final ACK.",
+  "native_protocol_deviations": "Explicit scalar quantization and metadata/control cost; author neural weights and physical AWGN unchanged."
+}

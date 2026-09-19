@@ -1,0 +1,19 @@
+{
+  "upstream": "/home/sheng/flowmatching_vtc2027/upstream/SwinJSCC",
+  "base_checkpoint": "/home/sheng/flowmatching_vtc2027/artifacts/published_weights/swin_mse_c32.pth",
+  "train_data": "/home/sheng/ugp_deepjscc_v2_20260919/data/DIV2K_train_HR",
+  "valid_data": "/home/sheng/ugp_deepjscc_v2_20260919/data/DIV2K_valid_HR",
+  "test_data": "/home/sheng/flowmatching_vtc2027/data/Kodak24",
+  "output": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/codec_b",
+  "steps": 8000,
+  "batch_size": 8,
+  "workers": 4,
+  "seed": 2027,
+  "lr": 0.001,
+  "validate_every": 200,
+  "patience": 10,
+  "minimum_steps": 3000,
+  "precision": "fp32",
+  "resume": false,
+  "smoke": false
+}

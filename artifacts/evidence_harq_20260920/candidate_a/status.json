@@ -1,0 +1,15 @@
+{
+  "stage": "codec",
+  "status": "completed",
+  "step": 900,
+  "steps": 2000,
+  "best_validation_mse": 0.0017734288499923422,
+  "mse_k0": 0.0017698784824460745,
+  "mse_k1": 0.001778625790029764,
+  "mse_k2": 0.0017771541723050177,
+  "mse_k3": 0.0017755082342773675,
+  "mse_k4": 0.0017731379717588424,
+  "elapsed_s": 99.13408827781677,
+  "stopping_step": 900,
+  "best_checkpoint_sha256": "debda0f5a693aed874687014266c14e59db2e28def89fced62e47d7011779a4c"
+}

@@ -1,0 +1,17 @@
+{
+  "stage": "codec",
+  "status": "failed",
+  "error_type": "FloatingPointError",
+  "error": "packet scale is not representable in binary16",
+  "last_logged_training_step": 1950,
+  "status_correction_source": "codec_b_pipeline.log; last validation status predates the uncaught exception",
+  "step": 1800,
+  "steps": 8000,
+  "best_validation_mse": 0.0017980360687943177,
+  "mse_k0": 0.0017698784824460745,
+  "mse_k1": 0.002127358946017921,
+  "mse_k2": 0.001985413138754666,
+  "mse_k3": 0.001870667573530227,
+  "mse_k4": 0.0018263325095176698,
+  "elapsed_s": 191.82361102104187
+}

@@ -1,0 +1,97 @@
+{
+  "status": "completed",
+  "paper_doi": "10.1109/TWC.2024.3379244",
+  "upstream_commit": "1d12e485e1062982fd87595fcf3f729f6d22b11e",
+  "checkpoints": {
+    "encoder_snr13": {
+      "name": "encoder_snr13_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10iu47OwgLcriQFcxCZm9u5_DFB2DgkEY/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 62923698,
+      "sha256": "aed428a19aa0cc359de94d2f22973864d9980f1436e3a328cbdb8a8430e3a9ab",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    },
+    "decoder_snr13": {
+      "name": "decoder_snr13_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10d_fhsFFK7zW_r2yHMRwkMWodbyQFgVp/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 63278749,
+      "sha256": "23c2dd21dbaac605a8c9d57f3a436275d3f0e495b85cb1c0498273e62aa52dd8",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    },
+    "redecoder_snr10": {
+      "name": "redecoder_snr10_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10jdF_zKnBsAqOed6ufGgXFvI37Z4Qd75/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 63279309,
+      "sha256": "6b0ffefa1e4e3cdcdbf3f280f476146b4993f848e13c188d380a75dfa8a51b96",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    },
+    "encoder_snr10": {
+      "name": "encoder_snr10_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10hjiQcdRJ6IGSHUhzKSEvyZ4tazW9yI1/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 62923698,
+      "sha256": "2381144c40c1bbaa3cf537663ffabf2ca057f16862b477829d622e758c05e7ab",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    },
+    "decoder_snr10": {
+      "name": "decoder_snr10_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10bw0hDCFo1wQPVvrIhExluXBQEU2oa48/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 63278749,
+      "sha256": "b2bde9c96e8b9bda4d1ad70e0ba4673534d48a800c5a3a30c2334fc686ac4c85",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    },
+    "CDDM_snr13": {
+      "name": "CDDM_snr13_channel_awgn_C36.pt",
+      "source": "https://drive.google.com/file/d/10PowelxqyxTJtMY-CbKyMp5ETOT2fGvE/view",
+      "author_folder": "https://drive.google.com/drive/folders/1-oEe1F_-OqkWoeYOtyOGJLiGJskLbcyX",
+      "bytes": 2093542291,
+      "sha256": "94d16a8d732c9694cd3f2113bc397f82ea3ed7893e13a34c04a9e88474c5304e",
+      "paper_doi": "10.1109/TWC.2024.3379244"
+    }
+  },
+  "summary": [
+    {
+      "model": "CDDM_author_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.612715808550515,
+      "mse": 0.0022323233270678125,
+      "lpips": 0.21693583984548848,
+      "ms_ssim": 0.9440213978290558,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 93.0
+    },
+    {
+      "model": "CDDM_author_JSCC_snr10_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.329548303286234,
+      "mse": 0.002381833069618248,
+      "lpips": 0.2292590289687117,
+      "ms_ssim": 0.9431836061179638,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 0.0
+    },
+    {
+      "model": "CDDM_author_JSCC_snr13_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.38015783627828,
+      "mse": 0.0023173121920990526,
+      "lpips": 0.20851547569036483,
+      "ms_ssim": 0.9418386936187744,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 0.0
+    }
+  ],
+  "csv_sha256": "467f02b61592ce608a8a80acd7bfe87671655d062ad02d74542bac56b987cfcb",
+  "adaptation": "Author architecture/checkpoints/channel/sampler; quantized global scale, common center256 RGB metrics, charged scalar and one final ACK.",
+  "side_channel": "Ideal reliable control/metadata, 0.5 information bits per complex use; no physical control code simulated.",
+  "timing_note": "Raw sampling time only, not certified full latency; concurrent GPU jobs may affect timing."
+}

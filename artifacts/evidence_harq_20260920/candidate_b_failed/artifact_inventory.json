@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "best.pt",
+      "bytes": 11967948,
+      "sha256": "56b5a498db044d1af31869d808c2246db8b62fbc98f02d37f81a4f4b0152bf1c"
+    },
+    {
+      "path": "configuration.json",
+      "bytes": 687,
+      "sha256": "b68e6abbe543192b5b6d24950cdbcef515627d9d9884f8d498ff7d243e17a486"
+    },
+    {
+      "path": "last.pt",
+      "bytes": 11967948,
+      "sha256": "9b32649459b1ec4f1551871cb9214007186f1b43eb231300d141861e700596a7"
+    },
+    {
+      "path": "pip-freeze.txt",
+      "bytes": 2667,
+      "sha256": "7e2e8d17ad5678f2a48d3bc3378fb9eeb0b71d6212230d25a250d1573f160dd2"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 1163,
+      "sha256": "ed0d351624983783df3d14e03facd96d1f264ccb1c56ea9bf32dd93af0df7b2b"
+    },
+    {
+      "path": "split_manifest.json",
+      "bytes": 189165,
+      "sha256": "34f93c662aec97fa13ef1ca8403dcfad3e72095917aeb8f06c28d7c54be99360"
+    },
+    {
+      "path": "status.json",
+      "bytes": 578,
+      "sha256": "8b0bdb308914fcd5d4c48a508869d0c86faedfd354de10676d33bd012c29f110"
+    },
+    {
+      "path": "training.csv",
+      "bytes": 174540,
+      "sha256": "feb258adb3146b013394e8ef110371567049b17fa903711915fcab512075993f"
+    }
+  ]
+}

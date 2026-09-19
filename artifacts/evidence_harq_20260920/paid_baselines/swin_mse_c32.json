@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "checkpoint": {
+    "name": "swin_mse_c32",
+    "paper": "SwinJSCC",
+    "objective": "MSE",
+    "channels": 32,
+    "snr_db": 10,
+    "channel": "AWGN",
+    "source": "https://drive.google.com/file/d/1h2Dk9jckeRg6Rah32S_kLq89CtPdGdwj/view",
+    "bytes": 125823492,
+    "sha256": "864d52a64281b3fcd4db34f7696b225b96c998b040b81d96cc556ecb837a17ff"
+  },
+  "upstream_commit": "a6d0e6da53548976acbe9317839a077ef31f190f",
+  "images": 24,
+  "draws": 10,
+  "seed": 8128,
+  "configuration": {
+    "family": "swin",
+    "upstream": "upstream/SwinJSCC",
+    "checkpoint": "artifacts/published_weights/swin_mse_c32.pth",
+    "data": "data/Kodak24",
+    "output": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/paid_baselines/swin_mse_c32.csv",
+    "eta": 0.2,
+    "draws": 10,
+    "seed": 8128,
+    "limit": 0
+  },
+  "source_sha256": "0316a79cedf70c6390568a2509fd75c2cfe001ed94ff6c98f19d361f37309539",
+  "csv_sha256": "5d61ef048b45956f2ebf49f2f1131597c6ef15451984f2d719928394f4667404",
+  "summary": {
+    "psnr": 28.393974264462788,
+    "mse": 0.0019602011765528005,
+    "lpips": 0.21400480512529613,
+    "ms_ssim": 0.9518373623490334,
+    "cbr_payload": 0.02083333333333333,
+    "cbr_total": 0.021006266276041668
+  },
+  "protocol": "RGB center256; IEEE binary16 scale; reliable metadata/control at 0.5 info bits/complex use; fixed 4-bit NTSCC token-rate index; one final ACK.",
+  "native_protocol_deviations": "Explicit scalar quantization and metadata/control cost; author neural weights and physical AWGN unchanged."
+}

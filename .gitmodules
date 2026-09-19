@@ -2,3 +2,7 @@
 	path = upstream/SwinJSCC
 	url = https://github.com/semcomm/SwinJSCC.git
 	branch = main
+
+[submodule "upstream/CDDM_author"]
+	path = upstream/CDDM_author
+	url = https://github.com/Wireless3C-SJTU/CDDM-channel-denoising-diffusion-model-for-semantic-communication.git

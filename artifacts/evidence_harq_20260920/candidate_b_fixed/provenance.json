@@ -1,0 +1,21 @@
+{
+  "torch": "2.5.0+cu118",
+  "python": "3.10.15",
+  "host": "DESKTOP-UGDDO8T",
+  "cuda": "11.8",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "base_checkpoint_sha256": "864d52a64281b3fcd4db34f7696b225b96c998b040b81d96cc556ecb837a17ff",
+  "source_sha256": {
+    "evidence_harq/__init__.py": "42fe7a427a647d8a38fc6389fc679d2bd36bc609925cb3500b6ef238c5a6bdb5",
+    "evidence_harq/codec.py": "afd2f9ddf7727e31d79096dbd5f303df8e2cde398780e4f225d512ae322d4660",
+    "evidence_harq/data.py": "d3febe751278585457abcf163ae9480944cd9183b964dcc728b8a2591b948b8a",
+    "evidence_harq/diagnose_codec.py": "71a978ff439dc4254d6460bc349e0a898850f58cce8504349fca866f18dee909",
+    "evidence_harq/evaluate_codec.py": "bcd9460b59a2390d4e38b2c55b8e1750d1a0409f3ab54dac154ef416f945819f",
+    "evidence_harq/oracle_gate.py": "9e4cad15381289e22b2b25b391d4afa7b5f11a3d6694996294fa06616276f68e",
+    "evidence_harq/physical.py": "7384ca999ddd25379f79739cad14a2ccbbd1f736cb969e087fb63e2c257659fe",
+    "evidence_harq/risk.py": "5e0e97f46358879f0ce28cca790440a969c206a0ab0461edc585487bfac93b5c",
+    "evidence_harq/train_codec.py": "7f4b899548fb4f0b1be8473e003bd7ddef269d75a47219de0b3383a83a0334f0"
+  },
+  "upstream_commit": "a6d0e6da53548976acbe9317839a077ef31f190f",
+  "status": "running"
+}

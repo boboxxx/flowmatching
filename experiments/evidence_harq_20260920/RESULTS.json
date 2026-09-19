@@ -1,0 +1,1242 @@
+{
+  "candidates": {
+    "candidate_a": {
+      "status": {
+        "stage": "codec",
+        "status": "completed",
+        "step": 900,
+        "steps": 2000,
+        "best_validation_mse": 0.0017734288499923422,
+        "mse_k0": 0.0017698784824460745,
+        "mse_k1": 0.001778625790029764,
+        "mse_k2": 0.0017771541723050177,
+        "mse_k3": 0.0017755082342773675,
+        "mse_k4": 0.0017731379717588424,
+        "elapsed_s": 99.13408827781677,
+        "stopping_step": 900,
+        "best_checkpoint_sha256": "debda0f5a693aed874687014266c14e59db2e28def89fced62e47d7011779a4c"
+      },
+      "gate": {
+        "stage": "oracle_gate",
+        "status": "stop_candidate",
+        "primary": {
+          "psnr_target": 24.0,
+          "lpips_target": 0.3,
+          "trial_count": 160,
+          "savings_vs_adaptive_reference": 0.0,
+          "criteria": {
+            "saving_at_least_10_percent": false,
+            "nontrivial_service_coverage": true,
+            "no_outage_increase": true,
+            "psnr_noninferior": true,
+            "lpips_noninferior": true,
+            "ms_ssim_noninferior": true,
+            "full_refines_base": false
+          },
+          "passed": false,
+          "summaries": {
+            "selective_clairvoyant": {
+              "psnr": 28.544601786136628,
+              "mse": 0.0023648550336929476,
+              "lpips": 0.20860776299377903,
+              "ms_ssim": 0.9602220579981804,
+              "total_uses": 5537.8625,
+              "cbr_total": 0.02816702524820964,
+              "outage": 0.33125
+            },
+            "adaptive_base_full_clairvoyant": {
+              "psnr": 28.544601786136628,
+              "mse": 0.0023648550336929476,
+              "lpips": 0.20860776299377903,
+              "ms_ssim": 0.9602220579981804,
+              "total_uses": 5537.8625,
+              "cbr_total": 0.02816702524820964,
+              "outage": 0.33125
+            },
+            "always_full": {
+              "psnr": 28.5375807762146,
+              "mse": 0.002366613347157909,
+              "lpips": 0.20842381169786678,
+              "ms_ssim": 0.9601885840296746,
+              "total_uses": 8364.0,
+              "cbr_total": 0.04254150390625,
+              "outage": 0.33125
+            },
+            "base_only": {
+              "psnr": 28.553590214252473,
+              "mse": 0.0023620821191343566,
+              "lpips": 0.20862736401613802,
+              "ms_ssim": 0.960268734768033,
+              "total_uses": 4138.0,
+              "cbr_total": 0.021046956380208336,
+              "outage": 0.33125
+            }
+          }
+        },
+        "sensitivity": [
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.54562429189682,
+                "mse": 0.0023634772645436896,
+                "lpips": 0.20860838189255446,
+                "ms_ssim": 0.9602349311113357,
+                "total_uses": 5458.625,
+                "cbr_total": 0.027764002482096355,
+                "outage": 0.3125
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.54562429189682,
+                "mse": 0.0023634772645436896,
+                "lpips": 0.20860838189255446,
+                "ms_ssim": 0.9602349311113357,
+                "total_uses": 5458.625,
+                "cbr_total": 0.027764002482096355,
+                "outage": 0.3125
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.3125
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.3125
+              }
+            }
+          },
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.546018970012664,
+                "mse": 0.0023634254360786144,
+                "lpips": 0.20862608726602047,
+                "ms_ssim": 0.9602390754967928,
+                "total_uses": 5088.85,
+                "cbr_total": 0.02588322957356771,
+                "outage": 0.225
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.546018970012664,
+                "mse": 0.0023634254360786144,
+                "lpips": 0.20862608726602047,
+                "ms_ssim": 0.9602390754967928,
+                "total_uses": 5088.85,
+                "cbr_total": 0.02588322957356771,
+                "outage": 0.225
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.225
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.225
+              }
+            }
+          },
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.55305370092392,
+                "mse": 0.002363111663953532,
+                "lpips": 0.20862903639208524,
+                "ms_ssim": 0.9602428145706654,
+                "total_uses": 4851.1375,
+                "cbr_total": 0.02467416127522787,
+                "outage": 0.16875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.55305370092392,
+                "mse": 0.002363111663953532,
+                "lpips": 0.20862903639208524,
+                "ms_ssim": 0.9602428145706654,
+                "total_uses": 4851.1375,
+                "cbr_total": 0.02467416127522787,
+                "outage": 0.16875
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.16875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.16875
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.54420710802078,
+                "mse": 0.002364906862158023,
+                "lpips": 0.20859005762031302,
+                "ms_ssim": 0.9602179136127234,
+                "total_uses": 5907.6375,
+                "cbr_total": 0.030047798156738283,
+                "outage": 0.41875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.54420710802078,
+                "mse": 0.002364906862158023,
+                "lpips": 0.20859005762031302,
+                "ms_ssim": 0.9602179136127234,
+                "total_uses": 5907.6375,
+                "cbr_total": 0.030047798156738283,
+                "outage": 0.41875
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.41875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.41875
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.544601786136628,
+                "mse": 0.0023648550336929476,
+                "lpips": 0.20860776299377903,
+                "ms_ssim": 0.9602220579981804,
+                "total_uses": 5537.8625,
+                "cbr_total": 0.02816702524820964,
+                "outage": 0.33125
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.544601786136628,
+                "mse": 0.0023648550336929476,
+                "lpips": 0.20860776299377903,
+                "ms_ssim": 0.9602220579981804,
+                "total_uses": 5537.8625,
+                "cbr_total": 0.02816702524820964,
+                "outage": 0.33125
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.33125
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.33125
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.551636517047882,
+                "mse": 0.002364541261567865,
+                "lpips": 0.2086107121198438,
+                "ms_ssim": 0.9602257970720529,
+                "total_uses": 5300.15,
+                "cbr_total": 0.026957956949869792,
+                "outage": 0.275
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.551636517047882,
+                "mse": 0.002364541261567865,
+                "lpips": 0.2086107121198438,
+                "ms_ssim": 0.9602257970720529,
+                "total_uses": 5300.15,
+                "cbr_total": 0.026957956949869792,
+                "outage": 0.275
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.275
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.275
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.543070220947264,
+                "mse": 0.002365740171762809,
+                "lpips": 0.20853751845424995,
+                "ms_ssim": 0.9602030593901872,
+                "total_uses": 6620.775,
+                "cbr_total": 0.033675003051757815,
+                "outage": 0.5875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.543070220947264,
+                "mse": 0.002365740171762809,
+                "lpips": 0.20853751845424995,
+                "ms_ssim": 0.9602030593901872,
+                "total_uses": 6620.775,
+                "cbr_total": 0.033675003051757815,
+                "outage": 0.5875
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.5875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.5875
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.54346489906311,
+                "mse": 0.002365688343297734,
+                "lpips": 0.20855522382771596,
+                "ms_ssim": 0.9602072037756443,
+                "total_uses": 6251.0,
+                "cbr_total": 0.031794230143229164,
+                "outage": 0.5
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.54346489906311,
+                "mse": 0.002365688343297734,
+                "lpips": 0.20855522382771596,
+                "ms_ssim": 0.9602072037756443,
+                "total_uses": 6251.0,
+                "cbr_total": 0.031794230143229164,
+                "outage": 0.5
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.5
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.5
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.55040307044983,
+                "mse": 0.002365453906759285,
+                "lpips": 0.20856206997996196,
+                "ms_ssim": 0.9602096427232027,
+                "total_uses": 6118.9375,
+                "cbr_total": 0.031122525533040367,
+                "outage": 0.46875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.55040307044983,
+                "mse": 0.002365453906759285,
+                "lpips": 0.20856206997996196,
+                "ms_ssim": 0.9602096427232027,
+                "total_uses": 6118.9375,
+                "cbr_total": 0.031122525533040367,
+                "outage": 0.46875
+              },
+              "always_full": {
+                "psnr": 28.5375807762146,
+                "mse": 0.002366613347157909,
+                "lpips": 0.20842381169786678,
+                "ms_ssim": 0.9601885840296746,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.46875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.46875
+              }
+            }
+          }
+        ],
+        "interpretation": "Clairvoyant bound for this codec, channel, and service, not a conclusion about all active HARQ designs.",
+        "source_csv": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/main/oracle_gate.csv",
+        "source_sha256": "879092acefb8c72939fe65758a4ace856ee028a56692a9b4fbfbb8b6be4a7f2e"
+      }
+    },
+    "candidate_b_failed": {
+      "status": {
+        "stage": "codec",
+        "status": "failed",
+        "error_type": "FloatingPointError",
+        "error": "packet scale is not representable in binary16",
+        "last_logged_training_step": 1950,
+        "status_correction_source": "codec_b_pipeline.log; last validation status predates the uncaught exception",
+        "step": 1800,
+        "steps": 8000,
+        "best_validation_mse": 0.0017980360687943177,
+        "mse_k0": 0.0017698784824460745,
+        "mse_k1": 0.002127358946017921,
+        "mse_k2": 0.001985413138754666,
+        "mse_k3": 0.001870667573530227,
+        "mse_k4": 0.0018263325095176698,
+        "elapsed_s": 191.82361102104187
+      },
+      "gate": null
+    },
+    "candidate_b_fixed": {
+      "status": {
+        "stage": "codec",
+        "status": "completed",
+        "step": 3200,
+        "steps": 8000,
+        "best_validation_mse": 0.0018004336568992587,
+        "mse_k0": 0.0017698784824460745,
+        "mse_k1": 0.001808726880699396,
+        "mse_k2": 0.0018047585035674274,
+        "mse_k3": 0.0017969083739444614,
+        "mse_k4": 0.0017931108828634023,
+        "elapsed_s": 896.5390434265137,
+        "stopping_step": 3200,
+        "best_checkpoint_sha256": "b0b6297527ba2063157eb0d6d60660dd36016d2141480201cbf0c8dc9b050728"
+      },
+      "gate": {
+        "stage": "oracle_gate",
+        "status": "stop_candidate",
+        "primary": {
+          "psnr_target": 24.0,
+          "lpips_target": 0.3,
+          "trial_count": 160,
+          "savings_vs_adaptive_reference": 0.0,
+          "criteria": {
+            "saving_at_least_10_percent": false,
+            "nontrivial_service_coverage": true,
+            "no_outage_increase": true,
+            "psnr_noninferior": true,
+            "lpips_noninferior": true,
+            "ms_ssim_noninferior": true,
+            "full_refines_base": false
+          },
+          "passed": false,
+          "summaries": {
+            "selective_clairvoyant": {
+              "psnr": 28.55436679124832,
+              "mse": 0.002376913227226396,
+              "lpips": 0.20837718611583114,
+              "ms_ssim": 0.9600184164941311,
+              "total_uses": 5537.8625,
+              "cbr_total": 0.02816702524820964,
+              "outage": 0.33125
+            },
+            "adaptive_base_full_clairvoyant": {
+              "psnr": 28.55436679124832,
+              "mse": 0.002376913227226396,
+              "lpips": 0.20837718611583114,
+              "ms_ssim": 0.9600184164941311,
+              "total_uses": 5537.8625,
+              "cbr_total": 0.02816702524820964,
+              "outage": 0.33125
+            },
+            "always_full": {
+              "psnr": 28.507145166397095,
+              "mse": 0.0023937355691032282,
+              "lpips": 0.20793039123527707,
+              "ms_ssim": 0.9596285246312618,
+              "total_uses": 8364.0,
+              "cbr_total": 0.04254150390625,
+              "outage": 0.33125
+            },
+            "base_only": {
+              "psnr": 28.553590214252473,
+              "mse": 0.0023620821191343566,
+              "lpips": 0.20862736401613802,
+              "ms_ssim": 0.960268734768033,
+              "total_uses": 4138.0,
+              "cbr_total": 0.021046956380208336,
+              "outage": 0.33125
+            }
+          }
+        },
+        "sensitivity": [
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.55823404788971,
+                "mse": 0.002370019648469679,
+                "lpips": 0.2082921755267307,
+                "ms_ssim": 0.9600757043808699,
+                "total_uses": 5458.625,
+                "cbr_total": 0.027764002482096355,
+                "outage": 0.3125
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.55823404788971,
+                "mse": 0.002370019648469679,
+                "lpips": 0.2082921755267307,
+                "ms_ssim": 0.9600757043808699,
+                "total_uses": 5458.625,
+                "cbr_total": 0.027764002482096355,
+                "outage": 0.3125
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.31875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.3125
+              }
+            }
+          },
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.561443746089935,
+                "mse": 0.0023692454883985194,
+                "lpips": 0.20832557443063707,
+                "ms_ssim": 0.9601137109100819,
+                "total_uses": 5088.85,
+                "cbr_total": 0.02588322957356771,
+                "outage": 0.225
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.561443746089935,
+                "mse": 0.0023692454883985194,
+                "lpips": 0.20832557443063707,
+                "ms_ssim": 0.9601137109100819,
+                "total_uses": 5088.85,
+                "cbr_total": 0.02588322957356771,
+                "outage": 0.225
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.225
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.225
+              }
+            }
+          },
+          {
+            "psnr_target": 22.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.547241628170013,
+                "mse": 0.0023691997436344537,
+                "lpips": 0.208344483259134,
+                "ms_ssim": 0.9601160056889058,
+                "total_uses": 4851.1375,
+                "cbr_total": 0.02467416127522787,
+                "outage": 0.16875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.547241628170013,
+                "mse": 0.0023691997436344537,
+                "lpips": 0.208344483259134,
+                "ms_ssim": 0.9601160056889058,
+                "total_uses": 4851.1375,
+                "cbr_total": 0.02467416127522787,
+                "outage": 0.16875
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.16875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.16875
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.551157093048097,
+                "mse": 0.002377687387297556,
+                "lpips": 0.20834378721192479,
+                "ms_ssim": 0.9599804099649191,
+                "total_uses": 5907.6375,
+                "cbr_total": 0.030047798156738283,
+                "outage": 0.41875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.551157093048097,
+                "mse": 0.002377687387297556,
+                "lpips": 0.20834378721192479,
+                "ms_ssim": 0.9599804099649191,
+                "total_uses": 5907.6375,
+                "cbr_total": 0.030047798156738283,
+                "outage": 0.41875
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.425
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.41875
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.55436679124832,
+                "mse": 0.002376913227226396,
+                "lpips": 0.20837718611583114,
+                "ms_ssim": 0.9600184164941311,
+                "total_uses": 5537.8625,
+                "cbr_total": 0.02816702524820964,
+                "outage": 0.33125
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.55436679124832,
+                "mse": 0.002376913227226396,
+                "lpips": 0.20837718611583114,
+                "ms_ssim": 0.9600184164941311,
+                "total_uses": 5537.8625,
+                "cbr_total": 0.02816702524820964,
+                "outage": 0.33125
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.33125
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.33125
+              }
+            }
+          },
+          {
+            "psnr_target": 24.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.5401646733284,
+                "mse": 0.0023768674824623305,
+                "lpips": 0.20839609494432806,
+                "ms_ssim": 0.960020711272955,
+                "total_uses": 5300.15,
+                "cbr_total": 0.026957956949869792,
+                "outage": 0.275
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.5401646733284,
+                "mse": 0.0023768674824623305,
+                "lpips": 0.20839609494432806,
+                "ms_ssim": 0.960020711272955,
+                "total_uses": 5300.15,
+                "cbr_total": 0.026957956949869792,
+                "outage": 0.275
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.275
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.275
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.25,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.53958715200424,
+                "mse": 0.002386160264677528,
+                "lpips": 0.20827072905376554,
+                "ms_ssim": 0.9598020117729902,
+                "total_uses": 6620.775,
+                "cbr_total": 0.033675003051757815,
+                "outage": 0.5875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.53958715200424,
+                "mse": 0.002386160264677528,
+                "lpips": 0.20827072905376554,
+                "ms_ssim": 0.9598020117729902,
+                "total_uses": 6620.775,
+                "cbr_total": 0.033675003051757815,
+                "outage": 0.5875
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.59375
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.5875
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.3,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.542796850204468,
+                "mse": 0.0023853861046063685,
+                "lpips": 0.2083041279576719,
+                "ms_ssim": 0.9598400183022022,
+                "total_uses": 6251.0,
+                "cbr_total": 0.031794230143229164,
+                "outage": 0.5
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.542796850204468,
+                "mse": 0.0023853861046063685,
+                "lpips": 0.2083041279576719,
+                "ms_ssim": 0.9598400183022022,
+                "total_uses": 6251.0,
+                "cbr_total": 0.031794230143229164,
+                "outage": 0.5
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.5
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.5
+              }
+            }
+          },
+          {
+            "psnr_target": 26.0,
+            "lpips_target": 0.35,
+            "trial_count": 160,
+            "savings_vs_adaptive_reference": 0.0,
+            "criteria": {
+              "saving_at_least_10_percent": false,
+              "nontrivial_service_coverage": true,
+              "no_outage_increase": true,
+              "psnr_noninferior": true,
+              "lpips_noninferior": true,
+              "ms_ssim_noninferior": true,
+              "full_refines_base": false
+            },
+            "passed": false,
+            "summaries": {
+              "selective_clairvoyant": {
+                "psnr": 28.527973461151124,
+                "mse": 0.002385857821582249,
+                "lpips": 0.2083243108354509,
+                "ms_ssim": 0.959845807775855,
+                "total_uses": 6118.9375,
+                "cbr_total": 0.031122525533040367,
+                "outage": 0.46875
+              },
+              "adaptive_base_full_clairvoyant": {
+                "psnr": 28.527973461151124,
+                "mse": 0.002385857821582249,
+                "lpips": 0.2083243108354509,
+                "ms_ssim": 0.959845807775855,
+                "total_uses": 6118.9375,
+                "cbr_total": 0.031122525533040367,
+                "outage": 0.46875
+              },
+              "always_full": {
+                "psnr": 28.507145166397095,
+                "mse": 0.0023937355691032282,
+                "lpips": 0.20793039123527707,
+                "ms_ssim": 0.9596285246312618,
+                "total_uses": 8364.0,
+                "cbr_total": 0.04254150390625,
+                "outage": 0.46875
+              },
+              "base_only": {
+                "psnr": 28.553590214252473,
+                "mse": 0.0023620821191343566,
+                "lpips": 0.20862736401613802,
+                "ms_ssim": 0.960268734768033,
+                "total_uses": 4138.0,
+                "cbr_total": 0.021046956380208336,
+                "outage": 0.46875
+              }
+            }
+          }
+        ],
+        "interpretation": "Clairvoyant bound for this codec, channel, and service, not a conclusion about all active HARQ designs.",
+        "source_csv": "/home/sheng/flowmatching_vtc2027/results/evidence_harq_20260920/codec_b_fixed/oracle_gate.csv",
+        "source_sha256": "2a2f694f8e54a22e937c8985003424738d80a8866dc994a5c0f5be68a05c4e27"
+      }
+    }
+  },
+  "published_baselines": [
+    {
+      "model": "ntscc_quality1",
+      "images": 24,
+      "draws": 10,
+      "psnr": 28.900356324513755,
+      "mse": 0.0016301740407167623,
+      "lpips": 0.20626705174023907,
+      "ms_ssim": 0.9430971061189969,
+      "cbr_payload": 0.025202009412977434,
+      "cbr_total": 0.035791609022352434
+    },
+    {
+      "model": "ntscc_quality2",
+      "images": 24,
+      "draws": 10,
+      "psnr": 30.976589957873028,
+      "mse": 0.0009613004350588502,
+      "lpips": 0.12788536570345363,
+      "ms_ssim": 0.9602624046305815,
+      "cbr_payload": 0.04089630974663628,
+      "cbr_total": 0.05148590935601128
+    },
+    {
+      "model": "swin_mse_c32",
+      "images": 24,
+      "draws": 10,
+      "psnr": 28.393974264462788,
+      "mse": 0.0019602011765528005,
+      "lpips": 0.21400480512529613,
+      "ms_ssim": 0.9518373623490334,
+      "cbr_payload": 0.02083333333333333,
+      "cbr_total": 0.021006266276041668
+    },
+    {
+      "model": "swin_mse_c64",
+      "images": 24,
+      "draws": 10,
+      "psnr": 30.816714890797932,
+      "mse": 0.0011400321479110669,
+      "lpips": 0.11034514317288995,
+      "ms_ssim": 0.9732325720290343,
+      "cbr_payload": 0.04166666666666666,
+      "cbr_total": 0.041839599609375
+    },
+    {
+      "model": "CDDM_author_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.612715808550515,
+      "mse": 0.0022323233270678125,
+      "lpips": 0.21693583984548848,
+      "ms_ssim": 0.9440213978290558,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 93.0
+    },
+    {
+      "model": "CDDM_author_JSCC_snr10_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.329548303286234,
+      "mse": 0.002381833069618248,
+      "lpips": 0.2292590289687117,
+      "ms_ssim": 0.9431836061179638,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 0.0
+    },
+    {
+      "model": "CDDM_author_JSCC_snr13_C36_paid_scale",
+      "images": 24,
+      "draws": 10,
+      "psnr": 27.38015783627828,
+      "mse": 0.0023173121920990526,
+      "lpips": 0.20851547569036483,
+      "ms_ssim": 0.9418386936187744,
+      "cbr_payload": 0.0234375,
+      "cbr_total": 0.02361043294270833,
+      "diffusion_nfe": 0.0
+    }
+  ],
+  "posterior_training": "not_started_gate_required",
+  "policy_training": "not_started_gate_required",
+  "conditional_5_percent_ack_certificate": "not_established; current independent calibration split too small",
+  "overall": "feasibility_study; no successful new-method or publication-ready claim"
+}
