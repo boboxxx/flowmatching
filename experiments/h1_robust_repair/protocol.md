@@ -18,6 +18,8 @@ Everything else remains fixed. Calibration uses the existing 20-image split; the
 
 The conservative inference grid is fixed before results to $K\in\{1,2,4\}$ and $\tau\in\{0.8,0.9\}$. This grid excludes the previously observed aggressive over-repair region and lets the hypothesis test the training objective rather than one arbitrary inference setting.
 
+After calibration selection, the single-seed held-out replication uses three new channel seeds (7001--7003). It is a gate before training seeds 2031 and 2032: the multi-seed expansion proceeds only if the held-out FM-only PSNR delta remains positive and FlowHARQ preserves the matched-quality constraints.
+
 ## Prediction and acceptance
 
 - Calibration FM-only PSNR must improve by at least 0.05 dB over direct at a feasible conservative mask.
