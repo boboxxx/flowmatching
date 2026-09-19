@@ -39,7 +39,7 @@ hypotheses:
     priority: high
   - id: H2
     statement: "A target-aware quality decision loss will reduce calibration MAE near the ACK boundary and convert repair gains into at least 2 percentage points fewer retransmissions."
-    status: running
+    status: heldout_supported_mechanism_mixed
     motivation: "Current global log-MSE regression has roughly 0.93 dB calibration MAE."
     parent: null
     priority: high
@@ -51,7 +51,7 @@ hypotheses:
     priority: high
   - id: H4
     statement: "Multi-step RAFM will outperform a parameter-matched one-shot residual denoiser at equal receiver latency or quality."
-    status: pending
+    status: running
     motivation: "Needed to justify flow matching rather than generic latent denoising."
     parent: null
     priority: medium
@@ -111,19 +111,43 @@ experiments:
     - job_id: "11397196_[2030-2032]"
       hypothesis: H2
       purpose: "target-aware quality-head fine-tuning"
-      status: running
+      status: completed
     - job_id: "11397200_[2030-2032]"
       hypothesis: H2
       purpose: "fixed reconstruction configuration and scalar bias calibration"
-      status: dependent
+      status: completed
     - job_id: "11397202_[0-8]"
       hypothesis: H2
       purpose: "three by three held-out matrix with fresh channel seeds"
-      status: dependent
+      status: completed
     - job_id: "11397203"
       hypothesis: H2
       purpose: "paired cross-training-seed confidence intervals"
+      status: completed
+    - job_id: "11397221_[0-8]"
+      hypothesis: H2
+      purpose: "frozen Kodak24 external validation"
+      status: completed
+    - job_id: "11397224"
+      hypothesis: H2
+      purpose: "Kodak24 paired confidence intervals"
+      status: completed
+    - job_id: "11397232"
+      hypothesis: H4
+      purpose: "parameter-matched t=0 one-shot residual control"
+      status: running
+    - job_id: "11397233_[0-1]"
+      hypothesis: H4
+      purpose: "one-shot calibration evaluation"
       status: dependent
+    - job_id: "11397234"
+      hypothesis: H4
+      purpose: "RAFM versus one-shot mechanism comparison"
+      status: dependent
+    - job_id: "11397235"
+      hypothesis: H2
+      purpose: "final K=4 receiver latency benchmark"
+      status: running
   trajectory:
     - run_id: pilot_v1_tau050
       hypothesis: H1
@@ -167,6 +191,20 @@ experiments:
       wall_time_min: 12.0
       change_summary: "3 training seeds x 3 fresh channel seeds; final PSNR +0.0271 dB CI [0.0120,0.0422]"
       timestamp: "2026-09-19T15:00:00+01:00"
+    - run_id: h2_div2k_3x3
+      hypothesis: H2
+      metric_value: 0.012963
+      delta: "NACK saving 1.296 pp; 95% CI [0.0225,2.570] pp in saving direction"
+      wall_time_min: 9.0
+      change_summary: "target-boundary fine-tuning; final PSNR +0.0206 dB, LPIPS +0.00132"
+      timestamp: "2026-09-19T15:25:00+01:00"
+    - run_id: h2_kodak_external
+      hypothesis: H2
+      metric_value: 0.020255
+      delta: "NACK saving 2.025 pp; 95% CI [0.708,3.343] pp"
+      wall_time_min: 4.0
+      change_summary: "24 unseen Kodak images, three training x three fresh channel seeds"
+      timestamp: "2026-09-19T15:35:00+01:00"
 
 outer_loop:
   cycle: 1

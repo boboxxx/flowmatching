@@ -21,6 +21,8 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 - At that frozen H1 point, calibration-only FlowHARQ saves 1.04 percentage points of physical retransmissions while improving final PSNR by +0.022 dB; this is a gate result, not held-out paper evidence.
 - The frozen single-training-seed held-out gate over three fresh channel seeds saves 2.1875 percentage points of retransmissions versus adaptive HARQ, with +0.0327 dB PSNR and +0.00145 LPIPS. This licenses the preregistered three-training-seed expansion but is not yet the final confidence-interval claim.
 - H1's full 3x3 held-out matrix establishes repair but not the retransmission claim. FlowHARQ minus adaptive HARQ is +0.0271 dB PSNR (95% CI [+0.0120,+0.0422]), +0.00098 LPIPS, and -1.389 pp NACK (95% CI [-3.240,+0.463] pp). All three training seeds reduce NACK individually, but n=3 and decision variability leave the interval crossing zero.
+- H2's frozen 3x3 DIV2K result supports the central system claim: FlowHARQ minus adaptive HARQ is -1.296 pp NACK (95% CI [-2.570,-0.0225]), +0.0206 dB PSNR (95% CI [+0.0012,+0.0400]), and +0.00132 LPIPS.
+- External Kodak24 validation strengthens the result: -2.025 pp NACK (95% CI [-3.343,-0.708]), +0.0284 dB PSNR (95% CI [-0.00028,+0.0570]), and +0.00128 LPIPS, using no Kodak fitting or selection.
 
 ## Patterns and Insights
 
@@ -35,6 +37,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 9. An oracle-decision audit proves that calibration is not the only current bottleneck. At the 24 dB target, v2 FM moves 37 held-out cases from NACK to ACK but moves 39 in the opposite direction, for an oracle NACK saving of -0.012 percentage points. The learned head's nominal +0.104-point saving is therefore a calibration artifact, not evidence of useful repair. H1 must succeed before H2 is scientifically meaningful.
 10. H1 exhibits a real interaction: reconstruction weight alone reaches -0.0008 dB and normalized Huber alone +0.0021 dB, while their combination reaches +0.0714 dB. The improvement therefore comes from jointly suppressing outlier gradients and aligning the residual predictor with decoded image quality.
 11. H1 FM-only PSNR improves for every training seed (+0.0739, +0.0358, +0.0574 dB). Final NACK changes are also directionally consistent (-2.19, -1.27, -0.71 pp), so H2 targets the magnitude and stability of the decision boundary rather than the repair network.
+12. H2's mechanism metrics are mixed: calibration balanced accuracy changes by +0.0220, -0.0236, and -0.0015 across seeds, while ECE improves for only one seed. The paper may claim that target-boundary fine-tuning stabilizes held-out retransmission savings, but not that it universally improves calibration accuracy.
 
 ## Lessons and Constraints
 
