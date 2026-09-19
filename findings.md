@@ -17,6 +17,8 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 - PSNR delta: -0.004 dB, 95% CI [-0.023, 0.016]; matched quality.
 - Virtual repair plus decode: 4.23 ms; direct decode: 3.05 ms.
 - Conservative masks prevent hallucination, but also leave too little repair benefit to change many ACK decisions.
+- H1 calibration succeeds: normalized Huber velocity supervision and reconstruction weight 1.0 yield +0.0714 dB FM-only PSNR over direct (bootstrap 95% CI [+0.0570, +0.0866]) at K=4, tau=0.8, with LPIPS delta +0.00203. Four of six conservative inference settings pass the preregistered +0.05 dB / +0.003 LPIPS gate.
+- At that frozen H1 point, calibration-only FlowHARQ saves 1.04 percentage points of physical retransmissions while improving final PSNR by +0.022 dB; this is a gate result, not held-out paper evidence.
 
 ## Patterns and Insights
 
@@ -29,6 +31,7 @@ The leakage-free v2 protocol shows essentially matched PSNR but no significant r
 7. On the v2 calibration split at frozen K=2, tau=0.9, FM-only minus direct is -0.0121 dB, with bootstrap 95% CI [-0.0179, -0.0058]. Decision-threshold tuning alone cannot rescue the current repair module.
 8. The final-epoch v2 FM loss is extremely heavy-tailed. Across seeds, median batch losses are 0.26--0.28 and 90th percentiles are 2.2--3.2, but 99th percentiles reach 203--2,209 and maxima reach 1,703--158,505. This directly supports H1's outlier-dominance mechanism rather than treating robust loss as an arbitrary hyperparameter sweep.
 9. An oracle-decision audit proves that calibration is not the only current bottleneck. At the 24 dB target, v2 FM moves 37 held-out cases from NACK to ACK but moves 39 in the opposite direction, for an oracle NACK saving of -0.012 percentage points. The learned head's nominal +0.104-point saving is therefore a calibration artifact, not evidence of useful repair. H1 must succeed before H2 is scientifically meaningful.
+10. H1 exhibits a real interaction: reconstruction weight alone reaches -0.0008 dB and normalized Huber alone +0.0021 dB, while their combination reaches +0.0714 dB. The improvement therefore comes from jointly suppressing outlier gradients and aligning the residual predictor with decoded image quality.
 
 ## Lessons and Constraints
 

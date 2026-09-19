@@ -33,7 +33,7 @@ literature:
 hypotheses:
   - id: H1
     statement: "Robust, scale-normalized velocity supervision plus a stronger image reconstruction term will make partial flow repair improve FM-only PSNR by at least 0.05 dB without worsening LPIPS."
-    status: running
+    status: heldout_gate
     motivation: "Current squared velocity loss is dominated by ZF deep-fade outliers and produces near-zero useful repair."
     parent: null
     priority: high
@@ -71,14 +71,22 @@ experiments:
     - job_id: "11397130_[0-3]"
       hypothesis: H1
       purpose: "same-seed robust repair objective sweep"
-      status: running
+      status: completed
     - job_id: "11397139_[0-23]"
       hypothesis: H1
       purpose: "calibration-only paired evaluation"
-      status: dependent
+      status: completed
     - job_id: "11397140"
       hypothesis: H1
       purpose: "bootstrap comparison and preregistered acceptance check"
+      status: completed
+    - job_id: "11397165_[0-2]"
+      hypothesis: H1
+      purpose: "single-training-seed held-out replication over three fresh channel seeds"
+      status: running
+    - job_id: "11397168"
+      hypothesis: H1
+      purpose: "held-out paired aggregation"
       status: dependent
   trajectory:
     - run_id: pilot_v1_tau050
@@ -102,6 +110,13 @@ experiments:
       wall_time_min: 29.0
       change_summary: "3 train seeds x 3 channel seeds, calibration/test split, Rx CSI, MRC, LPIPS"
       timestamp: "2026-09-19T12:43:00+01:00"
+    - run_id: h1_calibration_huber_rec1
+      hypothesis: H1
+      metric_value: 0.071428
+      delta: "FM-only PSNR minus direct; bootstrap 95% CI [0.056972, 0.086579] dB"
+      wall_time_min: 22.0
+      change_summary: "normalized Huber velocity loss plus reconstruction weight 1.0; K=4, tau=0.8"
+      timestamp: "2026-09-19T14:30:00+01:00"
 
 outer_loop:
   cycle: 1
