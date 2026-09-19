@@ -72,11 +72,11 @@ experiments:
       hypothesis: H1
       purpose: "same-seed robust repair objective sweep"
       status: running
-    - job_id: "11397133_[0-3]"
+    - job_id: "11397139_[0-23]"
       hypothesis: H1
       purpose: "calibration-only paired evaluation"
       status: dependent
-    - job_id: "11397134"
+    - job_id: "11397140"
       hypothesis: H1
       purpose: "bootstrap comparison and preregistered acceptance check"
       status: dependent
