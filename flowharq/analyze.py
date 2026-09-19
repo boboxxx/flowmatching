@@ -19,6 +19,7 @@ def parse_args():
     )
     parser.add_argument("--csv", nargs="+", required=True)
     parser.add_argument("--output-dir", required=True)
+    parser.add_argument("--split", choices=("test", "all"), default="test")
     return parser.parse_args()
 
 
@@ -44,13 +45,15 @@ def interval(values: list[float]) -> dict:
     }
 
 
-def load(paths: list[str]) -> list[dict]:
+def load(paths: list[str], expected_split: str = "test") -> list[dict]:
     rows = []
     for path in paths:
         with Path(path).open(newline="") as handle:
             for row in csv.DictReader(handle):
-                if row["split"] != "test":
-                    raise ValueError(f"non-test row in {path}")
+                if row["split"] != expected_split:
+                    raise ValueError(
+                        f"expected split={expected_split}, got {row['split']} in {path}"
+                    )
                 for key in (
                     "snr_db",
                     "speed_kmh",
@@ -121,7 +124,7 @@ def write_csv(path: Path, rows: list[dict]):
 
 def main():
     args = parse_args()
-    rows = load(args.csv)
+    rows = load(args.csv, expected_split=args.split)
     output = Path(args.output_dir)
     output.mkdir(parents=True, exist_ok=True)
     per_snr_runs = run_means(rows, condition_key="snr_db")
@@ -144,6 +147,7 @@ def main():
         ),
         "test_images": len({row["image"] for row in rows}),
         "rows": len(rows),
+        "split": args.split,
         "confidence_interval": (
             "two-sided 95% Student-t interval over independent training-seed means; "
             "each mean averages all channel seeds"
