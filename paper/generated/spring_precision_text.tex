@@ -1,0 +1,15 @@
+The original archive records single-scale SSIM, not MS-SSIM. Table~\ref{tab:precision} reports a separate frozen-checkpoint audit on Artemis: one existing trained receiver, one channel stream per dataset, all 24 SNR--speed conditions, and paired ideal/binary16 scale restoration. CPU random streams differ from the archived CUDA streams; this is a precision check, not their exact replay.
+
+Quantization changes 0 of 3840 paired adaptive/FlowHARQ decisions on DIV2K and 0 of 1152 on Kodak24. Across all five methods and both datasets, the largest per-image PSNR change is 0.0250 dB. PSNR and MSE alone do not establish perceptual benefit; the measured MS-SSIM and LPIPS must be considered separately. No threshold or weight is refitted using this audit, and it does not replace the multi-run confirmation.
+
+\begin{table}[t]
+
+\centering
+
+\caption{Frozen binary16 audit under correlated Rayleigh fading. One existing receiver and one channel stream per dataset, with 1920 DIV2K and 576 Kodak image--channel cases per method. No uncertainty estimate or new training is inferred from these rows.}
+
+\label{tab:precision}
+
+\resizebox{\columnwidth}{!}{\input{generated/spring_precision_table}}
+
+\end{table}

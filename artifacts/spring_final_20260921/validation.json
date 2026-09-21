@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checkpoint_and_calibration_files": 20,
+  "source_files": 28,
+  "original_archive_files": 74,
+  "audits": {
+    "div2k": {
+      "rows": 19200,
+      "sha256": "9d6db7fb58b58e2a3a172f9bcdbbf22ff582021445e399b0181db69c2633d80d",
+      "device": "cpu",
+      "job": "11403791"
+    },
+    "kodak": {
+      "rows": 5760,
+      "sha256": "aed925f71b076f07d0eac2ba3a276ec97255fb8d5a81964592cf1eabebeda5eb",
+      "device": "cpu",
+      "job": "11403794"
+    }
+  },
+  "limitations": "Hashes establish artifact identity, not scientific validity or model convergence. Neural weights are on Artemis, not in this archive."
+}

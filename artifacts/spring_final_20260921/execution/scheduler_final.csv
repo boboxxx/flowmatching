@@ -1,0 +1,11 @@
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|NodeList|Start|End
+11403772|flowharq-spring-audit|short,enginf|CANCELLED by 1007844|0:0|00:00:00|0|24G|None assigned|None|2026-09-21T22:36:43
+11403790_0|flowharq-spring-cpu|short|COMPLETED|0:0|00:32:03|8|24G|artemis-rtx-02|2026-09-21T22:35:18|2026-09-21T23:07:21
+11403790_0.batch|batch||COMPLETED|0:0|00:32:03|8||artemis-rtx-02|2026-09-21T22:35:18|2026-09-21T23:07:21
+11403790_0.extern|extern||COMPLETED|0:0|00:32:03|8||artemis-rtx-02|2026-09-21T22:35:18|2026-09-21T23:07:21
+11403790_1|flowharq-spring-cpu|short|FAILED|1:0|00:00:40|8|24G|artemis-rtx-01|2026-09-21T22:35:18|2026-09-21T22:35:58
+11403790_1.batch|batch||FAILED|1:0|00:00:40|8||artemis-rtx-01|2026-09-21T22:35:18|2026-09-21T22:35:58
+11403790_1.extern|extern||COMPLETED|0:0|00:00:40|8||artemis-rtx-01|2026-09-21T22:35:18|2026-09-21T22:35:58
+11403794_1|flowharq-spring-cpu|short|COMPLETED|0:0|00:09:58|8|24G|artemis-rtx-01|2026-09-21T22:37:48|2026-09-21T22:47:46
+11403794_1.batch|batch||COMPLETED|0:0|00:09:58|8||artemis-rtx-01|2026-09-21T22:37:48|2026-09-21T22:47:46
+11403794_1.extern|extern||COMPLETED|0:0|00:09:58|8||artemis-rtx-01|2026-09-21T22:37:48|2026-09-21T22:47:46

@@ -1,0 +1,32 @@
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=2
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"dataset": "kodak", "snr": 0.0, "speed": 30.0, "rows": 240}
+{"dataset": "kodak", "snr": 0.0, "speed": 60.0, "rows": 480}
+{"dataset": "kodak", "snr": 0.0, "speed": 90.0, "rows": 720}
+{"dataset": "kodak", "snr": 0.0, "speed": 120.0, "rows": 960}
+{"dataset": "kodak", "snr": 3.0, "speed": 30.0, "rows": 1200}
+{"dataset": "kodak", "snr": 3.0, "speed": 60.0, "rows": 1440}
+{"dataset": "kodak", "snr": 3.0, "speed": 90.0, "rows": 1680}
+{"dataset": "kodak", "snr": 3.0, "speed": 120.0, "rows": 1920}
+{"dataset": "kodak", "snr": 6.0, "speed": 30.0, "rows": 2160}
+{"dataset": "kodak", "snr": 6.0, "speed": 60.0, "rows": 2400}
+{"dataset": "kodak", "snr": 6.0, "speed": 90.0, "rows": 2640}
+{"dataset": "kodak", "snr": 6.0, "speed": 120.0, "rows": 2880}
+{"dataset": "kodak", "snr": 9.0, "speed": 30.0, "rows": 3120}
+{"dataset": "kodak", "snr": 9.0, "speed": 60.0, "rows": 3360}
+{"dataset": "kodak", "snr": 9.0, "speed": 90.0, "rows": 3600}
+{"dataset": "kodak", "snr": 9.0, "speed": 120.0, "rows": 3840}
+{"dataset": "kodak", "snr": 12.0, "speed": 30.0, "rows": 4080}
+{"dataset": "kodak", "snr": 12.0, "speed": 60.0, "rows": 4320}
+{"dataset": "kodak", "snr": 12.0, "speed": 90.0, "rows": 4560}
+{"dataset": "kodak", "snr": 12.0, "speed": 120.0, "rows": 4800}
+{"dataset": "kodak", "snr": 15.0, "speed": 30.0, "rows": 5040}
+{"dataset": "kodak", "snr": 15.0, "speed": 60.0, "rows": 5280}
+{"dataset": "kodak", "snr": 15.0, "speed": 90.0, "rows": 5520}
+{"dataset": "kodak", "snr": 15.0, "speed": 120.0, "rows": 5760}

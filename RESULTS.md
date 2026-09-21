@@ -1,5 +1,23 @@
 # FlowHARQ confirmatory results — 2026-09-19
 
+## Current manuscript audit — 2026-09-21
+
+The Spring paper returns to the frozen H2 claim; H3 and the failed progressive
+codec are not primary evidence. See [the new audit](experiments/spring_final_20260921/RESULTS.md)
+for exact CSV-derived decision decomposition, side-information accounting, and
+the separately reported Artemis binary16/four-metric check.
+
+For the existing ten-run extension, NACK reduction is 1.319444 pp on DIV2K and
+1.452546 pp on Kodak24. These correspond to 0.758430%/0.845972% payload savings,
+or 0.352913%/0.390886% charged-use savings with 256 binary16 token scales sent
+once and metadata/control efficiency 0.5 bit per complex use. The latter is
+analytical re-accounting of original ideal-scale decisions, not measured air-interface
+efficiency. LPIPS worsens within the original +0.003 tolerance; it does not improve.
+The PSNR tolerance remains the original -0.02 dB, not H3's different tolerance.
+
+Published AWGN references below and in the newer paid-metadata table are not
+matched-channel superiority comparisons against the Rayleigh/HARQ experiment.
+
 ## Published-paper baseline package — completed
 
 The completed published-baseline package is deliberately separate from the

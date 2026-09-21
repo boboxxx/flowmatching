@@ -1,0 +1,706 @@
+{
+  "deepjscc": {
+    "source": "https://api.crossref.org/works/10.1109/TCCN.2019.2919300/transform/application/x-bibtex",
+    "identifier": "10.1109/TCCN.2019.2919300",
+    "status": "verified_provider_record",
+    "sha256": "4c5bc7080093c43070c91016cbef4a36eff7b6dd194da2087882d2a9f1edb6c4",
+    "raw_bibtex": "@article{Bourtsoulatze_2019, title={Deep Joint Source-Channel Coding for Wireless Image Transmission}, volume={5}, ISSN={2372-2045}, url={http://dx.doi.org/10.1109/TCCN.2019.2919300}, DOI={10.1109/tccn.2019.2919300}, number={3}, journal={IEEE Transactions on Cognitive Communications and Networking}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Bourtsoulatze, Eirina and Burth Kurka, David and Gunduz, Deniz}, year={2019}, month=Sept, pages={567\u2013579} }"
+  },
+  "swinjscc": {
+    "source": "https://api.crossref.org/works/10.1109/TCCN.2024.3424842/transform/application/x-bibtex",
+    "identifier": "10.1109/TCCN.2024.3424842",
+    "status": "verified_provider_record",
+    "sha256": "daaafb3d16a9e2ffb3fee07e3d47a7dcab9f666e3f0159ae59b9940d05e3ef8a",
+    "raw_bibtex": "@article{Yang_2025, title={SwinJSCC: Taming Swin Transformer for Deep Joint Source-Channel Coding}, volume={11}, ISSN={2372-2045}, url={http://dx.doi.org/10.1109/TCCN.2024.3424842}, DOI={10.1109/tccn.2024.3424842}, number={1}, journal={IEEE Transactions on Cognitive Communications and Networking}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Yang, Ke and Wang, Sixian and Dai, Jincheng and Qin, Xiaoqi and Niu, Kai and Zhang, Ping}, year={2025}, month=Feb, pages={90\u2013104} }"
+  },
+  "deepjscc_f": {
+    "source": "https://api.crossref.org/works/10.1109/JSAIT.2020.2987203/transform/application/x-bibtex",
+    "identifier": "10.1109/JSAIT.2020.2987203",
+    "status": "verified_provider_record",
+    "sha256": "d6e739e9ab81b060109037c84b5d862b3d2a09afc3805dcb291aa5f6578fb7f2",
+    "raw_bibtex": "@article{Kurka_2020, title={DeepJSCC-\n                    <i>f</i>\n                    : Deep Joint Source-Channel Coding of Images With Feedback}, volume={1}, ISSN={2641-8770}, url={http://dx.doi.org/10.1109/JSAIT.2020.2987203}, DOI={10.1109/jsait.2020.2987203}, number={1}, journal={IEEE Journal on Selected Areas in Information Theory}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Kurka, David Burth and Gunduz, Deniz}, year={2020}, month=May, pages={178\u2013193} }"
+  },
+  "fineharq": {
+    "source": "https://api.crossref.org/works/10.1109/TWC.2025.3532501/transform/application/x-bibtex",
+    "identifier": "10.1109/TWC.2025.3532501",
+    "status": "verified_provider_record",
+    "sha256": "712568797dfdc81534a8b56a3b92bf49c808a342413e9c83478ba2aff5ae9897",
+    "raw_bibtex": "@article{Zheng_2025, title={Semantic Base Enabled Image Transmission With Fine-Grained HARQ}, volume={24}, ISSN={1558-2248}, url={http://dx.doi.org/10.1109/TWC.2025.3532501}, DOI={10.1109/twc.2025.3532501}, number={4}, journal={IEEE Transactions on Wireless Communications}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Zheng, Yuan and Wang, Fengyu and Xu, Wenjun and Zhang, Ping}, year={2025}, month=Apr, pages={3606\u20133622} }"
+  },
+  "cddm": {
+    "source": "https://api.crossref.org/works/10.1109/TWC.2024.3379244/transform/application/x-bibtex",
+    "identifier": "10.1109/TWC.2024.3379244",
+    "status": "verified_provider_record",
+    "sha256": "83ef3e1a9c2166ebe823bf2b37d52de2e04c0ae4e1d98148f522e55511e769fb",
+    "raw_bibtex": "@article{Wu_2024, title={CDDM: Channel Denoising Diffusion Models for Wireless Semantic Communications}, volume={23}, ISSN={1558-2248}, url={http://dx.doi.org/10.1109/TWC.2024.3379244}, DOI={10.1109/twc.2024.3379244}, number={9}, journal={IEEE Transactions on Wireless Communications}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Wu, Tong and Chen, Zhiyong and He, Dazhi and Qian, Liang and Xu, Yin and Tao, Meixia and Zhang, Wenjun}, year={2024}, month=Sept, pages={11168\u201311183} }"
+  },
+  "ntscc": {
+    "source": "https://api.crossref.org/works/10.1109/JSAC.2022.3180802/transform/application/x-bibtex",
+    "identifier": "10.1109/JSAC.2022.3180802",
+    "status": "verified_provider_record",
+    "sha256": "0fddcaf964e02093e067ca17d9987a9fa263e25c37dc26e87fc8ed0ee1740170",
+    "raw_bibtex": "@article{Dai_2022, title={Nonlinear Transform Source-Channel Coding for Semantic Communications}, volume={40}, ISSN={1558-0008}, url={http://dx.doi.org/10.1109/JSAC.2022.3180802}, DOI={10.1109/jsac.2022.3180802}, number={8}, journal={IEEE Journal on Selected Areas in Communications}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Dai, Jincheng and Wang, Sixian and Tan, Kailin and Si, Zhongwei and Qin, Xiaoqi and Niu, Kai and Zhang, Ping}, year={2022}, month=Aug, pages={2300\u20132316} }"
+  },
+  "lpips": {
+    "source": "https://api.crossref.org/works/10.1109/CVPR.2018.00068/transform/application/x-bibtex",
+    "identifier": "10.1109/CVPR.2018.00068",
+    "status": "verified_provider_record",
+    "sha256": "a9273bde201c9f4fa738a5cc05c9930ee4517d69d0631352f0a5101c24aed429",
+    "raw_bibtex": "@inproceedings{Zhang_2018, title={The Unreasonable Effectiveness of Deep Features as a Perceptual Metric}, url={http://dx.doi.org/10.1109/CVPR.2018.00068}, DOI={10.1109/cvpr.2018.00068}, booktitle={2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition}, publisher={IEEE}, author={Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver}, year={2018}, month=June, pages={586\u2013595} }"
+  },
+  "div2k": {
+    "source": "https://api.crossref.org/works/10.1109/CVPRW.2017.150/transform/application/x-bibtex",
+    "identifier": "10.1109/CVPRW.2017.150",
+    "status": "verified_provider_record",
+    "sha256": "cbe664fa03273b494535a8c4f08c49fa768600814c3610de635ca405a7204c60",
+    "raw_bibtex": "@inproceedings{Agustsson_2017, title={NTIRE 2017 Challenge on Single Image Super-Resolution: Dataset and Study}, url={http://dx.doi.org/10.1109/CVPRW.2017.150}, DOI={10.1109/cvprw.2017.150}, booktitle={2017 IEEE Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}, publisher={IEEE}, author={Agustsson, Eirikur and Timofte, Radu}, year={2017}, month=July, pages={1122\u20131131} }"
+  },
+  "msssim": {
+    "source": "https://api.crossref.org/works/10.1109/ACSSC.2003.1292216/transform/application/x-bibtex",
+    "identifier": "10.1109/ACSSC.2003.1292216",
+    "status": "verified_provider_record",
+    "sha256": "bbdd7dcc5b4bbcf7979a241255c5dae8ebe7980d1d40904f62cc393dbc826155",
+    "raw_bibtex": "@inproceedings{Wang, series={ACSSC-03}, title={Multiscale structural similarity for image quality assessment}, url={http://dx.doi.org/10.1109/ACSSC.2003.1292216}, DOI={10.1109/acssc.2003.1292216}, booktitle={The Thrity-Seventh Asilomar Conference on Signals, Systems &amp; Computers, 2003}, publisher={IEEE}, author={Wang, Z. and Simoncelli, E.P. and Bovik, A.C.}, pages={1398\u20131402}, collection={ACSSC-03} }"
+  },
+  "flowmatching": {
+    "source": "https://api.datacite.org/dois/10.48550/arxiv.2210.02747",
+    "identifier": "2210.02747",
+    "status": "verified_provider_record",
+    "sha256": "5b49adcfc263af0308f5d201a5bddfb683e594aa0a3fb2480690ce0e8b3ae8b4",
+    "raw_bibtex": "@article{flowmatching,\n author={Lipman, Yaron and Chen, Ricky T. Q. and Ben-Hamu, Heli and Nickel, Maximilian and Le, Matt},\n title={{Flow Matching for Generative Modeling}},\n journal={arXiv preprint arXiv:2210.02747},\n year={2022},\n doi={10.48550/arxiv.2210.02747}\n}",
+    "provider_metadata": {
+      "doi": "10.48550/arxiv.2210.02747",
+      "prefix": "10.48550",
+      "suffix": "arxiv.2210.02747",
+      "identifiers": [
+        {
+          "identifier": "2210.02747",
+          "identifierType": "arXiv"
+        }
+      ],
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifierType": "arXiv",
+          "alternateIdentifier": "2210.02747"
+        }
+      ],
+      "creators": [
+        {
+          "name": "Lipman, Yaron",
+          "nameType": "Personal",
+          "givenName": "Yaron",
+          "familyName": "Lipman",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Chen, Ricky T. Q.",
+          "nameType": "Personal",
+          "givenName": "Ricky T. Q.",
+          "familyName": "Chen",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Ben-Hamu, Heli",
+          "nameType": "Personal",
+          "givenName": "Heli",
+          "familyName": "Ben-Hamu",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Nickel, Maximilian",
+          "nameType": "Personal",
+          "givenName": "Maximilian",
+          "familyName": "Nickel",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Le, Matt",
+          "nameType": "Personal",
+          "givenName": "Matt",
+          "familyName": "Le",
+          "affiliation": [],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "Flow Matching for Generative Modeling"
+        }
+      ],
+      "publisher": "arXiv",
+      "container": {},
+      "publicationYear": 2022,
+      "subjects": [
+        {
+          "lang": "en",
+          "subject": "Machine Learning (cs.LG)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "lang": "en",
+          "subject": "Artificial Intelligence (cs.AI)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "lang": "en",
+          "subject": "Machine Learning (stat.ML)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "subject": "FOS: Computer and information sciences",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        },
+        {
+          "subject": "FOS: Computer and information sciences",
+          "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2022-10-06T08:32:20Z",
+          "dateType": "Submitted",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2022-10-07T01:14:40Z",
+          "dateType": "Updated",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2023-02-08T15:46:05Z",
+          "dateType": "Submitted",
+          "dateInformation": "v2"
+        },
+        {
+          "date": "2023-02-09T01:14:54Z",
+          "dateType": "Updated",
+          "dateInformation": "v2"
+        },
+        {
+          "date": "2022-10",
+          "dateType": "Available",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2022",
+          "dateType": "Issued"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork",
+        "resourceType": "Article",
+        "resourceTypeGeneral": "Preprint"
+      },
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "2",
+      "rightsList": [
+        {
+          "rights": "arXiv.org perpetual, non-exclusive license",
+          "rightsUri": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "We introduce a new paradigm for generative modeling built on Continuous Normalizing Flows (CNFs), allowing us to train CNFs at unprecedented scale. Specifically, we present the notion of Flow Matching (FM), a simulation-free approach for training CNFs based on regressing vector fields of fixed conditional probability paths. Flow Matching is compatible with a general family of Gaussian probability paths for transforming between noise and data samples -- which subsumes existing diffusion paths as specific instances. Interestingly, we find that employing FM with diffusion paths results in a more robust and stable alternative for training diffusion models. Furthermore, Flow Matching opens the door to training CNFs with other, non-diffusion probability paths. An instance of particular interest is using Optimal Transport (OT) displacement interpolation to define the conditional probability paths. These paths are more efficient than diffusion paths, provide faster training and sampling, and result in better generalization. Training CNFs using Flow Matching on ImageNet leads to consistently better performance than alternative diffusion-based methods in terms of both likelihood and sample quality, and allows fast and reliable sample generation using off-the-shelf numerical ODE solvers.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yMjEwLjAyNzQ3PC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjIxMC4wMjc0NzwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MaXBtYW4sIFlhcm9uPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5ZYXJvbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5MaXBtYW48L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Q2hlbiwgUmlja3kgVC4gUS48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPlJpY2t5IFQuIFEuPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkNoZW48L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+QmVuLUhhbXUsIEhlbGk8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPkhlbGk8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+QmVuLUhhbXU8L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+Tmlja2VsLCBNYXhpbWlsaWFuPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYXhpbWlsaWFuPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPk5pY2tlbDwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MZSwgTWF0dDwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+TWF0dDwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5MZTwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+RmxvdyBNYXRjaGluZyBmb3IgR2VuZXJhdGl2ZSBNb2RlbGluZzwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5hclhpdjwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMjwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJlbiIgc3ViamVjdFNjaGVtZT0iYXJYaXYiPk1hY2hpbmUgTGVhcm5pbmcgKGNzLkxHKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJlbiIgc3ViamVjdFNjaGVtZT0iYXJYaXYiPkFydGlmaWNpYWwgSW50ZWxsaWdlbmNlIChjcy5BSSk8L3N1YmplY3Q+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9ImFyWGl2Ij5NYWNoaW5lIExlYXJuaW5nIChzdGF0Lk1MKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIj5GT1M6IENvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjItMTAtMDZUMDg6MzI6MjBaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjItMTAtMDdUMDE6MTQ6NDBaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MiI+MjAyMy0wMi0wOFQxNTo0NjowNVo8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iVXBkYXRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MiI+MjAyMy0wMi0wOVQwMToxNDo1NFo8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQXZhaWxhYmxlIiBkYXRlSW5mb3JtYXRpb249InYxIj4yMDIyLTEwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJQcmVwcmludCI+QXJ0aWNsZTwvcmVzb3VyY2VUeXBlPgogIDx2ZXJzaW9uPjI8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2FyeGl2Lm9yZy9saWNlbnNlcy9ub25leGNsdXNpdmUtZGlzdHJpYi8xLjAvIj5hclhpdi5vcmcgcGVycGV0dWFsLCBub24tZXhjbHVzaXZlIGxpY2Vuc2U8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5XZSBpbnRyb2R1Y2UgYSBuZXcgcGFyYWRpZ20gZm9yIGdlbmVyYXRpdmUgbW9kZWxpbmcgYnVpbHQgb24gQ29udGludW91cyBOb3JtYWxpemluZyBGbG93cyAoQ05GcyksIGFsbG93aW5nIHVzIHRvIHRyYWluIENORnMgYXQgdW5wcmVjZWRlbnRlZCBzY2FsZS4gU3BlY2lmaWNhbGx5LCB3ZSBwcmVzZW50IHRoZSBub3Rpb24gb2YgRmxvdyBNYXRjaGluZyAoRk0pLCBhIHNpbXVsYXRpb24tZnJlZSBhcHByb2FjaCBmb3IgdHJhaW5pbmcgQ05GcyBiYXNlZCBvbiByZWdyZXNzaW5nIHZlY3RvciBmaWVsZHMgb2YgZml4ZWQgY29uZGl0aW9uYWwgcHJvYmFiaWxpdHkgcGF0aHMuIEZsb3cgTWF0Y2hpbmcgaXMgY29tcGF0aWJsZSB3aXRoIGEgZ2VuZXJhbCBmYW1pbHkgb2YgR2F1c3NpYW4gcHJvYmFiaWxpdHkgcGF0aHMgZm9yIHRyYW5zZm9ybWluZyBiZXR3ZWVuIG5vaXNlIGFuZCBkYXRhIHNhbXBsZXMgLS0gd2hpY2ggc3Vic3VtZXMgZXhpc3RpbmcgZGlmZnVzaW9uIHBhdGhzIGFzIHNwZWNpZmljIGluc3RhbmNlcy4gSW50ZXJlc3RpbmdseSwgd2UgZmluZCB0aGF0IGVtcGxveWluZyBGTSB3aXRoIGRpZmZ1c2lvbiBwYXRocyByZXN1bHRzIGluIGEgbW9yZSByb2J1c3QgYW5kIHN0YWJsZSBhbHRlcm5hdGl2ZSBmb3IgdHJhaW5pbmcgZGlmZnVzaW9uIG1vZGVscy4gRnVydGhlcm1vcmUsIEZsb3cgTWF0Y2hpbmcgb3BlbnMgdGhlIGRvb3IgdG8gdHJhaW5pbmcgQ05GcyB3aXRoIG90aGVyLCBub24tZGlmZnVzaW9uIHByb2JhYmlsaXR5IHBhdGhzLiBBbiBpbnN0YW5jZSBvZiBwYXJ0aWN1bGFyIGludGVyZXN0IGlzIHVzaW5nIE9wdGltYWwgVHJhbnNwb3J0IChPVCkgZGlzcGxhY2VtZW50IGludGVycG9sYXRpb24gdG8gZGVmaW5lIHRoZSBjb25kaXRpb25hbCBwcm9iYWJpbGl0eSBwYXRocy4gVGhlc2UgcGF0aHMgYXJlIG1vcmUgZWZmaWNpZW50IHRoYW4gZGlmZnVzaW9uIHBhdGhzLCBwcm92aWRlIGZhc3RlciB0cmFpbmluZyBhbmQgc2FtcGxpbmcsIGFuZCByZXN1bHQgaW4gYmV0dGVyIGdlbmVyYWxpemF0aW9uLiBUcmFpbmluZyBDTkZzIHVzaW5nIEZsb3cgTWF0Y2hpbmcgb24gSW1hZ2VOZXQgbGVhZHMgdG8gY29uc2lzdGVudGx5IGJldHRlciBwZXJmb3JtYW5jZSB0aGFuIGFsdGVybmF0aXZlIGRpZmZ1c2lvbi1iYXNlZCBtZXRob2RzIGluIHRlcm1zIG9mIGJvdGggbGlrZWxpaG9vZCBhbmQgc2FtcGxlIHF1YWxpdHksIGFuZCBhbGxvd3MgZmFzdCBhbmQgcmVsaWFibGUgc2FtcGxlIGdlbmVyYXRpb24gdXNpbmcgb2ZmLXRoZS1zaGVsZiBudW1lcmljYWwgT0RFIHNvbHZlcnMuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "url": "https://arxiv.org/abs/2210.02747",
+      "contentUrl": null,
+      "metadataVersion": 2,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "mds",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "created": "2022-10-07T00:59:04.000Z",
+      "registered": "2022-10-07T00:59:04.000Z",
+      "published": "2022",
+      "updated": "2023-02-09T02:07:38.000Z"
+    }
+  },
+  "flowsem": {
+    "source": "https://api.datacite.org/dois/10.48550/arxiv.2608.21651",
+    "identifier": "2608.21651",
+    "status": "verified_provider_record",
+    "sha256": "05e2322cc69cb0ffbee1fbc38d73a1c266b94340347fa136b6e0fe2a90c5297a",
+    "raw_bibtex": "@article{flowsem,\n author={Emon, Arnab and Eldeeb, Eslam},\n title={{FlowSem: Flow Matching for Adaptive Wireless Image Transmission in Semantic Communication}},\n journal={arXiv preprint arXiv:2608.21651},\n year={2026},\n doi={10.48550/arxiv.2608.21651}\n}",
+    "provider_metadata": {
+      "doi": "10.48550/arxiv.2608.21651",
+      "prefix": "10.48550",
+      "suffix": "arxiv.2608.21651",
+      "identifiers": [
+        {
+          "identifier": "2608.21651",
+          "identifierType": "arXiv"
+        }
+      ],
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifierType": "arXiv",
+          "alternateIdentifier": "2608.21651"
+        }
+      ],
+      "creators": [
+        {
+          "name": "Emon, Arnab",
+          "nameType": "Personal",
+          "givenName": "Arnab",
+          "familyName": "Emon",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Eldeeb, Eslam",
+          "nameType": "Personal",
+          "givenName": "Eslam",
+          "familyName": "Eldeeb",
+          "affiliation": [],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "FlowSem: Flow Matching for Adaptive Wireless Image Transmission in Semantic Communication"
+        }
+      ],
+      "publisher": "arXiv",
+      "container": {},
+      "publicationYear": 2026,
+      "subjects": [
+        {
+          "lang": "en",
+          "subject": "Image and Video Processing (eess.IV)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "subject": "FOS: Electrical engineering, electronic engineering, information engineering",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2026-08-21T21:46:37Z",
+          "dateType": "Submitted",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-08-25T00:11:15Z",
+          "dateType": "Updated",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-08",
+          "dateType": "Available",
+          "dateInformation": "v1"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork",
+        "resourceType": "Article",
+        "resourceTypeGeneral": "Preprint"
+      },
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "1",
+      "rightsList": [
+        {
+          "rights": "arXiv.org perpetual, non-exclusive license",
+          "rightsUri": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Wireless image transmission becomes challenging under poor channel conditions and stringent bandwidth constraints, as the receiver needs to preserve both pixel-level fidelity and meaningful visual structure. Classical separation-based systems, such as better portable graphics with low-density parity-check coding (BPG+LDPC), may suffer from cliff-effect behavior. While deep joint source-channel coding (DeepJSCC) provides graceful degradation as channel conditions worsen, its reconstructions may lose fine details under strong compression and severe channel distortion. To address this limitation, this paper proposes a two-stage flow matching-based semantic communication framework, termed FlowSem. In the first stage, a signal-to-noise ratio (SNR)-adaptive DeepJSCC model maps the source image into channel symbols and produces a coarse reconstruction at the receiver. In the second stage, a conditional flow matching model generates the final image from Gaussian noise conditioned on the DeepJSCC reconstruction and channel SNR. The proposed framework is evaluated on the Cityscapes dataset under additive white Gaussian noise (AWGN) and Rayleigh fading channels using a fixed channel-symbol budget. The baselines include a rate-matched BPG+LDPC system, DeepJSCC, a denoising diffusion probabilistic model (DDPM), and a denoising diffusion implicit model (DDIM). Results show that FlowSem achieves competitive pixel-level fidelity and improved structural and perceptual reconstruction quality over the considered generative baselines across different channel conditions. FlowSem provides up to 60% lower Fr\u00e9chet Inception Distance (FID) than the diffusion baselines at low SNRs. Moreover, FlowSem reaches high reconstruction quality using only a few ODE integration steps, providing a favorable quality-latency tradeoff compared with standard DDPM and accelerated DDIM sampling.",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yNjA4LjIxNjUxPC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjYwOC4yMTY1MTwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FbW9uLCBBcm5hYjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+QXJuYWI8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+RW1vbjwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5FbGRlZWIsIEVzbGFtPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5Fc2xhbTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5FbGRlZWI8L2ZhbWlseU5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkZsb3dTZW06IEZsb3cgTWF0Y2hpbmcgZm9yIEFkYXB0aXZlIFdpcmVsZXNzIEltYWdlIFRyYW5zbWlzc2lvbiBpbiBTZW1hbnRpYyBDb21tdW5pY2F0aW9uPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPmFyWGl2PC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDI2PC9wdWJsaWNhdGlvblllYXI+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3QgeG1sOmxhbmc9ImVuIiBzdWJqZWN0U2NoZW1lPSJhclhpdiI+SW1hZ2UgYW5kIFZpZGVvIFByb2Nlc3NpbmcgKGVlc3MuSVYpPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iRmllbGRzIG9mIFNjaWVuY2UgYW5kIFRlY2hub2xvZ3kgKEZPUykiPkZPUzogRWxlY3RyaWNhbCBlbmdpbmVlcmluZywgZWxlY3Ryb25pYyBlbmdpbmVlcmluZywgaW5mb3JtYXRpb24gZW5naW5lZXJpbmc8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iU3VibWl0dGVkIiBkYXRlSW5mb3JtYXRpb249InYxIj4yMDI2LTA4LTIxVDIxOjQ2OjM3WjwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJVcGRhdGVkIiBkYXRlSW5mb3JtYXRpb249InYxIj4yMDI2LTA4LTI1VDAwOjExOjE1WjwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJBdmFpbGFibGUiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjYtMDg8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlByZXByaW50Ij5BcnRpY2xlPC9yZXNvdXJjZVR5cGU+CiAgPHZlcnNpb24+MTwvdmVyc2lvbj4KICA8cmlnaHRzTGlzdD4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJodHRwOi8vYXJ4aXYub3JnL2xpY2Vuc2VzL25vbmV4Y2x1c2l2ZS1kaXN0cmliLzEuMC8iPmFyWGl2Lm9yZyBwZXJwZXR1YWwsIG5vbi1leGNsdXNpdmUgbGljZW5zZTwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPldpcmVsZXNzIGltYWdlIHRyYW5zbWlzc2lvbiBiZWNvbWVzIGNoYWxsZW5naW5nIHVuZGVyIHBvb3IgY2hhbm5lbCBjb25kaXRpb25zIGFuZCBzdHJpbmdlbnQgYmFuZHdpZHRoIGNvbnN0cmFpbnRzLCBhcyB0aGUgcmVjZWl2ZXIgbmVlZHMgdG8gcHJlc2VydmUgYm90aCBwaXhlbC1sZXZlbCBmaWRlbGl0eSBhbmQgbWVhbmluZ2Z1bCB2aXN1YWwgc3RydWN0dXJlLiBDbGFzc2ljYWwgc2VwYXJhdGlvbi1iYXNlZCBzeXN0ZW1zLCBzdWNoIGFzIGJldHRlciBwb3J0YWJsZSBncmFwaGljcyB3aXRoIGxvdy1kZW5zaXR5IHBhcml0eS1jaGVjayBjb2RpbmcgKEJQRytMRFBDKSwgbWF5IHN1ZmZlciBmcm9tIGNsaWZmLWVmZmVjdCBiZWhhdmlvci4gV2hpbGUgZGVlcCBqb2ludCBzb3VyY2UtY2hhbm5lbCBjb2RpbmcgKERlZXBKU0NDKSBwcm92aWRlcyBncmFjZWZ1bCBkZWdyYWRhdGlvbiBhcyBjaGFubmVsIGNvbmRpdGlvbnMgd29yc2VuLCBpdHMgcmVjb25zdHJ1Y3Rpb25zIG1heSBsb3NlIGZpbmUgZGV0YWlscyB1bmRlciBzdHJvbmcgY29tcHJlc3Npb24gYW5kIHNldmVyZSBjaGFubmVsIGRpc3RvcnRpb24uIFRvIGFkZHJlc3MgdGhpcyBsaW1pdGF0aW9uLCB0aGlzIHBhcGVyIHByb3Bvc2VzIGEgdHdvLXN0YWdlIGZsb3cgbWF0Y2hpbmctYmFzZWQgc2VtYW50aWMgY29tbXVuaWNhdGlvbiBmcmFtZXdvcmssIHRlcm1lZCBGbG93U2VtLiBJbiB0aGUgZmlyc3Qgc3RhZ2UsIGEgc2lnbmFsLXRvLW5vaXNlIHJhdGlvIChTTlIpLWFkYXB0aXZlIERlZXBKU0NDIG1vZGVsIG1hcHMgdGhlIHNvdXJjZSBpbWFnZSBpbnRvIGNoYW5uZWwgc3ltYm9scyBhbmQgcHJvZHVjZXMgYSBjb2Fyc2UgcmVjb25zdHJ1Y3Rpb24gYXQgdGhlIHJlY2VpdmVyLiBJbiB0aGUgc2Vjb25kIHN0YWdlLCBhIGNvbmRpdGlvbmFsIGZsb3cgbWF0Y2hpbmcgbW9kZWwgZ2VuZXJhdGVzIHRoZSBmaW5hbCBpbWFnZSBmcm9tIEdhdXNzaWFuIG5vaXNlIGNvbmRpdGlvbmVkIG9uIHRoZSBEZWVwSlNDQyByZWNvbnN0cnVjdGlvbiBhbmQgY2hhbm5lbCBTTlIuIFRoZSBwcm9wb3NlZCBmcmFtZXdvcmsgaXMgZXZhbHVhdGVkIG9uIHRoZSBDaXR5c2NhcGVzIGRhdGFzZXQgdW5kZXIgYWRkaXRpdmUgd2hpdGUgR2F1c3NpYW4gbm9pc2UgKEFXR04pIGFuZCBSYXlsZWlnaCBmYWRpbmcgY2hhbm5lbHMgdXNpbmcgYSBmaXhlZCBjaGFubmVsLXN5bWJvbCBidWRnZXQuIFRoZSBiYXNlbGluZXMgaW5jbHVkZSBhIHJhdGUtbWF0Y2hlZCBCUEcrTERQQyBzeXN0ZW0sIERlZXBKU0NDLCBhIGRlbm9pc2luZyBkaWZmdXNpb24gcHJvYmFiaWxpc3RpYyBtb2RlbCAoRERQTSksIGFuZCBhIGRlbm9pc2luZyBkaWZmdXNpb24gaW1wbGljaXQgbW9kZWwgKERESU0pLiBSZXN1bHRzIHNob3cgdGhhdCBGbG93U2VtIGFjaGlldmVzIGNvbXBldGl0aXZlIHBpeGVsLWxldmVsIGZpZGVsaXR5IGFuZCBpbXByb3ZlZCBzdHJ1Y3R1cmFsIGFuZCBwZXJjZXB0dWFsIHJlY29uc3RydWN0aW9uIHF1YWxpdHkgb3ZlciB0aGUgY29uc2lkZXJlZCBnZW5lcmF0aXZlIGJhc2VsaW5lcyBhY3Jvc3MgZGlmZmVyZW50IGNoYW5uZWwgY29uZGl0aW9ucy4gRmxvd1NlbSBwcm92aWRlcyB1cCB0byA2MCUgbG93ZXIgRnLDqWNoZXQgSW5jZXB0aW9uIERpc3RhbmNlIChGSUQpIHRoYW4gdGhlIGRpZmZ1c2lvbiBiYXNlbGluZXMgYXQgbG93IFNOUnMuIE1vcmVvdmVyLCBGbG93U2VtIHJlYWNoZXMgaGlnaCByZWNvbnN0cnVjdGlvbiBxdWFsaXR5IHVzaW5nIG9ubHkgYSBmZXcgT0RFIGludGVncmF0aW9uIHN0ZXBzLCBwcm92aWRpbmcgYSBmYXZvcmFibGUgcXVhbGl0eS1sYXRlbmN5IHRyYWRlb2ZmIGNvbXBhcmVkIHdpdGggc3RhbmRhcmQgRERQTSBhbmQgYWNjZWxlcmF0ZWQgRERJTSBzYW1wbGluZy48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "url": "https://arxiv.org/abs/2608.21651",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "mds",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "created": "2026-08-25T03:01:31.000Z",
+      "registered": "2026-08-25T03:01:31.000Z",
+      "published": "2026",
+      "updated": "2026-08-25T03:01:31.000Z"
+    }
+  },
+  "rcbfm": {
+    "source": "https://api.datacite.org/dois/10.48550/arxiv.2607.24876",
+    "identifier": "2607.24876",
+    "status": "verified_provider_record",
+    "sha256": "0568fa389d1e54dfa93a07833447ca61288248217484f627cdd263deef5037de",
+    "raw_bibtex": "@article{rcbfm,\n author={Gao, Fan and Wang, Youzheng and Qin, Zhijin and Gao, Feifei},\n title={{Low-Latency Generative Semantic Communication via Channel-Realization Flow Matching}},\n journal={arXiv preprint arXiv:2607.24876},\n year={2026},\n doi={10.48550/arxiv.2607.24876}\n}",
+    "provider_metadata": {
+      "doi": "10.48550/arxiv.2607.24876",
+      "prefix": "10.48550",
+      "suffix": "arxiv.2607.24876",
+      "identifiers": [
+        {
+          "identifier": "2607.24876",
+          "identifierType": "arXiv"
+        }
+      ],
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifierType": "arXiv",
+          "alternateIdentifier": "2607.24876"
+        }
+      ],
+      "creators": [
+        {
+          "name": "Gao, Fan",
+          "nameType": "Personal",
+          "givenName": "Fan",
+          "familyName": "Gao",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Wang, Youzheng",
+          "nameType": "Personal",
+          "givenName": "Youzheng",
+          "familyName": "Wang",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Qin, Zhijin",
+          "nameType": "Personal",
+          "givenName": "Zhijin",
+          "familyName": "Qin",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Gao, Feifei",
+          "nameType": "Personal",
+          "givenName": "Feifei",
+          "familyName": "Gao",
+          "affiliation": [],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "Low-Latency Generative Semantic Communication via Channel-Realization Flow Matching"
+        }
+      ],
+      "publisher": "arXiv",
+      "container": {},
+      "publicationYear": 2026,
+      "subjects": [
+        {
+          "lang": "en",
+          "subject": "Information Theory (cs.IT)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "lang": "en",
+          "subject": "Image and Video Processing (eess.IV)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "subject": "FOS: Computer and information sciences",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        },
+        {
+          "subject": "FOS: Electrical engineering, electronic engineering, information engineering",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2026-07-27T07:28:37Z",
+          "dateType": "Submitted",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-07-29T00:02:53Z",
+          "dateType": "Updated",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-07",
+          "dateType": "Available",
+          "dateInformation": "v1"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork",
+        "resourceType": "Article",
+        "resourceTypeGeneral": "Preprint"
+      },
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "1",
+      "rightsList": [
+        {
+          "rights": "arXiv.org perpetual, non-exclusive license",
+          "rightsUri": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Generative semantic communication receivers deliver high perceptual quality but suffer from prohibitive decoding latency. This bottleneck arises because diffusion receivers rely on stochastic iterative decoding, while existing flow matching receivers employ independent endpoint coupling that ignores the physical source--channel link, yielding unnecessarily long and curved sampling trajectories. In this paper, we reformulate receiver-side recovery as a realization-coupled bridge flow matching problem under explicit bandwidth and power constraints. Specifically, we propose Realization-Coupled Bridge Flow Matching (RC-BFM), where the decoder initializes from a channel-induced semantic state rather than isotropic noise. Crucially, training pairs are linked via a realization-coupled entropic optimal transport (RC-OT) plan that preserves the physical channel realization of each transmission while maintaining robustness to stochastic fading. Furthermore, we identify independent coupling as the fundamental source of a conditional train--test distribution shift in conditional flow matching-based receivers, and derive an end-to-end distortion bound whose discretization error decays as \\(O(K^{-2})\\). Experiments on CIFAR-10 and FFHQ-64\\(\\times\\)64 over AWGN and Rayleigh fading channels demonstrate that RC-BFM achieves a superior fidelity--perception trade-off, reducing decoding latency by over 10\\(\\times\\) compared to diffusion-based receivers.",
+          "descriptionType": "Abstract"
+        },
+        {
+          "description": "Accpeted by Globecom 2026. 6 pages, 7 figures",
+          "descriptionType": "Other"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yNjA3LjI0ODc2PC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjYwNy4yNDg3NjwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5HYW8sIEZhbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+RmFuPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkdhbzwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5XYW5nLCBZb3V6aGVuZzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+WW91emhlbmc8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+V2FuZzwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5RaW4sIFpoaWppbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+WmhpamluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlFpbjwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5HYW8sIEZlaWZlaTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+RmVpZmVpPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkdhbzwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+TG93LUxhdGVuY3kgR2VuZXJhdGl2ZSBTZW1hbnRpYyBDb21tdW5pY2F0aW9uIHZpYSBDaGFubmVsLVJlYWxpemF0aW9uIEZsb3cgTWF0Y2hpbmc8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+YXJYaXY8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjY8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9ImFyWGl2Ij5JbmZvcm1hdGlvbiBUaGVvcnkgKGNzLklUKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJlbiIgc3ViamVjdFNjaGVtZT0iYXJYaXYiPkltYWdlIGFuZCBWaWRlbyBQcm9jZXNzaW5nIChlZXNzLklWKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIj5GT1M6IENvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlczwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIj5GT1M6IEVsZWN0cmljYWwgZW5naW5lZXJpbmcsIGVsZWN0cm9uaWMgZW5naW5lZXJpbmcsIGluZm9ybWF0aW9uIGVuZ2luZWVyaW5nPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNi0wNy0yN1QwNzoyODozN1o8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iVXBkYXRlZCIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNi0wNy0yOVQwMDowMjo1M1o8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQXZhaWxhYmxlIiBkYXRlSW5mb3JtYXRpb249InYxIj4yMDI2LTA3PC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJQcmVwcmludCI+QXJ0aWNsZTwvcmVzb3VyY2VUeXBlPgogIDx2ZXJzaW9uPjE8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2FyeGl2Lm9yZy9saWNlbnNlcy9ub25leGNsdXNpdmUtZGlzdHJpYi8xLjAvIj5hclhpdi5vcmcgcGVycGV0dWFsLCBub24tZXhjbHVzaXZlIGxpY2Vuc2U8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5HZW5lcmF0aXZlIHNlbWFudGljIGNvbW11bmljYXRpb24gcmVjZWl2ZXJzIGRlbGl2ZXIgaGlnaCBwZXJjZXB0dWFsIHF1YWxpdHkgYnV0IHN1ZmZlciBmcm9tIHByb2hpYml0aXZlIGRlY29kaW5nIGxhdGVuY3kuIFRoaXMgYm90dGxlbmVjayBhcmlzZXMgYmVjYXVzZSBkaWZmdXNpb24gcmVjZWl2ZXJzIHJlbHkgb24gc3RvY2hhc3RpYyBpdGVyYXRpdmUgZGVjb2RpbmcsIHdoaWxlIGV4aXN0aW5nIGZsb3cgbWF0Y2hpbmcgcmVjZWl2ZXJzIGVtcGxveSBpbmRlcGVuZGVudCBlbmRwb2ludCBjb3VwbGluZyB0aGF0IGlnbm9yZXMgdGhlIHBoeXNpY2FsIHNvdXJjZS0tY2hhbm5lbCBsaW5rLCB5aWVsZGluZyB1bm5lY2Vzc2FyaWx5IGxvbmcgYW5kIGN1cnZlZCBzYW1wbGluZyB0cmFqZWN0b3JpZXMuIEluIHRoaXMgcGFwZXIsIHdlIHJlZm9ybXVsYXRlIHJlY2VpdmVyLXNpZGUgcmVjb3ZlcnkgYXMgYSByZWFsaXphdGlvbi1jb3VwbGVkIGJyaWRnZSBmbG93IG1hdGNoaW5nIHByb2JsZW0gdW5kZXIgZXhwbGljaXQgYmFuZHdpZHRoIGFuZCBwb3dlciBjb25zdHJhaW50cy4gU3BlY2lmaWNhbGx5LCB3ZSBwcm9wb3NlIFJlYWxpemF0aW9uLUNvdXBsZWQgQnJpZGdlIEZsb3cgTWF0Y2hpbmcgKFJDLUJGTSksIHdoZXJlIHRoZSBkZWNvZGVyIGluaXRpYWxpemVzIGZyb20gYSBjaGFubmVsLWluZHVjZWQgc2VtYW50aWMgc3RhdGUgcmF0aGVyIHRoYW4gaXNvdHJvcGljIG5vaXNlLiBDcnVjaWFsbHksIHRyYWluaW5nIHBhaXJzIGFyZSBsaW5rZWQgdmlhIGEgcmVhbGl6YXRpb24tY291cGxlZCBlbnRyb3BpYyBvcHRpbWFsIHRyYW5zcG9ydCAoUkMtT1QpIHBsYW4gdGhhdCBwcmVzZXJ2ZXMgdGhlIHBoeXNpY2FsIGNoYW5uZWwgcmVhbGl6YXRpb24gb2YgZWFjaCB0cmFuc21pc3Npb24gd2hpbGUgbWFpbnRhaW5pbmcgcm9idXN0bmVzcyB0byBzdG9jaGFzdGljIGZhZGluZy4gRnVydGhlcm1vcmUsIHdlIGlkZW50aWZ5IGluZGVwZW5kZW50IGNvdXBsaW5nIGFzIHRoZSBmdW5kYW1lbnRhbCBzb3VyY2Ugb2YgYSBjb25kaXRpb25hbCB0cmFpbi0tdGVzdCBkaXN0cmlidXRpb24gc2hpZnQgaW4gY29uZGl0aW9uYWwgZmxvdyBtYXRjaGluZy1iYXNlZCByZWNlaXZlcnMsIGFuZCBkZXJpdmUgYW4gZW5kLXRvLWVuZCBkaXN0b3J0aW9uIGJvdW5kIHdob3NlIGRpc2NyZXRpemF0aW9uIGVycm9yIGRlY2F5cyBhcyBcKE8oS157LTJ9KVwpLiBFeHBlcmltZW50cyBvbiBDSUZBUi0xMCBhbmQgRkZIUS02NFwoXHRpbWVzXCk2NCBvdmVyIEFXR04gYW5kIFJheWxlaWdoIGZhZGluZyBjaGFubmVscyBkZW1vbnN0cmF0ZSB0aGF0IFJDLUJGTSBhY2hpZXZlcyBhIHN1cGVyaW9yIGZpZGVsaXR5LS1wZXJjZXB0aW9uIHRyYWRlLW9mZiwgcmVkdWNpbmcgZGVjb2RpbmcgbGF0ZW5jeSBieSBvdmVyIDEwXChcdGltZXNcKSBjb21wYXJlZCB0byBkaWZmdXNpb24tYmFzZWQgcmVjZWl2ZXJzLjwvZGVzY3JpcHRpb24+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJPdGhlciI+QWNjcGV0ZWQgYnkgR2xvYmVjb20gMjAyNi4gNiBwYWdlcywgNyBmaWd1cmVzPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "url": "https://arxiv.org/abs/2607.24876",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "mds",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "created": "2026-07-29T01:56:08.000Z",
+      "registered": "2026-07-29T01:56:09.000Z",
+      "published": "2026",
+      "updated": "2026-07-29T01:56:09.000Z"
+    }
+  },
+  "genharq": {
+    "source": "https://api.datacite.org/dois/10.48550/arxiv.2603.15068",
+    "identifier": "2603.15068",
+    "status": "verified_provider_record",
+    "sha256": "1ce1c5e986c82a7ca495c988baa7fbdedbdff2a5ae35d92039b2f106dffbd332",
+    "raw_bibtex": "@article{genharq,\n author={Han, Bin and Hu, Yulin and Schotten, Hans D.},\n title={{Generative Semantic HARQ: Latent-Space Text Retransmission and Combining}},\n journal={arXiv preprint arXiv:2603.15068},\n year={2026},\n doi={10.48550/arxiv.2603.15068}\n}",
+    "provider_metadata": {
+      "doi": "10.48550/arxiv.2603.15068",
+      "prefix": "10.48550",
+      "suffix": "arxiv.2603.15068",
+      "identifiers": [
+        {
+          "identifier": "2603.15068",
+          "identifierType": "arXiv"
+        }
+      ],
+      "alternateIdentifiers": [
+        {
+          "alternateIdentifierType": "arXiv",
+          "alternateIdentifier": "2603.15068"
+        }
+      ],
+      "creators": [
+        {
+          "name": "Han, Bin",
+          "nameType": "Personal",
+          "givenName": "Bin",
+          "familyName": "Han",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Hu, Yulin",
+          "nameType": "Personal",
+          "givenName": "Yulin",
+          "familyName": "Hu",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Schotten, Hans D.",
+          "nameType": "Personal",
+          "givenName": "Hans D.",
+          "familyName": "Schotten",
+          "affiliation": [],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "Generative Semantic HARQ: Latent-Space Text Retransmission and Combining"
+        }
+      ],
+      "publisher": "arXiv",
+      "container": {},
+      "publicationYear": 2026,
+      "subjects": [
+        {
+          "lang": "en",
+          "subject": "Signal Processing (eess.SP)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "lang": "en",
+          "subject": "Machine Learning (cs.LG)",
+          "subjectScheme": "arXiv"
+        },
+        {
+          "subject": "FOS: Electrical engineering, electronic engineering, information engineering",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        },
+        {
+          "subject": "FOS: Electrical engineering, electronic engineering, information engineering",
+          "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        },
+        {
+          "subject": "FOS: Computer and information sciences",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        },
+        {
+          "subject": "FOS: Computer and information sciences",
+          "schemeUri": "http://www.oecd.org/science/inno/38235147.pdf",
+          "subjectScheme": "Fields of Science and Technology (FOS)"
+        }
+      ],
+      "contributors": [],
+      "dates": [
+        {
+          "date": "2026-03-16T10:24:22Z",
+          "dateType": "Submitted",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-03-17T02:07:35Z",
+          "dateType": "Updated",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026-03",
+          "dateType": "Available",
+          "dateInformation": "v1"
+        },
+        {
+          "date": "2026",
+          "dateType": "Issued"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "GEN",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "CreativeWork",
+        "resourceType": "Article",
+        "resourceTypeGeneral": "Preprint"
+      },
+      "relatedIdentifiers": [],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": "1",
+      "rightsList": [
+        {
+          "rights": "arXiv.org perpetual, non-exclusive license",
+          "rightsUri": "http://arxiv.org/licenses/nonexclusive-distrib/1.0/"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "Semantic communication conveys meaning rather than raw bits, but reliability at the semantic level remains an open challenge. We propose a semantic-level hybrid automatic repeat request (HARQ) framework for text communication, in which a Transformer-variational autoencoder (VAE) codec operates as a lightweight overlay on the conventional protocol stack. The stochastic encoder inherently generates diverse latent representations across retransmissions-providing incremental knowledge (IK) from a single model without dedicated protocol design. On the receiver side, a soft quality estimator triggers retransmissions and a quality-aware combiner merges the received latent vectors within a consistent latent space. We systematically benchmark six semantic quality metrics and four soft combining strategies under hybrid semantic distortion that mixes systematic bias with additive noise. The results suggest combining Weighted-Average or MRC-Inspired combining with self-consistency-based HARQ triggering for the best performance.",
+          "descriptionType": "Abstract"
+        },
+        {
+          "description": "Submitted to IEEE PIMRC 2026",
+          "descriptionType": "Other"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC40ODU1MC9BUlhJVi4yNjAzLjE1MDY4PC9pZGVudGlmaWVyPgogIDxhbHRlcm5hdGVJZGVudGlmaWVycz4KICAgIDxhbHRlcm5hdGVJZGVudGlmaWVyIGFsdGVybmF0ZUlkZW50aWZpZXJUeXBlPSJhclhpdiI+MjYwMy4xNTA2ODwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IYW4sIEJpbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+QmluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkhhbjwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5IdSwgWXVsaW48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPll1bGluPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkh1PC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPlNjaG90dGVuLCBIYW5zIEQuPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5IYW5zIEQuPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlNjaG90dGVuPC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5HZW5lcmF0aXZlIFNlbWFudGljIEhBUlE6IExhdGVudC1TcGFjZSBUZXh0IFJldHJhbnNtaXNzaW9uIGFuZCBDb21iaW5pbmc8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+YXJYaXY8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjY8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9ImFyWGl2Ij5TaWduYWwgUHJvY2Vzc2luZyAoZWVzcy5TUCk8L3N1YmplY3Q+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZW4iIHN1YmplY3RTY2hlbWU9ImFyWGl2Ij5NYWNoaW5lIExlYXJuaW5nIChjcy5MRyk8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJGaWVsZHMgb2YgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSAoRk9TKSI+Rk9TOiBFbGVjdHJpY2FsIGVuZ2luZWVyaW5nLCBlbGVjdHJvbmljIGVuZ2luZWVyaW5nLCBpbmZvcm1hdGlvbiBlbmdpbmVlcmluZzwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IkZpZWxkcyBvZiBTY2llbmNlIGFuZCBUZWNobm9sb2d5IChGT1MpIj5GT1M6IENvbXB1dGVyIGFuZCBpbmZvcm1hdGlvbiBzY2llbmNlczwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJTdWJtaXR0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjYtMDMtMTZUMTA6MjQ6MjJaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiIGRhdGVJbmZvcm1hdGlvbj0idjEiPjIwMjYtMDMtMTdUMDI6MDc6MzVaPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IkF2YWlsYWJsZSIgZGF0ZUluZm9ybWF0aW9uPSJ2MSI+MjAyNi0wMzwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iUHJlcHJpbnQiPkFydGljbGU8L3Jlc291cmNlVHlwZT4KICA8dmVyc2lvbj4xPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHA6Ly9hcnhpdi5vcmcvbGljZW5zZXMvbm9uZXhjbHVzaXZlLWRpc3RyaWIvMS4wLyI+YXJYaXYub3JnIHBlcnBldHVhbCwgbm9uLWV4Y2x1c2l2ZSBsaWNlbnNlPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+U2VtYW50aWMgY29tbXVuaWNhdGlvbiBjb252ZXlzIG1lYW5pbmcgcmF0aGVyIHRoYW4gcmF3IGJpdHMsIGJ1dCByZWxpYWJpbGl0eSBhdCB0aGUgc2VtYW50aWMgbGV2ZWwgcmVtYWlucyBhbiBvcGVuIGNoYWxsZW5nZS4gV2UgcHJvcG9zZSBhIHNlbWFudGljLWxldmVsIGh5YnJpZCBhdXRvbWF0aWMgcmVwZWF0IHJlcXVlc3QgKEhBUlEpIGZyYW1ld29yayBmb3IgdGV4dCBjb21tdW5pY2F0aW9uLCBpbiB3aGljaCBhIFRyYW5zZm9ybWVyLXZhcmlhdGlvbmFsIGF1dG9lbmNvZGVyIChWQUUpIGNvZGVjIG9wZXJhdGVzIGFzIGEgbGlnaHR3ZWlnaHQgb3ZlcmxheSBvbiB0aGUgY29udmVudGlvbmFsIHByb3RvY29sIHN0YWNrLiBUaGUgc3RvY2hhc3RpYyBlbmNvZGVyIGluaGVyZW50bHkgZ2VuZXJhdGVzIGRpdmVyc2UgbGF0ZW50IHJlcHJlc2VudGF0aW9ucyBhY3Jvc3MgcmV0cmFuc21pc3Npb25zLXByb3ZpZGluZyBpbmNyZW1lbnRhbCBrbm93bGVkZ2UgKElLKSBmcm9tIGEgc2luZ2xlIG1vZGVsIHdpdGhvdXQgZGVkaWNhdGVkIHByb3RvY29sIGRlc2lnbi4gT24gdGhlIHJlY2VpdmVyIHNpZGUsIGEgc29mdCBxdWFsaXR5IGVzdGltYXRvciB0cmlnZ2VycyByZXRyYW5zbWlzc2lvbnMgYW5kIGEgcXVhbGl0eS1hd2FyZSBjb21iaW5lciBtZXJnZXMgdGhlIHJlY2VpdmVkIGxhdGVudCB2ZWN0b3JzIHdpdGhpbiBhIGNvbnNpc3RlbnQgbGF0ZW50IHNwYWNlLiBXZSBzeXN0ZW1hdGljYWxseSBiZW5jaG1hcmsgc2l4IHNlbWFudGljIHF1YWxpdHkgbWV0cmljcyBhbmQgZm91ciBzb2Z0IGNvbWJpbmluZyBzdHJhdGVnaWVzIHVuZGVyIGh5YnJpZCBzZW1hbnRpYyBkaXN0b3J0aW9uIHRoYXQgbWl4ZXMgc3lzdGVtYXRpYyBiaWFzIHdpdGggYWRkaXRpdmUgbm9pc2UuIFRoZSByZXN1bHRzIHN1Z2dlc3QgY29tYmluaW5nIFdlaWdodGVkLUF2ZXJhZ2Ugb3IgTVJDLUluc3BpcmVkIGNvbWJpbmluZyB3aXRoIHNlbGYtY29uc2lzdGVuY3ktYmFzZWQgSEFSUSB0cmlnZ2VyaW5nIGZvciB0aGUgYmVzdCBwZXJmb3JtYW5jZS48L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iT3RoZXIiPlN1Ym1pdHRlZCB0byBJRUVFIFBJTVJDIDIwMjY8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==",
+      "url": "https://arxiv.org/abs/2603.15068",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "mds",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 0,
+      "created": "2026-03-17T04:30:03.000Z",
+      "registered": "2026-03-17T04:30:04.000Z",
+      "published": "2026",
+      "updated": "2026-03-17T04:30:04.000Z"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "args": {
+    "checkpoint": "results/h2/seed_2030/checkpoint.pt",
+    "calibration": "results/h2/seed_2030/decision.json",
+    "data": "/mnt/lustre/scratch/engdes/wc296/mambajscc_vtc2027/data/DIV2K_valid_HR",
+    "dataset": "div2k",
+    "seed": 8001,
+    "output": "/mnt/nfs2/engdes/wc296/flowmatching/results/spring_final_cpu_20260921/div2k",
+    "upstream": "upstream/SwinJSCC",
+    "limit": 0,
+    "device": "cpu",
+    "threads": 8
+  },
+  "source_sha256": {
+    "ugp/channel.py": "804a7f3b0aa5ec72f87876c3457bacfceb3bbe939d91adc73e9d2de5981a5b6d",
+    "ugp/model.py": "8f34d0f030ce03b44a4a24fdb203431cfa0fc88121a9f308e48c629485cc041d",
+    "ugp/data.py": "85f8f90e2b3ef8a42de2139389dae7b565989dd766c0866b4e5f5869325eb0d2",
+    "flowharq/model.py": "8c55229a8db6e0a378de5fbdd7fa15455fc989281bf982d3e100ec9b74e520ac",
+    "flowharq/modules.py": "76a1ddf916c50b7c6f8a8f8b1212d43fe7b90e3b7aa3c300b8fdbb5eac1db953",
+    "flowharq/metrics.py": "5d8129e7aaa81c5b09cc7dfe4a9cb4b74d848a67a5f0fea62c5380a611e7e75a",
+    "flowharq/perceptual.py": "cd9b6475e85020468edc834a810ec763589ef084499cc05d8c6dcd10479b39f7",
+    "/mnt/nfs2/engdes/wc296/flowmatching/scripts/audit_spring_link.py": "75aa58b3154998a672b544fc0ddb0cf92054d4b4b790f445cac9a03394bdaa7d"
+  },
+  "torch": "2.7.1+cu128",
+  "cuda": "12.8",
+  "gpu": null,
+  "device": "cpu",
+  "msssim_version": "1.0.0",
+  "slurm_job_id": "11403791",
+  "host": "artemis-rtx-02.local"
+}

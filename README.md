@@ -1,13 +1,19 @@
 # FlowHARQ-JSCC
 
-The active research direction (2026-09-20) is **evidence-adaptive image transmission**:
-paid metadata/control, a progressive codec feasibility gate, then conditional posterior
-acquisition only if that gate passes. The mathematical model, fixed protocol, publication
-audit are in [the new study](experiments/evidence_harq_20260920/protocol.md).
-The [completed feasibility results](experiments/evidence_harq_20260920/RESULTS.md)
-show a **failed codec gate (0% selective saving)**, not a successful new method.
-Executable modules are under `evidence_harq/`. The FlowHARQ description and experiments
-below are retained as the legacy study; they do not establish the new method's performance.
+The VTC2027-Spring manuscript (2026-09-21 revision) studies **compute before
+retransmit**: frozen H2 receiver repair and calibrated full-payload HARQ, supported
+by H4's qualified recipe control. See the [paper](paper/main.tex),
+[PDF](output/pdf/FlowHARQ_VTC2027.pdf), [current protocol](experiments/spring_final_20260921/protocol.md),
+and [evidence audit](experiments/spring_final_20260921/RESULTS.md).
+The original three-run study and existing ten-run extension remain distinct;
+no new training or seed sweep is introduced. Explicit scale/control accounting
+reduces payload-only savings to about 0.35–0.39% under the stated signaling model.
+
+The [evidence-adaptive codec study](experiments/evidence_harq_20260920/RESULTS.md)
+failed its feasibility gate (0% selective saving). Its code and negative results
+remain archived, but it is not the manuscript's proposed method. H3's rate-aware
+extension also remains exploratory after failing its cross-SNR acceptance rule.
+These decisions do not erase or relabel either negative result.
 
 Research prototype for **virtual retransmission via flow matching** in semantic
 image communication. The receiver first repairs unreliable DeepJSCC latent

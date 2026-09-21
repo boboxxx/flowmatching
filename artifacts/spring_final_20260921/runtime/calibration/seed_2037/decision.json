@@ -1,0 +1,98 @@
+{
+  "protocol": {
+    "selection_split": "calibration",
+    "target_psnrs": [
+      24.0
+    ],
+    "psnr_tolerance_db": 0.02,
+    "lpips_tolerance": 0.003,
+    "feasible_candidates": 1,
+    "total_candidates": 1
+  },
+  "selected": {
+    "source_csv": "results/h2/seed_2037/calibration.csv",
+    "flow_steps": 4,
+    "mask_threshold": 0.8,
+    "training_seed": 2037,
+    "channel_seed": 6060,
+    "samples": 480,
+    "target_psnr": 24.0,
+    "direct_quality_bias": 0.8535920957724253,
+    "fm_quality_bias": 0.8759242534637451,
+    "direct_calibration_mae_db": 0.7513327128191793,
+    "fm_calibration_mae_db": 0.7671512548128768,
+    "adaptive_harq": {
+      "nack": 0.6708333333333333,
+      "psnr": 22.767120333512626,
+      "ssim": 0.599647473792235,
+      "lpips": 0.4965974350149433
+    },
+    "flowharq": {
+      "nack": 0.6541666666666667,
+      "psnr": 22.787345345815023,
+      "ssim": 0.6002250765760739,
+      "lpips": 0.49753302267442145
+    },
+    "retransmission_reduction": 0.016666666666666607,
+    "psnr_delta_db": 0.02022501230239726,
+    "lpips_delta": 0.0009355876594781543,
+    "direct_boundary": {
+      "accuracy": 0.9354166666666667,
+      "balanced_accuracy": 0.9286848635235732,
+      "nack_recall": 0.9476923076923077,
+      "ack_recall": 0.9096774193548387,
+      "ece": 0.05733207171242011
+    },
+    "fm_boundary": {
+      "accuracy": 0.9291666666666667,
+      "balanced_accuracy": 0.926252063841497,
+      "nack_recall": 0.9347826086956522,
+      "ack_recall": 0.9177215189873418,
+      "ece": 0.04923358333464695
+    }
+  },
+  "candidates": [
+    {
+      "source_csv": "results/h2/seed_2037/calibration.csv",
+      "flow_steps": 4,
+      "mask_threshold": 0.8,
+      "training_seed": 2037,
+      "channel_seed": 6060,
+      "samples": 480,
+      "target_psnr": 24.0,
+      "direct_quality_bias": 0.8535920957724253,
+      "fm_quality_bias": 0.8759242534637451,
+      "direct_calibration_mae_db": 0.7513327128191793,
+      "fm_calibration_mae_db": 0.7671512548128768,
+      "adaptive_harq": {
+        "nack": 0.6708333333333333,
+        "psnr": 22.767120333512626,
+        "ssim": 0.599647473792235,
+        "lpips": 0.4965974350149433
+      },
+      "flowharq": {
+        "nack": 0.6541666666666667,
+        "psnr": 22.787345345815023,
+        "ssim": 0.6002250765760739,
+        "lpips": 0.49753302267442145
+      },
+      "retransmission_reduction": 0.016666666666666607,
+      "psnr_delta_db": 0.02022501230239726,
+      "lpips_delta": 0.0009355876594781543,
+      "direct_boundary": {
+        "accuracy": 0.9354166666666667,
+        "balanced_accuracy": 0.9286848635235732,
+        "nack_recall": 0.9476923076923077,
+        "ack_recall": 0.9096774193548387,
+        "ece": 0.05733207171242011
+      },
+      "fm_boundary": {
+        "accuracy": 0.9291666666666667,
+        "balanced_accuracy": 0.926252063841497,
+        "nack_recall": 0.9347826086956522,
+        "ack_recall": 0.9177215189873418,
+        "ece": 0.04923358333464695
+      }
+    }
+  ]
+}

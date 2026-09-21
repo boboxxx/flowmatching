@@ -1,0 +1,2 @@
+# Keep third-party sources in their pinned submodule, not a duplicated distribution.
+runtime/source/upstream/

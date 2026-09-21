@@ -1,0 +1,221 @@
+{
+  "platform": "Linux-5.14.0-503.16.1.el9_5.x86_64-x86_64-with-glibc2.34",
+  "python": "3.10.0",
+  "checkpoints": [
+    {
+      "path": "results/h2/seed_2030/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "61952a6aceffd101273a0d3bf89dbdb1aa0f168facd676f1e7aca4d63e8c45ae"
+    },
+    {
+      "path": "results/h2/seed_2030/decision.json",
+      "bytes": 2959,
+      "sha256": "edd1d18f6267a663e66d329ef7aa8d97bbab85c70988b476942922f578f8d1f7"
+    },
+    {
+      "path": "results/h2/seed_2031/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "f9ab9ecde8403f3800f56e272558b00d5cafc8f6ab6e5cf3db259abbe3092ec3"
+    },
+    {
+      "path": "results/h2/seed_2031/decision.json",
+      "bytes": 2973,
+      "sha256": "30f732cea73311dfc9eae65275dc312fc223d1b89e475d19e3f551aa1145dca5"
+    },
+    {
+      "path": "results/h2/seed_2032/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "bbb6b8a6816a1648f30c60f3864322a87bc3ca80f9821354c7d91dd5e2fd5832"
+    },
+    {
+      "path": "results/h2/seed_2032/decision.json",
+      "bytes": 2929,
+      "sha256": "db739b2f1837b1c93ffa91fcb3a2d054102c32646ca24956d500e0acce236055"
+    },
+    {
+      "path": "results/h2/seed_2033/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "3067eae07709c2f2dd90819efd8ad15048634eda6f3ac5ceaaea9a10a732c713"
+    },
+    {
+      "path": "results/h2/seed_2033/decision.json",
+      "bytes": 2947,
+      "sha256": "48f69cab30dbd0403a3bd10efa26d2999ecef9a5aff7ac02663965d549af8194"
+    },
+    {
+      "path": "results/h2/seed_2034/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "0f82717ce050da361f2594fde59e933292b80eeb2ce19d8947dbc67589de2aa6"
+    },
+    {
+      "path": "results/h2/seed_2034/decision.json",
+      "bytes": 2965,
+      "sha256": "72dc352412317cacea4f35e04bb6e55d754e1355ccd50fdbb8da96c3f023da92"
+    },
+    {
+      "path": "results/h2/seed_2035/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "eeb1e3f268b2f96cb4aeebddaca7a971fe69f0a2b46fa3ea6ef1a7bc4f46d5f7"
+    },
+    {
+      "path": "results/h2/seed_2035/decision.json",
+      "bytes": 2917,
+      "sha256": "565838da9b6a1af5c63d86b72815ff7188c3a3ca399e51e0abb9ae472e38b39b"
+    },
+    {
+      "path": "results/h2/seed_2036/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "71502f4d0ca9573f5121ccdd4576ee2a81cd006195e788e50d3130e1d43118cf"
+    },
+    {
+      "path": "results/h2/seed_2036/decision.json",
+      "bytes": 2997,
+      "sha256": "80b5e842018290997b73e8aef224c976adbd6236464d6d363f43d042feeee8da"
+    },
+    {
+      "path": "results/h2/seed_2037/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "d9a81b087e86d2cd7d6ca13343b904feaca800687289707992aa54c4c25b9e7e"
+    },
+    {
+      "path": "results/h2/seed_2037/decision.json",
+      "bytes": 2989,
+      "sha256": "658661ffa81b04791594b189af69c5449e014a2dce78b125b10e8eaade58223a"
+    },
+    {
+      "path": "results/h2/seed_2038/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "bb7447a20e74506f7962b0682bd738e153f32ac2db8b072612d7f527dc4fca7b"
+    },
+    {
+      "path": "results/h2/seed_2038/decision.json",
+      "bytes": 2961,
+      "sha256": "bdc8e21c7bbc610f7b8c292404db55f63085ffe1227237f0f2d12a8fbcd82eb4"
+    },
+    {
+      "path": "results/h2/seed_2039/checkpoint.pt",
+      "bytes": 101375952,
+      "sha256": "10c4d581429317a21784fa12182eaa82bc8b00e271dab7daf62f9aa07fd6d347"
+    },
+    {
+      "path": "results/h2/seed_2039/decision.json",
+      "bytes": 2973,
+      "sha256": "a187b6c025e64ad9c254af3228aad66bcfca5178f8c289950b3f7a6cfe28cd69"
+    }
+  ],
+  "sources": [
+    {
+      "path": "ugp/__init__.py",
+      "sha256": "770b1a893be6d39e7f58a55f412f7bbf9df696e7706f6f712928642bec5ea5fe"
+    },
+    {
+      "path": "ugp/benchmark.py",
+      "sha256": "b2225d97f3e80d3f868c338a0ab0a7d66b26d6aa7d58bcd0e05d7d84c0ebfb65"
+    },
+    {
+      "path": "ugp/channel.py",
+      "sha256": "804a7f3b0aa5ec72f87876c3457bacfceb3bbe939d91adc73e9d2de5981a5b6d"
+    },
+    {
+      "path": "ugp/data.py",
+      "sha256": "85f8f90e2b3ef8a42de2139389dae7b565989dd766c0866b4e5f5869325eb0d2"
+    },
+    {
+      "path": "ugp/evaluate.py",
+      "sha256": "84b66bbb77a48b898f232278a07b4df153cf3940018dff0a4014539f504c95f1"
+    },
+    {
+      "path": "ugp/heads.py",
+      "sha256": "302c0c91685dabeb1a0c83a0ed23f15117feb6bd0545fb3653f1ceb34a7af6b3"
+    },
+    {
+      "path": "ugp/metrics.py",
+      "sha256": "2ca883a6817e8e872b32fa3a6dccb97f81dd1248da596108ee8cbd871ff3b5d7"
+    },
+    {
+      "path": "ugp/model.py",
+      "sha256": "8f34d0f030ce03b44a4a24fdb203431cfa0fc88121a9f308e48c629485cc041d"
+    },
+    {
+      "path": "ugp/train.py",
+      "sha256": "7f08b401de5694376b1504cd46c42848a0d9f640e1dbfeda8ae8c5fa1ea4e07d"
+    },
+    {
+      "path": "flowharq/__init__.py",
+      "sha256": "a78a5793a56586a354edee5d5b259fbe912c165e9081523eb6eaff8a37adea99"
+    },
+    {
+      "path": "flowharq/analyze.py",
+      "sha256": "bdd0d72b1f40abdf975c33dbf276bb0033da57b5ba1bc1ecaa383fd497e7932d"
+    },
+    {
+      "path": "flowharq/benchmark_latency.py",
+      "sha256": "aa362456aa2e45bb833ae220bd7b1d0ceeb9dec67a845eebf0f9d1c6ecf67216"
+    },
+    {
+      "path": "flowharq/calibrate.py",
+      "sha256": "cbbbb4ec5faf192bc3be2062e99708139187de34546c4f0a647aedefe1631fd8"
+    },
+    {
+      "path": "flowharq/compare_repair.py",
+      "sha256": "7f909ae67551524e477a51f6e215a1e27a78bffdca762bfdb734619a41e87693"
+    },
+    {
+      "path": "flowharq/evaluate.py",
+      "sha256": "393e308dc05117ea634f923e257cad6baf90074ec46d011a69f12c37da8ce2a4"
+    },
+    {
+      "path": "flowharq/frontier.py",
+      "sha256": "1f759d00b0e35b1e9985d49015a95709785f84b044949c5686640704dff2a5d8"
+    },
+    {
+      "path": "flowharq/metrics.py",
+      "sha256": "5d8129e7aaa81c5b09cc7dfe4a9cb4b74d848a67a5f0fea62c5380a611e7e75a"
+    },
+    {
+      "path": "flowharq/model.py",
+      "sha256": "8c55229a8db6e0a378de5fbdd7fa15455fc989281bf982d3e100ec9b74e520ac"
+    },
+    {
+      "path": "flowharq/modules.py",
+      "sha256": "76a1ddf916c50b7c6f8a8f8b1212d43fe7b90e3b7aa3c300b8fdbb5eac1db953"
+    },
+    {
+      "path": "flowharq/paper_artifacts.py",
+      "sha256": "1951498ebe21a496825e8838b1163f30ca252f7a90616818a95f19a4756c7f1a"
+    },
+    {
+      "path": "flowharq/perceptual.py",
+      "sha256": "cd9b6475e85020468edc834a810ec763589ef084499cc05d8c6dcd10479b39f7"
+    },
+    {
+      "path": "flowharq/plot.py",
+      "sha256": "77870d956baf77ffe1ebab7a31aa0b30ac18d189f8a0106191d0b2c520f0a6dc"
+    },
+    {
+      "path": "flowharq/train.py",
+      "sha256": "a44e83d55b97b3992976591a8e863a543bcdd69b2a3d78fd36ec041f86274d66"
+    },
+    {
+      "path": "upstream/SwinJSCC/net/channel.py",
+      "sha256": "84572df9fb661d5e10cc0b00dbed1db473eef94bb1822833be06b33443dc74d9"
+    },
+    {
+      "path": "upstream/SwinJSCC/net/decoder.py",
+      "sha256": "29260e7252551e445eae245c1714879e7459ca93a3dfeec9119da80136c87822"
+    },
+    {
+      "path": "upstream/SwinJSCC/net/encoder.py",
+      "sha256": "dd9379276d6cc2dbdd6ac174b14a72e604e859ed30884367e62f5a1e8bbb37d3"
+    },
+    {
+      "path": "upstream/SwinJSCC/net/modules.py",
+      "sha256": "341213cd8f59e983045acd7354ca2d0768da58389fc346ee9516856ecd90e6ce"
+    },
+    {
+      "path": "upstream/SwinJSCC/net/network.py",
+      "sha256": "215fc46a52809f9db57570bb8a1d1a278c936c30abd2018aa55efb7b0fc73b6a"
+    }
+  ],
+  "note": "Checkpoint paths are on Artemis. This manifest does not mean the model binaries are publicly hosted. Source snapshot is separate from the working Git tree."
+}

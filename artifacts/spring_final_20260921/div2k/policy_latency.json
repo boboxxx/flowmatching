@@ -1,0 +1,13 @@
+{
+  "adaptive_harq": {
+    "mean_ms": 89.87480369629338,
+    "median_ms": 89.86128855030984,
+    "repetitions": 100
+  },
+  "flowharq": {
+    "mean_ms": 96.21125191217288,
+    "median_ms": 95.76056303922087,
+    "repetitions": 100
+  },
+  "note": "Batch one; both observations precomputed. Includes reliability, quality head, branch selection, optional repair/MRC and one decode. Excludes radio, encoding, equalization, feedback, queues; one fixed input only."
+}

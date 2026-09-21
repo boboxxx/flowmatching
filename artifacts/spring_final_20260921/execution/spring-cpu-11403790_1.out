@@ -1,0 +1,8 @@
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=2
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2

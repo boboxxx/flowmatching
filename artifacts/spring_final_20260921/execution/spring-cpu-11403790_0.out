@@ -1,0 +1,32 @@
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=2
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"dataset": "div2k", "snr": 0.0, "speed": 30.0, "rows": 800}
+{"dataset": "div2k", "snr": 0.0, "speed": 60.0, "rows": 1600}
+{"dataset": "div2k", "snr": 0.0, "speed": 90.0, "rows": 2400}
+{"dataset": "div2k", "snr": 0.0, "speed": 120.0, "rows": 3200}
+{"dataset": "div2k", "snr": 3.0, "speed": 30.0, "rows": 4000}
+{"dataset": "div2k", "snr": 3.0, "speed": 60.0, "rows": 4800}
+{"dataset": "div2k", "snr": 3.0, "speed": 90.0, "rows": 5600}
+{"dataset": "div2k", "snr": 3.0, "speed": 120.0, "rows": 6400}
+{"dataset": "div2k", "snr": 6.0, "speed": 30.0, "rows": 7200}
+{"dataset": "div2k", "snr": 6.0, "speed": 60.0, "rows": 8000}
+{"dataset": "div2k", "snr": 6.0, "speed": 90.0, "rows": 8800}
+{"dataset": "div2k", "snr": 6.0, "speed": 120.0, "rows": 9600}
+{"dataset": "div2k", "snr": 9.0, "speed": 30.0, "rows": 10400}
+{"dataset": "div2k", "snr": 9.0, "speed": 60.0, "rows": 11200}
+{"dataset": "div2k", "snr": 9.0, "speed": 90.0, "rows": 12000}
+{"dataset": "div2k", "snr": 9.0, "speed": 120.0, "rows": 12800}
+{"dataset": "div2k", "snr": 12.0, "speed": 30.0, "rows": 13600}
+{"dataset": "div2k", "snr": 12.0, "speed": 60.0, "rows": 14400}
+{"dataset": "div2k", "snr": 12.0, "speed": 90.0, "rows": 15200}
+{"dataset": "div2k", "snr": 12.0, "speed": 120.0, "rows": 16000}
+{"dataset": "div2k", "snr": 15.0, "speed": 30.0, "rows": 16800}
+{"dataset": "div2k", "snr": 15.0, "speed": 60.0, "rows": 17600}
+{"dataset": "div2k", "snr": 15.0, "speed": 90.0, "rows": 18400}
+{"dataset": "div2k", "snr": 15.0, "speed": 120.0, "rows": 19200}

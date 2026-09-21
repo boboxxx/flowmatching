@@ -1,0 +1,18 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Policy & NACK (\%) & PSNR & MSE $\times10^3$ & MS-SSIM & LPIPS \\
+\midrule
+\multicolumn{6}{l}{\textit{DIV2K}} \\
+Direct & 0.00 & 21.319 & 10.239 & 0.8000 & 0.5127 \\
+Full HARQ & 100.00 & 21.985 & 8.587 & 0.8405 & 0.4827 \\
+Repair only & 0.00 & 21.392 & 10.165 & 0.7972 & 0.5164 \\
+Adaptive & 74.69 & 21.912 & 8.630 & 0.8379 & 0.4853 \\
+FlowHARQ & 73.02 & 21.948 & 8.608 & 0.8371 & 0.4867 \\
+\multicolumn{6}{l}{\textit{Kodak24}} \\
+Direct & 0.00 & 21.470 & 8.554 & 0.7797 & 0.5575 \\
+Full HARQ & 100.00 & 22.105 & 7.142 & 0.8259 & 0.5189 \\
+Repair only & 0.00 & 21.580 & 8.409 & 0.7760 & 0.5626 \\
+Adaptive & 74.31 & 22.033 & 7.191 & 0.8220 & 0.5238 \\
+FlowHARQ & 71.70 & 22.070 & 7.165 & 0.8209 & 0.5257 \\
+\bottomrule
+\end{tabular}
