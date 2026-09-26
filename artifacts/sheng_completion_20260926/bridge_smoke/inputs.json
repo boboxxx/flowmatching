@@ -1,0 +1,21 @@
+{
+  "images": [
+    {
+      "name": "01.png",
+      "sha256": "a56e27cbf5f843c048b6af1d6e090760e9c92fadba88b7dee0205918a37523bd"
+    }
+  ],
+  "author_checkpoint": {
+    "name": "swin_mse_c32",
+    "paper": "SwinJSCC",
+    "objective": "MSE",
+    "channels": 32,
+    "snr_db": 10,
+    "channel": "AWGN",
+    "source": "https://drive.google.com/file/d/1h2Dk9jckeRg6Rah32S_kLq89CtPdGdwj/view",
+    "bytes": 125823492,
+    "sha256": "864d52a64281b3fcd4db34f7696b225b96c998b040b81d96cc556ecb837a17ff"
+  },
+  "own_checkpoint_sha256": "61952a6aceffd101273a0d3bf89dbdb1aa0f168facd676f1e7aca4d63e8c45ae",
+  "calibration_sha256": "edd1d18f6267a663e66d329ef7aa8d97bbab85c70988b476942922f578f8d1f7"
+}

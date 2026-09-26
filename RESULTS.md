@@ -1,5 +1,21 @@
 # FlowHARQ confirmatory results — 2026-09-19
 
+## Latest diagnostic — Sheng, 2026-09-26
+
+The [new paired fading comparison and decision-risk audit](experiments/sheng_completion_20260926/RESULTS.md)
+complete 14,976 new rows without new model training. Published SwinJSCC with
+our two-round Chase wrapper obtains 26.34 dB on Kodak versus 22.05 dB for
+FlowHARQ, better MSE/MS-SSIM/LPIPS, and lower charged use. On DIV2K its mean
+MSE is worse despite higher mean PSNR; do not claim uniform dominance.
+The wrapper is an adaptation, not a published HARQ reproduction.
+
+A calibration-selected 1-dB decision margin gives FlowHARQ conditional false
+ACK 3.86% on DIV2K but 30.32% on Kodak. Thus the historical within-codec
+savings below remain valid, but do not establish reliable delivery or system
+competitiveness. Full raw rows, reconstruction and environment manifests are
+in `artifacts/sheng_completion_20260926/`. No competitive-system completion or
+submission claim is made.
+
 ## Current manuscript audit — 2026-09-21
 
 The Spring paper returns to the frozen H2 claim; H3 and the failed progressive

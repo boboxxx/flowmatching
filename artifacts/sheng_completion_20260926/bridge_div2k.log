@@ -1,0 +1,106 @@
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=AlexNet_Weights.IMAGENET1K_V1`. You can also use `weights=AlexNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/sheng/anaconda3/envs/cv/lib/python3.10/site-packages/lpips/lpips.py:107: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.load_state_dict(torch.load(model_path, map_location='cpu'), strict=False)
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=6
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=6
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=3, input_resolution=(256, 256), depth=2
+Encoder  dim=128, input_resolution=(128, 128), depth=2
+Encoder  dim=192, input_resolution=(64, 64), depth=2
+Encoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=320, input_resolution=(16, 16), depth=2
+Decoder  dim=256, input_resolution=(32, 32), depth=2
+Decoder  dim=192, input_resolution=(64, 64), depth=2
+Decoder  dim=128, input_resolution=(128, 128), depth=2
+{"dataset": "div2k", "images_done": 1, "images": 80, "rows": 144}
+{"dataset": "div2k", "images_done": 2, "images": 80, "rows": 288}
+{"dataset": "div2k", "images_done": 3, "images": 80, "rows": 432}
+{"dataset": "div2k", "images_done": 4, "images": 80, "rows": 576}
+{"dataset": "div2k", "images_done": 5, "images": 80, "rows": 720}
+{"dataset": "div2k", "images_done": 6, "images": 80, "rows": 864}
+{"dataset": "div2k", "images_done": 7, "images": 80, "rows": 1008}
+{"dataset": "div2k", "images_done": 8, "images": 80, "rows": 1152}
+{"dataset": "div2k", "images_done": 9, "images": 80, "rows": 1296}
+{"dataset": "div2k", "images_done": 10, "images": 80, "rows": 1440}
+{"dataset": "div2k", "images_done": 11, "images": 80, "rows": 1584}
+{"dataset": "div2k", "images_done": 12, "images": 80, "rows": 1728}
+{"dataset": "div2k", "images_done": 13, "images": 80, "rows": 1872}
+{"dataset": "div2k", "images_done": 14, "images": 80, "rows": 2016}
+{"dataset": "div2k", "images_done": 15, "images": 80, "rows": 2160}
+{"dataset": "div2k", "images_done": 16, "images": 80, "rows": 2304}
+{"dataset": "div2k", "images_done": 17, "images": 80, "rows": 2448}
+{"dataset": "div2k", "images_done": 18, "images": 80, "rows": 2592}
+{"dataset": "div2k", "images_done": 19, "images": 80, "rows": 2736}
+{"dataset": "div2k", "images_done": 20, "images": 80, "rows": 2880}
+{"dataset": "div2k", "images_done": 21, "images": 80, "rows": 3024}
+{"dataset": "div2k", "images_done": 22, "images": 80, "rows": 3168}
+{"dataset": "div2k", "images_done": 23, "images": 80, "rows": 3312}
+{"dataset": "div2k", "images_done": 24, "images": 80, "rows": 3456}
+{"dataset": "div2k", "images_done": 25, "images": 80, "rows": 3600}
+{"dataset": "div2k", "images_done": 26, "images": 80, "rows": 3744}
+{"dataset": "div2k", "images_done": 27, "images": 80, "rows": 3888}
+{"dataset": "div2k", "images_done": 28, "images": 80, "rows": 4032}
+{"dataset": "div2k", "images_done": 29, "images": 80, "rows": 4176}
+{"dataset": "div2k", "images_done": 30, "images": 80, "rows": 4320}
+{"dataset": "div2k", "images_done": 31, "images": 80, "rows": 4464}
+{"dataset": "div2k", "images_done": 32, "images": 80, "rows": 4608}
+{"dataset": "div2k", "images_done": 33, "images": 80, "rows": 4752}
+{"dataset": "div2k", "images_done": 34, "images": 80, "rows": 4896}
+{"dataset": "div2k", "images_done": 35, "images": 80, "rows": 5040}
+{"dataset": "div2k", "images_done": 36, "images": 80, "rows": 5184}
+{"dataset": "div2k", "images_done": 37, "images": 80, "rows": 5328}
+{"dataset": "div2k", "images_done": 38, "images": 80, "rows": 5472}
+{"dataset": "div2k", "images_done": 39, "images": 80, "rows": 5616}
+{"dataset": "div2k", "images_done": 40, "images": 80, "rows": 5760}
+{"dataset": "div2k", "images_done": 41, "images": 80, "rows": 5904}
+{"dataset": "div2k", "images_done": 42, "images": 80, "rows": 6048}
+{"dataset": "div2k", "images_done": 43, "images": 80, "rows": 6192}
+{"dataset": "div2k", "images_done": 44, "images": 80, "rows": 6336}
+{"dataset": "div2k", "images_done": 45, "images": 80, "rows": 6480}
+{"dataset": "div2k", "images_done": 46, "images": 80, "rows": 6624}
+{"dataset": "div2k", "images_done": 47, "images": 80, "rows": 6768}
+{"dataset": "div2k", "images_done": 48, "images": 80, "rows": 6912}
+{"dataset": "div2k", "images_done": 49, "images": 80, "rows": 7056}
+{"dataset": "div2k", "images_done": 50, "images": 80, "rows": 7200}
+{"dataset": "div2k", "images_done": 51, "images": 80, "rows": 7344}
+{"dataset": "div2k", "images_done": 52, "images": 80, "rows": 7488}
+{"dataset": "div2k", "images_done": 53, "images": 80, "rows": 7632}
+{"dataset": "div2k", "images_done": 54, "images": 80, "rows": 7776}
+{"dataset": "div2k", "images_done": 55, "images": 80, "rows": 7920}
+{"dataset": "div2k", "images_done": 56, "images": 80, "rows": 8064}
+{"dataset": "div2k", "images_done": 57, "images": 80, "rows": 8208}
+{"dataset": "div2k", "images_done": 58, "images": 80, "rows": 8352}
+{"dataset": "div2k", "images_done": 59, "images": 80, "rows": 8496}
+{"dataset": "div2k", "images_done": 60, "images": 80, "rows": 8640}
+{"dataset": "div2k", "images_done": 61, "images": 80, "rows": 8784}
+{"dataset": "div2k", "images_done": 62, "images": 80, "rows": 8928}
+{"dataset": "div2k", "images_done": 63, "images": 80, "rows": 9072}
+{"dataset": "div2k", "images_done": 64, "images": 80, "rows": 9216}
+{"dataset": "div2k", "images_done": 65, "images": 80, "rows": 9360}
+{"dataset": "div2k", "images_done": 66, "images": 80, "rows": 9504}
+{"dataset": "div2k", "images_done": 67, "images": 80, "rows": 9648}
+{"dataset": "div2k", "images_done": 68, "images": 80, "rows": 9792}
+{"dataset": "div2k", "images_done": 69, "images": 80, "rows": 9936}
+{"dataset": "div2k", "images_done": 70, "images": 80, "rows": 10080}
+{"dataset": "div2k", "images_done": 71, "images": 80, "rows": 10224}
+{"dataset": "div2k", "images_done": 72, "images": 80, "rows": 10368}
+{"dataset": "div2k", "images_done": 73, "images": 80, "rows": 10512}
+{"dataset": "div2k", "images_done": 74, "images": 80, "rows": 10656}
+{"dataset": "div2k", "images_done": 75, "images": 80, "rows": 10800}
+{"dataset": "div2k", "images_done": 76, "images": 80, "rows": 10944}
+{"dataset": "div2k", "images_done": 77, "images": 80, "rows": 11088}
+{"dataset": "div2k", "images_done": 78, "images": 80, "rows": 11232}
+{"dataset": "div2k", "images_done": 79, "images": 80, "rows": 11376}
+{"dataset": "div2k", "images_done": 80, "images": 80, "rows": 11520}

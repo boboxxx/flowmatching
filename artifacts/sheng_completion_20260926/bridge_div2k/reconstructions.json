@@ -1,0 +1,86 @@
+[
+  {
+    "file": "0dB_SwinJSCC_author_one_shot.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "SwinJSCC_author_one_shot",
+    "sha256": "6fe692f4473fd4c183b12660adf9c01a218aee84ffb622c2e7f91b2c1499de3b"
+  },
+  {
+    "file": "0dB_SwinJSCC_author_Chase_wrapper.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "SwinJSCC_author_Chase_wrapper",
+    "sha256": "801a6e94ba985bee54bf9e71414992d99cbaaec33821c5c7a46477d76b2460ee"
+  },
+  {
+    "file": "0dB_same_codec_direct.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "same_codec_direct",
+    "sha256": "fe9797333f868cf504391bad6fe4693cf86194dca238a8637c6a8d57020f8e7d"
+  },
+  {
+    "file": "0dB_same_codec_full_HARQ.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "same_codec_full_HARQ",
+    "sha256": "7f2be561d1718c062a3ffce81b85b35920254b6b8f338f216381ca50210b096c"
+  },
+  {
+    "file": "0dB_adaptive_HARQ.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "adaptive_HARQ",
+    "sha256": "7f2be561d1718c062a3ffce81b85b35920254b6b8f338f216381ca50210b096c"
+  },
+  {
+    "file": "0dB_FlowHARQ.png",
+    "image": "0821.png",
+    "snr": 0.0,
+    "method": "FlowHARQ",
+    "sha256": "ac28ba5481d14bfeddfc168bd8e33b507646c423c237e020834d48239bb3866f"
+  },
+  {
+    "file": "15dB_SwinJSCC_author_one_shot.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "SwinJSCC_author_one_shot",
+    "sha256": "572e1164a2c35a5e0dbf5d12c770cde5c79580277d8bf26d716056058619b5f7"
+  },
+  {
+    "file": "15dB_SwinJSCC_author_Chase_wrapper.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "SwinJSCC_author_Chase_wrapper",
+    "sha256": "ff87c9c5f540adbd5a4878d7c30e4b4d1d4c990e65529351c27774b3e0fe7db1"
+  },
+  {
+    "file": "15dB_same_codec_direct.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "same_codec_direct",
+    "sha256": "d0087aadab69d93d6aa85f04866e197751b6f73b746e95752a60e6c697dae604"
+  },
+  {
+    "file": "15dB_same_codec_full_HARQ.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "same_codec_full_HARQ",
+    "sha256": "ee2444fc99ef9624ed987eace5721153831f293861407ae8851c452b26829b2c"
+  },
+  {
+    "file": "15dB_adaptive_HARQ.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "adaptive_HARQ",
+    "sha256": "d0087aadab69d93d6aa85f04866e197751b6f73b746e95752a60e6c697dae604"
+  },
+  {
+    "file": "15dB_FlowHARQ.png",
+    "image": "0821.png",
+    "snr": 15.0,
+    "method": "FlowHARQ",
+    "sha256": "fc5275e046ae734e1429c750d0e81c7e55bf67edae4f14cc4d5670cba838a11c"
+  }
+]

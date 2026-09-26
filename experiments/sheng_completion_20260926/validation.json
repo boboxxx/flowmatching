@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "input/checkpoint hashes",
+    "raw row counts",
+    "paired gains",
+    "common fallback identity",
+    "cost identities",
+    "PSNR/MSE identity",
+    "reconstruction hashes"
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "risk_selected": [
+    {
+      "dataset": "calibration",
+      "policy": "adaptive_harq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "480",
+      "ack_count": "118",
+      "ack_coverage": "0.24583333333333332",
+      "nack": "0.7541666666666667",
+      "joint_false_ack": "0.00625",
+      "conditional_false_ack": "0.025423728813559324",
+      "final_outage": "0.5979166666666667",
+      "charged_uses": "15380.574999999999",
+      "psnr": "22.798395494620006",
+      "mse": "0.006307913635732796",
+      "lpips": "0.49561505249390997",
+      "ssim": "0.6006752709547679",
+      "calibration_selected": "True"
+    },
+    {
+      "dataset": "calibration",
+      "policy": "flowharq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "480",
+      "ack_count": "129",
+      "ack_coverage": "0.26875",
+      "nack": "0.73125",
+      "joint_false_ack": "0.0125",
+      "conditional_false_ack": "0.046511627906976744",
+      "final_outage": "0.6",
+      "charged_uses": "15286.6625",
+      "psnr": "22.80739509264628",
+      "mse": "0.006303011078347858",
+      "lpips": "0.49615170564502475",
+      "ssim": "0.6008881169060866",
+      "calibration_selected": "True"
+    },
+    {
+      "dataset": "div2k",
+      "policy": "adaptive_harq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "5760",
+      "ack_count": "1047",
+      "ack_coverage": "0.18177083333333333",
+      "nack": "0.8182291666666667",
+      "joint_false_ack": "0.009027777777777777",
+      "conditional_false_ack": "0.049665711556829036",
+      "final_outage": "0.7032986111111111",
+      "charged_uses": "15643.103125",
+      "psnr": "21.949671521948442",
+      "mse": "0.008601856848678337",
+      "lpips": "0.4844700599684276",
+      "ssim": "0.5894256910852467",
+      "calibration_selected": "True"
+    },
+    {
+      "dataset": "div2k",
+      "policy": "flowharq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "5760",
+      "ack_count": "1113",
+      "ack_coverage": "0.19322916666666667",
+      "nack": "0.8067708333333333",
+      "joint_false_ack": "0.007465277777777778",
+      "conditional_false_ack": "0.03863432165318958",
+      "final_outage": "0.6996527777777778",
+      "charged_uses": "15596.146875",
+      "psnr": "21.97053566922744",
+      "mse": "0.008588879163647851",
+      "lpips": "0.48532895856640407",
+      "ssim": "0.5899848292659348",
+      "calibration_selected": "True"
+    },
+    {
+      "dataset": "kodak",
+      "policy": "adaptive_harq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "1728",
+      "ack_count": "323",
+      "ack_coverage": "0.1869212962962963",
+      "nack": "0.8130787037037037",
+      "joint_false_ack": "0.05960648148148148",
+      "conditional_false_ack": "0.3188854489164087",
+      "final_outage": "0.8287037037037037",
+      "charged_uses": "15621.996527777777",
+      "psnr": "22.063870378666454",
+      "mse": "0.007182004774352751",
+      "lpips": "0.5212831678800285",
+      "ssim": "0.5851245735496007",
+      "calibration_selected": "True"
+    },
+    {
+      "dataset": "kodak",
+      "policy": "flowharq",
+      "margin_db": "1.0",
+      "always_nack": "False",
+      "cases": "1728",
+      "ack_count": "343",
+      "ack_coverage": "0.19849537037037038",
+      "nack": "0.8015046296296297",
+      "joint_false_ack": "0.06018518518518518",
+      "conditional_false_ack": "0.3032069970845481",
+      "final_outage": "0.8211805555555556",
+      "charged_uses": "15574.565972222223",
+      "psnr": "22.091619243776357",
+      "mse": "0.007163231116346846",
+      "lpips": "0.5222543791212417",
+      "ssim": "0.5850568399419663",
+      "calibration_selected": "True"
+    }
+  ],
+  "bridge": {
+    "div2k": {
+      "SwinJSCC_author_one_shot": {
+        "psnr": 23.07099108095532,
+        "mse": 0.025345430028678114,
+        "ms_ssim": 0.7729912701368449,
+        "lpips": 0.34626465683347,
+        "nack": 0.0,
+        "outage": 0.49583333333333335,
+        "total_uses": 4130.0
+      },
+      "SwinJSCC_author_Chase_wrapper": {
+        "psnr": 26.13651311772134,
+        "mse": 0.009806700125517409,
+        "ms_ssim": 0.885173199896235,
+        "lpips": 0.26409133354124303,
+        "nack": 1.0,
+        "outage": 0.3375,
+        "total_uses": 8228.0
+      },
+      "same_codec_direct": {
+        "psnr": 21.367982599860365,
+        "mse": 0.010281924198200917,
+        "ms_ssim": 0.801078287884593,
+        "lpips": 0.5119241590378806,
+        "nack": 0.0,
+        "outage": 0.7520833333333333,
+        "total_uses": 12290.0
+      },
+      "same_codec_full_HARQ": {
+        "psnr": 21.99225951633438,
+        "mse": 0.008627590930867275,
+        "ms_ssim": 0.8402552494158347,
+        "lpips": 0.48289735009893775,
+        "nack": 1.0,
+        "outage": 0.7046875,
+        "total_uses": 16388.0
+      },
+      "adaptive_HARQ": {
+        "psnr": 21.91395202500271,
+        "mse": 0.008672229791621551,
+        "ms_ssim": 0.8371356768533588,
+        "lpips": 0.48559267437085507,
+        "nack": 0.7307291666666667,
+        "outage": 0.715625,
+        "total_uses": 15284.528125
+      },
+      "FlowHARQ": {
+        "psnr": 21.94461693338754,
+        "mse": 0.008653342758376918,
+        "ms_ssim": 0.8361319976858794,
+        "lpips": 0.4873098862202217,
+        "nack": 0.709375,
+        "outage": 0.7104166666666667,
+        "total_uses": 15197.01875
+      }
+    },
+    "kodak": {
+      "SwinJSCC_author_one_shot": {
+        "psnr": 23.016402458961945,
+        "mse": 0.021347529661448386,
+        "ms_ssim": 0.7505829651038058,
+        "lpips": 0.37582349502998924,
+        "nack": 0.0,
+        "outage": 0.4791666666666667,
+        "total_uses": 4130.0
+      },
+      "SwinJSCC_author_Chase_wrapper": {
+        "psnr": 26.33717342015309,
+        "mse": 0.005987955818075837,
+        "ms_ssim": 0.8851129011147552,
+        "lpips": 0.27705242012679165,
+        "nack": 1.0,
+        "outage": 0.28125,
+        "total_uses": 8228.0
+      },
+      "same_codec_direct": {
+        "psnr": 21.45732964009603,
+        "mse": 0.008555819799868105,
+        "ms_ssim": 0.7798034582907954,
+        "lpips": 0.5576326131510237,
+        "nack": 0.0,
+        "outage": 0.8506944444444444,
+        "total_uses": 12290.0
+      },
+      "same_codec_full_HARQ": {
+        "psnr": 22.0795059463628,
+        "mse": 0.0071726874094666625,
+        "ms_ssim": 0.8248581368890073,
+        "lpips": 0.5198568521688381,
+        "nack": 1.0,
+        "outage": 0.8211805555555556,
+        "total_uses": 16388.0
+      },
+      "adaptive_HARQ": {
+        "psnr": 22.019265742113106,
+        "mse": 0.00721842953923139,
+        "ms_ssim": 0.8216477311733696,
+        "lpips": 0.5235977543310987,
+        "nack": 0.7274305555555556,
+        "outage": 0.8368055555555556,
+        "total_uses": 15271.010416666666
+      },
+      "FlowHARQ": {
+        "psnr": 22.050653250000675,
+        "mse": 0.007192790493314128,
+        "ms_ssim": 0.8203913781584965,
+        "lpips": 0.5257814543114768,
+        "nack": 0.703125,
+        "outage": 0.828125,
+        "total_uses": 15171.40625
+      }
+    }
+  }
+}

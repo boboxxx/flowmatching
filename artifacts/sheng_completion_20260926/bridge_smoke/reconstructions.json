@@ -1,0 +1,86 @@
+[
+  {
+    "file": "0dB_SwinJSCC_author_one_shot.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "SwinJSCC_author_one_shot",
+    "sha256": "4ed7a2e27dd2dc032a165ba389fef1ab02b76f958eb741d34f57eb996e70b748"
+  },
+  {
+    "file": "0dB_SwinJSCC_author_Chase_wrapper.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "SwinJSCC_author_Chase_wrapper",
+    "sha256": "71be75c8b71c0c6ed89c79da322cb7cf515f1ddeeb18640d8498f8f5b0a9aa50"
+  },
+  {
+    "file": "0dB_same_codec_direct.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "same_codec_direct",
+    "sha256": "bc3c2b7f503e248d702d9a5fb4e09c68956bd2433abf6688a9baed7bf9254a99"
+  },
+  {
+    "file": "0dB_same_codec_full_HARQ.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "same_codec_full_HARQ",
+    "sha256": "f42eac383684504011bab08ed154835f1f6bbcc338880bb1d7d03b56df14e7a6"
+  },
+  {
+    "file": "0dB_adaptive_HARQ.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "adaptive_HARQ",
+    "sha256": "f42eac383684504011bab08ed154835f1f6bbcc338880bb1d7d03b56df14e7a6"
+  },
+  {
+    "file": "0dB_FlowHARQ.png",
+    "image": "01.png",
+    "snr": 0.0,
+    "method": "FlowHARQ",
+    "sha256": "f42eac383684504011bab08ed154835f1f6bbcc338880bb1d7d03b56df14e7a6"
+  },
+  {
+    "file": "15dB_SwinJSCC_author_one_shot.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "SwinJSCC_author_one_shot",
+    "sha256": "91076eb17df4ef481ed7aeb4a1db5f0b2bc92f6d5935035759ddc1fbd5f5406d"
+  },
+  {
+    "file": "15dB_SwinJSCC_author_Chase_wrapper.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "SwinJSCC_author_Chase_wrapper",
+    "sha256": "74bb69e89d7f7d0753720cf18c4551dac8a5c201dca8d800874189ece25b0c81"
+  },
+  {
+    "file": "15dB_same_codec_direct.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "same_codec_direct",
+    "sha256": "f508ddc2d1ed5c40f5260e711872638dcc51fa53b1bb26cc6fbdf4b7fb631f06"
+  },
+  {
+    "file": "15dB_same_codec_full_HARQ.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "same_codec_full_HARQ",
+    "sha256": "4eafa8920bf05e2ad3701c56f6b4fd90d0a8e610d8aecc49bca7b21ee3149072"
+  },
+  {
+    "file": "15dB_adaptive_HARQ.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "adaptive_HARQ",
+    "sha256": "4eafa8920bf05e2ad3701c56f6b4fd90d0a8e610d8aecc49bca7b21ee3149072"
+  },
+  {
+    "file": "15dB_FlowHARQ.png",
+    "image": "01.png",
+    "snr": 15.0,
+    "method": "FlowHARQ",
+    "sha256": "4eafa8920bf05e2ad3701c56f6b4fd90d0a8e610d8aecc49bca7b21ee3149072"
+  }
+]

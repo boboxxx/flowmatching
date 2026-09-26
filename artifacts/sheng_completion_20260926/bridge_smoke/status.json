@@ -1,0 +1,7 @@
+{
+  "status": "smoke_only",
+  "rows": 144,
+  "elapsed_seconds": 2.554941415786743,
+  "csv_sha256": "d6309e82a29cab1baf9ffe4b528efebaec69fe5bb2dd45aee407380f4cd4003d",
+  "caveat": "Published codec with our flat-Rayleigh Chase wrapper; not a published HARQ reproduction. Frozen unequal training recipes."
+}

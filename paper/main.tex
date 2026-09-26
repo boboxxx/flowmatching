@@ -9,74 +9,69 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-A quality-based hybrid automatic repeat request (HARQ) receiver requests another
-transmission when its current image estimate is inadequate. We investigate a
-preceding receiver action: repair selected latent tokens using the observation
-already available, and then decide whether physical retransmission is still
-needed. FlowHARQ combines reliability-anchored conditional flow matching with a
-separately calibrated quality predictor, without changing the source--channel
-codec. Under a two-round, temporally correlated Rayleigh model, the original
-three-training-run experiment and an existing ten-run extension show consistent
-aggregate savings on held-out DIV2K and Kodak24 images. In the extension, NACK
-probability falls by 1.319 and 1.453 percentage points, respectively; mean PSNR
-increases slightly, while LPIPS worsens within the specified tolerance. Paired
-decision analysis separates genuine saved rounds from quality changes on images
-that both receivers already accept. Charging 16-bit token scales and reliable
-ACK/NACK signaling reduces the corresponding payload savings of 0.758\% and
-0.846\% to 0.353\% and 0.391\% at 0.5 information bits per complex channel use.
-The results establish a modest receiver-computation versus communication
-tradeoff, but substantial target-quality violations preclude a reliable-delivery
-claim or replacement for physical HARQ.
+Can a receiver improve its current estimate enough to avoid another physical
+transmission? We study this question for image DeepJSCC with two-round,
+quality-based hybrid automatic repeat request (HARQ). FlowHARQ repairs selected
+latent tokens through conditional flow matching, preserves unselected tokens,
+and applies a separately calibrated quality decision. A fixed codec and common
+maximum-ratio-combining fallback isolate the effect of receiver computation.
+On DIV2K and Kodak24, an existing ten-run extension reduces NACK probability
+by 1.319 and 1.453 percentage points, respectively, within predefined mean
+PSNR and LPIPS tolerances. A paired decision decomposition shows that quality
+improvement on already-accepted images offsets degradation on saved rounds;
+the aggregate is not a per-image improvement. Charging token-scale metadata
+and reliable feedback reduces payload savings of 0.758\% and 0.846\% to
+0.353\% and 0.391\%. Substantial false acceptance and final outage remain.
+A paired published-SwinJSCC transfer test also exposes a large codec-quality
+gap. The evidence supports a small within-codec tradeoff, not reliable
+target-quality delivery or a competitive end-to-end HARQ system.
 \end{abstract}
 \begin{IEEEkeywords}
 DeepJSCC, HARQ, flow matching, semantic communication, receiver processing.
 \end{IEEEkeywords}
 
 \section{Introduction}
-Deep joint source--channel coding (DeepJSCC) maps an image to channel symbols
-and reconstructs it without a separate bitstream decoder \cite{deepjscc}.
-Its gradual quality degradation is useful on fading links, but does not remove
-the need to decide when reception is adequate. A quality-based HARQ receiver
-requests another transmission when a predicted reconstruction quality falls
-below a target. That decision consumes additional radio resources even when
-the receiver could still improve its estimate locally.
+Deep joint source--channel coding (DeepJSCC) produces a reconstruction even
+when channel conditions do not support high image quality \cite{deepjscc}.
+A receiver must therefore decide whether to accept that reconstruction or
+request additional symbols. This decision has two distinct failure modes:
+requesting a transmission that local processing could avoid, and accepting an
+image whose quality falls below the service target. Reducing the first without
+measuring the second can make an overconfident receiver appear efficient.
 
-Existing retransmission mechanisms primarily change what is sent next.
-DeepJSCC-f exploits channel-output feedback to encode incremental information
-\cite{deepjscc_f}; semantic-aware fine-grained HARQ (SAFG-HARQ) refines retransmission granularity
-\cite{fineharq}. In contrast, we ask whether receiver computation can avoid
-some requests \emph{before} a second transmission is invoked. We call this
-action virtual retransmission, while emphasizing that it introduces no new
-channel observation and cannot replace missing physical evidence arbitrarily.
+We investigate a receiver action between equalization and ACK/NACK: refine
+the received latent representation, then reassess whether a physical round is
+needed. The action adds computation but no channel observation. It is useful
+only if its change in the final decision compensates for its processing cost
+without an unacceptable quality loss. Image restoration quality alone cannot
+establish this communication benefit.
 
-Generative refinement alone is not a new communication primitive. CDDM uses
-diffusion for channel denoising \cite{cddm}. Recent flow-matching work includes
-FlowSem's conditional image refinement \cite{flowsem} and channel-realization
-flow matching \cite{rcbfm}; generative semantic HARQ has also been studied for
-text latents \cite{genharq}. Our focus is the interaction between a constrained
-latent repair and the ensuing ACK/NACK decision, not the first application of
-flow matching to semantic communication. This distinction matters: a prettier
-reconstruction does not necessarily reduce transmissions, and a lower NACK
-rate could instead reflect an overconfident quality predictor.
+\textit{Position relative to prior work.}
+DeepJSCC-f uses channel-output feedback to encode further information
+\cite{deepjscc_f}, while SAFG-HARQ changes retransmission granularity
+\cite{fineharq}. These approaches modify physical information delivery.
+CDDM instead uses diffusion for channel denoising \cite{cddm}; FlowSem and
+realization-coupled flow matching study generative refinement in communication
+\cite{flowsem,rcbfm}, and generative semantic HARQ has been investigated for
+text latents \cite{genharq}. In computer vision, FlowIE studies conditional
+rectified flow for efficient enhancement \cite{Zhu_2024_CVPR}; ResFlow models
+restoration through an augmented degradation flow \cite{Qin_2025_CVPR}.
+These works motivate iterative refinement, but their restoration results do
+not establish safe early acceptance on a wireless link. Our question concerns
+the subsequent communication decision, not priority for applying flow matching.
 
-FlowHARQ therefore couples three elements. A reliability head selects tokens
-for repair, an identity projection preserves the unselected latent values, and
-a separately calibrated quality head makes the final receiver-only decision.
-The encoder and decoder remain fixed. If the receiver still requests another
-round, it discards the repaired estimate and uses ordinary maximum-ratio
-combining (MRC) of two physical observations. This construction permits a
-paired comparison in which both policies have exactly the same fallback.
+FlowHARQ constrains repair with a reliability mask, then decides on the repaired
+state. On NACK, it uses the same two-observation MRC fallback as the no-repair
+policy. When both retransmit, their delivered images are identical.
 
-Our contributions are a reliability-anchored receiver formulation; a controlled
-rate--quality evaluation with explicit original and expanded experimental
-cohorts; and a decision-level and signaling-cost audit of the measured gain.
-The latter is important for reproducibility: the codec normalizes each token
-using an image-dependent scale, which is side information rather than free
-receiver knowledge. We charge that information explicitly and distinguish
-percentage-point NACK reductions from relative channel-use savings. The
-resulting improvement is small but interpretable. We do not infer improved
-latency, finite-blocklength reliability, or performance under estimated CSI
-from this idealized fading experiment.
+The paper makes three contributions. First, it specifies this receiver action
+with explicit forward symbols, side information, and binary feedback. Second,
+it separates changes in accepted-image quality from changes due to saved or
+additional rounds through a paired decision decomposition. Third, it evaluates
+the resulting tradeoff using frozen experiments, a finite-precision audit,
+and charged signaling costs. The benefit is modest and does not establish
+reliable 24-dB delivery. We report that boundary alongside the saving rather
+than equating an average-quality tolerance with a reliability guarantee.
 
 \begin{figure}[t]
 \centering
@@ -171,8 +166,32 @@ through the denominator. Thus $p_A-p_F$, $(p_A-p_F)/p_A$, and
 $(p_A-p_F)/(1+p_A)$ represent different quantities: an absolute NACK change,
 a relative reduction in requests, and a relative payload saving.
 
+\subsection{What a Saved Round Does and Does Not Establish}
+Let $P_D,P_R,P_M$ denote the PSNR of direct, repaired, and MRC images for
+the same source and physical observations. With $I_{uv}=\mathbb I[a_A=u,a_F=v]$,
+the delivered-quality difference obeys the sample-wise identity
+\begin{align}
+ P_F-P_A={}&I_{00}(P_R-P_D)+I_{10}(P_R-P_M)\nonumber\\
+          &+I_{01}(P_M-P_D).
+ \label{eq:decomposition}
+\end{align}
+This follows by enumerating the four decision pairs; the $I_{11}$ term is
+zero because the fallback is common. The same identity holds for any scalar
+reconstruction metric, including MSE and LPIPS, with their respective signs.
+An overall PSNR gain can therefore coexist with a loss on the saved-round
+subset. We evaluate both the net change and its components.
+
+For reliability, define ACK coverage $\kappa_j=\Pr(a_j=0)$, joint false ACK
+$u_j=\Pr(a_j=0,P_j<P_0)$, and conditional false ACK
+$r_j=u_j/\kappa_j$ when $\kappa_j>0$. Final outage is
+$o_j=\Pr(P_j<P_0)$, including delivery after MRC. Neither
+\eqref{eq:objective} nor the cost identity bounds $r_j$ or $o_j$.
+When $\kappa_j=0$, conditional false ACK is undefined, not evidence of a
+useful zero-risk service. These quantities distinguish economical decisions
+from reliable delivery.
+
 \section{Reliability-Anchored FlowHARQ}
-\subsection{Masked Transport with an Identity Constraint}
+\subsection{Repair Only the Selected Latent Coordinates}
 A reliability head predicts $q_i=g_q(\widetilde{\mathbf z}_{1,i},\mathbf c)$,
 and inference selects $m_i=\mathbb I[q_i\geq\tau_r]$. During training only,
 an oracle mask $m_i^*$ selects the largest $\lceil0.35N\rceil$ clean-to-received
@@ -215,7 +234,7 @@ image regions, since decoding mixes tokens. Likewise, the dense Transformer
 still processes all tokens; masking constrains content changes rather than
 delivering sparse-computation savings.
 
-\subsection{Calibrated Quality Decision}
+\subsection{Decide on the Repaired State, Fall Back to Physical Evidence}
 A quality head estimates log-MSE from the latent, reliability scores, and
 context. Its converted PSNR prediction $\widehat P$ is trained on direct and
 repaired states using log-MSE regression and a boundary loss
@@ -248,6 +267,8 @@ performance experiment. All efficiency points are reported.}
 
 \section{Experimental Results}
 \subsection{Protocol and Comparisons}
+We test request savings, their decision-level mechanism, and their reliability
+and signaling costs.
 The fixed Swin-based codec has 21.83M parameters, while the reliability,
 velocity, and quality heads add 0.479M. The velocity field has two Transformer
 blocks, width 128, and four attention heads. Receiver training uses DIV2K
@@ -288,9 +309,9 @@ cohorts are separated. PSNR is in dB.}
 \resizebox{\columnwidth}{!}{\input{generated/spring_main_table}}
 \end{table}
 
-\subsection{Aggregate Gain and Its Decision Mechanism}
-The original three-run experiment gives a 1.296-percentage-point NACK reduction
-on DIV2K and 2.025 points on Kodak24. The ten-run extension retains the effect:
+\subsection{Does Receiver Repair Reduce Physical Requests?}
+Table~\ref{tab:main} separates the original result from the ten-run extension.
+In the latter,
 DIV2K NACK probability changes from \DivAdaptiveNack\% to \DivFlowNack\%,
 and Kodak24 from \KodAdaptiveNack\% to \KodFlowNack\%. Mean delivered PSNR
 changes by $+0.0144$ and $+0.0253$ dB, respectively. LPIPS changes by
@@ -298,6 +319,7 @@ $+0.00143$ and $+0.00131$: both are within the 0.003 tolerance, but neither
 is a perceptual improvement. Fig.~\ref{fig:audit} gives the SNR dependence
 rather than presenting the aggregate as a uniform gain.
 
+\subsection{Where Does the Gain Come From?}
 To locate the effect, partition paired samples by $(a_A,a_F)$. The identity
 $p_A-p_F=\Pr(1,0)-\Pr(0,1)$ separates saved from newly requested rounds.
 On DIV2K, 1.4740\% of samples save a round and 0.1545\% request an extra one,
@@ -305,7 +327,7 @@ leaving the net 1.3194-point reduction. Both receivers accept 25.8750\% and
 both request retransmission on 72.4965\%. In the last group the delivered
 images are identical, because both use the same MRC observation.
 
-The quality decomposition is equally informative. DIV2K samples accepted by
+Equation~\eqref{eq:decomposition} explains the quality result. DIV2K samples accepted by
 both policies contribute $+0.02719$ dB to the overall mean PSNR difference;
 saved-round samples contribute $-0.01332$ dB, and extra-round samples
 $+0.00054$ dB. Thus the net PSNR gain does not mean that skipping a physical
@@ -314,16 +336,24 @@ already-accepted images with a small quality sacrifice on saved rounds.
 Kodak24 has the same structure: 1.5856\% saved rounds versus 0.1331\% extra
 rounds. This is an average resource--quality tradeoff, not per-image dominance.
 
-The service target exposes a stronger limitation. Define conditional false ACK
-as $\Pr(P<P_0\mid a=0)$ and final outage as $\Pr(P<P_0)$ after the selected
-delivery branch. In the ten-run extension, conditional false ACK changes from
+\subsection{Does the Saving Imply Reliable Delivery?}
+In the ten-run extension, conditional false ACK changes from
 13.51\% to 14.03\% on DIV2K and from 50.88\% to 50.57\% on Kodak24.
 FlowHARQ's final outage is 70.89\% and 82.92\%, respectively. These figures
 include difficult low-SNR fades and show that 24 dB is not a reliably met
 service level. Lower average NACK cost within mean-quality tolerances is
 therefore not evidence of reliable early stopping.
 
-\subsection{Signaling Cost and Finite-Precision Audit}
+A post-hoc frozen-receiver diagnostic tests whether a more conservative
+decision resolves this problem. For receiver 2030, calibration alone selects
+a 1-dB extra margin from $\{0,0.25,0.5,1,2,4\}$ dB, requiring empirical
+conditional false ACK below 5\% and at least 5\% ACK coverage. Both policies
+select the same margin. Across the three archived channel streams, DIV2K
+conditional false ACK is 4.97\% for adaptive HARQ and 3.86\% for FlowHARQ,
+but Kodak24 reaches 31.89\% and 30.32\%. Thus a calibration safety margin
+does not transfer reliably; these empirical values are not risk certificates.
+
+\subsection{Does the Saving Survive Signaling Costs?}
 The ten-run NACK reductions correspond to \DivRequestSaving\% and
 \KodRequestSaving\% fewer second-round requests, but only
 \DivPayloadSaving\% and \KodPayloadSaving\% fewer payload symbols. With
@@ -336,63 +366,60 @@ but would change the implemented system and is not credited here.
 
 \input{generated/spring_precision_text}
 
-\subsection{One-Step Control and Published Reference Models}
-An existing parameter-matched, one-step residual control is trained with the
-same image-alignment objective but with flow time fixed to zero. Its best
-tested calibration threshold yields $-0.0147$ dB relative to direct decoding;
-neither tested threshold passes the predefined nonnegative-PSNR gate. The four-step
-training recipe yields $+0.0714$ dB in the corresponding earlier calibration
-study. This supports retaining the measured multistep recipe rather than
-substituting that one-step control. Different time supervision and threshold
-selection prevent attributing the difference to integration depth alone, and
-the result is calibration evidence, not an independent held-out test.
+\subsection{What Do the Controls and Published Models Establish?}
+An existing parameter-matched control trained at flow time zero yields
+$-0.0147$ dB at its best tested calibration threshold, versus $+0.0714$ dB
+for the earlier four-step recipe. Different time supervision and threshold
+selection prevent isolating integration depth. This calibration comparison
+supports retaining the measured recipe, not claiming that flow matching is
+necessary or that a held-out one-step alternative has been ruled out.
 
-For external context, Table~\ref{tab:published} reports published SwinJSCC
-\cite{swinjscc}, NTSCC \cite{ntscc}, and CDDM \cite{cddm} using author
-weights and a common Kodak24 center-crop AWGN test at 10 dB. PSNR, image MSE,
-LPIPS, and five-scale MS-SSIM \cite{msssim} are measured on the same RGB
-reconstructions. Metadata and final-ACK costs are charged; NTSCC additionally
-signals token-rate indices. Different rates remain explicit rather than
-interpolated. These single-round references do not establish FlowHARQ's
-superiority under correlated fading. In particular, CDDM's iterative denoising
-does not implement our ACK/NACK policy. DeepJSCC-f's channel-output feedback
-is also richer than binary HARQ feedback. Our separately archived author-code
-retraining on DIV2K achieves 26.387 dB, MSE 0.002624, MS-SSIM 0.93746, and
-LPIPS 0.30644 at two-round forward CBR $1/24$ under AWGN 10 dB. This is an
-adapted-training reference with ideal channel-output feedback, not a matched
-binary-feedback baseline or a reproduction of its original training dataset.
+Table~\ref{tab:published} provides a new paired channel-transfer diagnostic
+using published SwinJSCC C32 weights \cite{swinjscc}. Both codecs receive
+the same two fading gains and noise vectors, with 4096 complex payload symbols
+per round. The six-SNR/four-speed grid and image crops are unchanged. We use
+one existing FlowHARQ receiver and one channel draw per case on an RTX 4090,
+without retraining or recalibration. SwinJSCC retains its global packet scale,
+whereas FlowHARQ retains 256 token scales; both are binary16 and charged.
+The two-round SwinJSCC variant uses our Chase/MRC wrapper, not a published
+HARQ architecture. Different training recipes and normalization remain explicit.
+
+The comparison exposes a codec-level limitation. On Kodak24, two-round
+SwinJSCC reaches 26.34 dB versus FlowHARQ's 22.05 dB with lower MSE and LPIPS,
+higher five-scale MS-SSIM \cite{msssim}, and 8228 versus 15171 charged uses.
+On DIV2K, its mean PSNR is also higher, but mean MSE is worse: averaging
+logarithmic PSNR can conceal large errors in deep fades. Thus neither a
+within-codec gain nor mean PSNR alone establishes system superiority.
+Separate archived AWGN evaluations of NTSCC \cite{ntscc}, CDDM, and
+DeepJSCC-f retain their distinct rate and feedback assumptions; they are not
+substituted for a matched published HARQ comparison.
 
 \begin{table}[t]
 \centering
-\caption{Published author-model references: Kodak24, AWGN 10 dB, ten channel
-draws. Charged CBR includes reliable metadata/control; rates differ. These
-results are not mixed with the Rayleigh HARQ comparison.}
+\caption{Paired Rayleigh transfer diagnostic, one draw per image/condition.
+Author SwinJSCC uses one or two rounds (1R/2R); 2R is our Chase wrapper.
+Uses include binary16 scales and reliable control. Training recipes differ.}
 \label{tab:published}
-\resizebox{\columnwidth}{!}{\input{generated/spring_published_table}}
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{\input{generated/sheng_bridge_table}}
 \end{table}
 
 \subsection{Scope and Limitations}
-The measured benefit relies on a calibrated receiver and a frozen codec. A
-different decoder, imperfect CSI, erroneous metadata, or shifted image
-distribution may invalidate it. The original GPU microbenchmark measures
-3.11 ms for decoding and 5.00 ms for repair plus decoding on an RTX PRO 6000,
-but excludes the quality head and communication. It cannot establish lower
-end-to-end HARQ latency or energy. If additional receiver processing takes
-$\delta T$ and a physical round takes $T_R$, the simplified break-even condition
-is $\delta T<(p_A-p_F)T_R$; scheduling and overlap require separate measurement.
-Selective token retransmission and rate-aware flow fine-tuning are outside
-this paper's validated claim. They should be assessed under a new protocol,
-not used to enlarge the current contribution without matched evidence.
+Imperfect CSI, corrupted metadata, and shifted image distributions remain
+deployment risks. The original RTX PRO 6000 microbenchmark gives 3.11 ms
+for decoding and 5.00 ms for repair plus decoding, excluding the quality head
+and radio. For additional processing time $\delta T$ and round time $T_R$,
+the simplified break-even condition is $\delta T<(p_A-p_F)T_R$; neither
+end-to-end latency nor energy savings are measured. Selective retransmission
+and joint rate-aware training are outside the validated claim.
 
 \section{Conclusion}
-FlowHARQ places reliability-anchored latent repair before a quality-based
-retransmission decision while retaining a common physical MRC fallback.
-Paired tests support a small aggregate reduction in channel use within stated
-mean-quality tolerances. Decision decomposition shows where the reduction
-comes from, and explicit scale signaling substantially reduces its relative
-size. Receiver refinement is therefore a plausible additional action in HARQ,
-but its practical value depends on side-information efficiency, calibrated
-decisions, and the cost of computation relative to a physical round.
+FlowHARQ isolates receiver refinement before ACK/NACK through a common physical
+fallback. Frozen experiments support small within-codec savings under mean-quality
+tolerances, but decision decomposition, acceptance errors, and metadata costs
+limit their interpretation. The published-codec comparison exposes a larger
+system gap. Validation on a strong pretrained codec at matched acceptance risk,
+followed by a faithful external HARQ comparison, remains necessary.
 
 \section*{Acknowledgment}
 OpenAI Codex assisted with drafting and revising Sections I--V, literature
@@ -400,5 +427,5 @@ metadata checks, and analysis and audit code. The authors are responsible for
 verifying the manuscript, implementations, and reported evidence.
 \balance
 \bibliographystyle{IEEEtran}
-\bibliography{spring_references}
+\bibliography{spring_references,cvpr_references}
 \end{document}

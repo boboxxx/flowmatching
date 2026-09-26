@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "interpretation": "post_hoc_empirical_not_risk_certified",
+  "selected": {
+    "adaptive_harq": {
+      "margin_db": 1.0,
+      "status": "empirical_calibration_gate_passed"
+    },
+    "flowharq": {
+      "margin_db": 1.0,
+      "status": "empirical_calibration_gate_passed"
+    }
+  },
+  "python": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]",
+  "host": "DESKTOP-UGDDO8T",
+  "invocation": [
+    "scripts/audit_ack_risk.py",
+    "--root",
+    "/home/sheng/flowmatching_revision_20260926",
+    "--output",
+    "/home/sheng/flowmatching_revision_20260926/results/ack_risk"
+  ],
+  "source_sha256": "d17219c662b0bf811094aa309c604f3a8a84cb237be9cd82ed979973dff82904",
+  "inputs": {
+    "results/h2/seed_2030/calibration.csv": "3b7e27d666384fe068b537d20d3909da4d186b83c80128134424fc56c7c55321",
+    "results/h2/seed_2030/decision.json": "edd1d18f6267a663e66d329ef7aa8d97bbab85c70988b476942922f578f8d1f7",
+    "results/h2/test/train_2030_channel_8001.csv": "0482185f10b20f377a401c0fa2b41b68deb24c23fa700649bc46921e38dbf140",
+    "results/h2/test/train_2030_channel_8002.csv": "c7e73abb3cadc3c7f348fb8e5dc72a0289f27645e57c4fdd25896a671f0f7905",
+    "results/h2/test/train_2030_channel_8003.csv": "89fdc7714e149f85dd4a740349ee67605296ab341a5b5aab44f218e9cd0a944f",
+    "results/h2/kodak/train_2030_channel_9001.csv": "2950b20112039519b529b32a2f0e4b6c16f626ad62470fe45660847eca3a81e2",
+    "results/h2/kodak/train_2030_channel_9002.csv": "a1f69746db4424d622fda1e89eed91e889f8c9009f3636b988db6cf04401383f",
+    "results/h2/kodak/train_2030_channel_9003.csv": "054719be6ba80fc9317ebb37ee8603460b6ba06f6c870e3e0dbcd3393727fc52"
+  },
+  "csv_sha256": "0c674b7ba0f208f3671a276f61e808596af680e6fbb99d665a75a5dcada7f4e9",
+  "note": "No MS-SSIM in archived rows. MSE reconstructed per row from PSNR. No test fitting."
+}

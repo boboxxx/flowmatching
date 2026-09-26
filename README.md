@@ -1,6 +1,6 @@
 # FlowHARQ-JSCC
 
-The VTC2027-Spring manuscript (2026-09-21 revision) studies **compute before
+The VTC2027-Spring manuscript (2026-09-26 revision) studies **compute before
 retransmit**: frozen H2 receiver repair and calibrated full-payload HARQ, supported
 by H4's qualified recipe control. See the [paper](paper/main.tex),
 [PDF](output/pdf/FlowHARQ_VTC2027.pdf), [current protocol](experiments/spring_final_20260921/protocol.md),
@@ -8,6 +8,14 @@ and [evidence audit](experiments/spring_final_20260921/RESULTS.md).
 The original three-run study and existing ten-run extension remain distinct;
 no new training or seed sweep is introduced. Explicit scale/control accounting
 reduces payload-only savings to about 0.35–0.39% under the stated signaling model.
+
+The [new Sheng audit](experiments/sheng_completion_20260926/RESULTS.md) adds
+14,976 paired fading rows and a calibration-only decision-margin diagnostic.
+It exposes a substantial published-codec quality gap and persistent Kodak
+false acceptance. The manuscript now reports those limitations explicitly.
+The bounded experiments and five-page rewrite are complete; a competitive,
+reliable end-to-end HARQ claim is **not** established. Raw results and
+reproduction instructions are in the linked revision directory.
 
 The [evidence-adaptive codec study](experiments/evidence_harq_20260920/RESULTS.md)
 failed its feasibility gate (0% selective saving). Its code and negative results

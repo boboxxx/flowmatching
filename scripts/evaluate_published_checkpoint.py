@@ -20,7 +20,6 @@ import torch
 
 PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT))
-from flowharq.metrics import mse, psnr, ms_ssim, ms_ssim_db
 
 
 def load_author_state(model, path):
@@ -64,6 +63,9 @@ def build(args, manifest):
 
 
 def main():
+    # Model construction is also reused with the historical frozen receiver,
+    # whose metrics module predates these additional evaluation functions.
+    from flowharq.metrics import mse, psnr, ms_ssim, ms_ssim_db
     p = argparse.ArgumentParser()
     p.add_argument("--family", choices=["swin", "ntscc"], required=True)
     p.add_argument("--upstream", type=Path, required=True)

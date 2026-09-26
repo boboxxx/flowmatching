@@ -1,5 +1,40 @@
 # Research Findings
 
+## Current evidence boundary — 2026-09-26
+
+This update supersedes stronger interpretations in the historical narrative
+below; those entries remain as a record of the research trajectory.
+
+- The completed 2026-09-21/22 audit supports **mean-quality-constrained cost
+  reduction**, not reliable target delivery. Charged-use savings are 0.353%
+  on DIV2K and 0.391% on Kodak at the stated metadata/control efficiency.
+- Conditional false ACK is about 14% on DIV2K and 51% on Kodak; final outage
+  is substantial. A global quality bias is not a risk certificate.
+- H4 is calibration evidence with different time supervision and threshold
+  selection, not a held-out isolation of integration depth or proof that flow
+  matching is necessary. The historical image-condition bootstrap interval
+  should not be presented as an independent-image confidence interval.
+- Author-model AWGN results are published references, not matched Rayleigh
+  HARQ superiority evidence. Existing GPU microbenchmarks omit the quality
+  head and radio system; they do not prove end-to-end latency reduction.
+- The September 26 rewrite follows a problem/design/evidence structure informed
+  by FlowIE and ResFlow. It adds an exact paired quality decomposition, not
+  a fabricated theoretical guarantee. See `literature/cvpr_rewrite_20260926.md`.
+- Sheng authentication succeeded and the September 26 frozen diagnostics
+  completed: 14,976 new image/method rows plus archived decision-risk analysis.
+  At a calibration-selected 1-dB margin, FlowHARQ conditional false ACK is
+  3.86% on DIV2K but 30.32% on Kodak. Calibration risk does not transfer.
+- On paired Kodak fading, published SwinJSCC with our two-round Chase wrapper
+  achieves 26.34 dB versus FlowHARQ's 22.05 dB, with better MSE/MS-SSIM/LPIPS
+  and lower charged uses (8228 vs 15171). DIV2K is not an all-metric dominance
+  result: the author wrapper has worse mean MSE despite higher mean PSNR.
+  See `experiments/sheng_completion_20260926/RESULTS.md`.
+- These checks complete the bounded diagnostic, not a competitive-system
+  claim. Moving to an author-pretrained codec requires new training and
+  calibration; it is not a cosmetic checkpoint replacement.
+
+## Historical research narrative (read with the qualifications above)
+
 ## Research Question
 
 Can receiver-side reliability-anchored flow matching act as a zero-airtime HARQ round, reducing physical retransmissions at matched image quality?

@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "rows": 3456,
+  "elapsed_seconds": 40.36098766326904,
+  "csv_sha256": "6877b4f2bcb1f5657c7899224a6b6b7fc529d6b2fbfd26fbf3302ffb7a2858dc",
+  "caveat": "Published codec with our flat-Rayleigh Chase wrapper; not a published HARQ reproduction. Frozen unequal training recipes."
+}
